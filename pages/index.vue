@@ -1,73 +1,114 @@
 <!-- pages/index.vue -->
 <template>
-  <main class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white py-20 px-4">
+  <main class="min-h-screen bg-navy-900 text-white">
     <!-- Hero Section -->
-    <div class="max-w-4xl mx-auto text-center space-y-8">
-      <!-- Logo/Icon -->
-      <div class="animate-bounce bg-green-500 p-4 w-16 h-16 rounded-full mx-auto mb-8 shadow-lg shadow-green-500/30">
-        <div class="text-2xl">💰</div>
+    <section class="relative py-20 px-4">
+      <div class="max-w-6xl mx-auto text-center">
+        <!-- Main Heading -->
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Protect your right to<br />
+          transact freely.
+        </h1>
+        
+        <!-- Subtitle -->
+        <p class="text-xl md:text-2xl mb-8">
+          Support H.R. 1747: The Blockchain Regulatory Certainty Act
+        </p>
+
+        <!-- CTA Button -->
+        <button class="bg-coral-500 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-coral-600 transition-colors">
+          Contact your representatives
+        </button>
       </div>
+    </section>
 
-      <!-- Main Title with Animation -->
-      <h1 class="text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text animate-fade-in">
-        Save Our Wallets
-      </h1>
+    <!-- Why This Bill Matters Section -->
+    <section class="py-20 px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-16">
+          Why This Bill Matters
+        </h2>
 
-      <!-- Subtitle -->
-      <p class="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
-        Your personal finance companion, helping you make smarter decisions with your money. Built with Nuxt 3 and styled with Tailwind CSS.
-      </p>
+        <!-- Features Grid -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="bg-navy-800 rounded-xl p-8">
+            <div class="text-6xl text-coral-500 mb-4">1</div>
+            <h3 class="text-2xl font-bold mb-4">Safe Harbor Protection</h3>
+            <p class="text-gray-300">
+              Provides clear guidelines for blockchain developers and service providers who don't control user assets.
+            </p>
+          </div>
 
-      <!-- Call to Action Buttons -->
-      <div class="flex flex-wrap justify-center gap-4 mt-10">
-        <a
-          href="#"
-          class="px-8 py-3 bg-green-500 rounded-full font-semibold hover:bg-green-400 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30 transform hover:-translate-y-1"
-        >
-          Get Started
-        </a>
-        <a
-          href="#"
-          class="px-8 py-3 border-2 border-green-500 rounded-full font-semibold hover:bg-green-500/10 transition-all duration-300"
-        >
-          Learn More
-        </a>
-      </div>
+          <!-- Feature 2 -->
+          <div class="bg-navy-800 rounded-xl p-8">
+            <div class="text-6xl text-coral-500 mb-4">2</div>
+            <h3 class="text-2xl font-bold mb-4">Developer Freedom</h3>
+            <p class="text-gray-300">
+              Removes unnecessary licensing burdens while maintaining appropriate oversight where needed.
+            </p>
+          </div>
 
-      <!-- Feature Cards -->
-      <div class="grid md:grid-cols-3 gap-6 mt-16">
-        <div class="bg-gray-800/50 p-6 rounded-xl hover:bg-gray-800 transition-all duration-300 backdrop-blur-sm">
-          <div class="text-green-500 text-2xl mb-4">📊</div>
-          <h3 class="text-xl font-semibold mb-2">Track Expenses</h3>
-          <p class="text-gray-400">Monitor your spending habits with intuitive tracking tools</p>
-        </div>
-        <div class="bg-gray-800/50 p-6 rounded-xl hover:bg-gray-800 transition-all duration-300 backdrop-blur-sm">
-          <div class="text-green-500 text-2xl mb-4">🎯</div>
-          <h3 class="text-xl font-semibold mb-2">Set Goals</h3>
-          <p class="text-gray-400">Create and achieve your financial goals step by step</p>
-        </div>
-        <div class="bg-gray-800/50 p-6 rounded-xl hover:bg-gray-800 transition-all duration-300 backdrop-blur-sm">
-          <div class="text-green-500 text-2xl mb-4">💡</div>
-          <h3 class="text-xl font-semibold mb-2">Smart Insights</h3>
-          <p class="text-gray-400">Get personalized tips to improve your financial health</p>
+          <!-- Feature 3 -->
+          <div class="bg-navy-800 rounded-xl p-8">
+            <div class="text-6xl text-coral-500 mb-4">3</div>
+            <h3 class="text-2xl font-bold mb-4">Balanced Approach</h3>
+            <p class="text-gray-300">
+              Ensures America stays competitive in blockchain innovation while protecting consumers.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- What The Bill Does Section -->
+    <section class="py-20 px-4 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <!-- Decorative line -->
+        <div class="flex justify-center mb-8">
+          <div class="w-24 h-1 bg-coral-500 rounded-full"></div>
+        </div>
+
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">
+          What The Bill Does
+        </h2>
+        
+        <div class="max-w-4xl mx-auto space-y-8">
+          <!-- Main description -->
+          <p class="text-xl text-gray-700 leading-relaxed">
+            The Blockchain Regulatory Certainty Act creates a safe harbor from licensing and registration requirements for blockchain developers and service providers who:
+          </p>
+
+          <!-- Bullet points -->
+          <ul class="space-y-4 text-xl text-gray-700 list-none pl-8">
+            <li class="flex items-center space-x-3">
+              <span class="w-2 h-2 bg-coral-500 rounded-full"></span>
+              <span>Don't control consumer funds</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <span class="w-2 h-2 bg-coral-500 rounded-full"></span>
+              <span>Only provide software or computing services</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <span class="w-2 h-2 bg-coral-500 rounded-full"></span>
+              <span>Don't act as financial intermediaries</span>
+            </li>
+          </ul>
+
+          <!-- Closing statement -->
+          <p class="text-xl text-gray-700 leading-relaxed pt-4">
+            This clarity helps encourage innovation while ensuring appropriate oversight of actual financial services.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 <script setup>
-// No script needed for this simple example
+// No script needed for this layout
 </script>
 
 <style>
-/* Add custom animation */
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.animate-fade-in {
-  animation: fade-in 1s ease-out;
-}
+/* Add custom colors to your tailwind.config.js instead of here */
 </style>
