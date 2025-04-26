@@ -66,63 +66,93 @@
       </div>
     </section>
 
-    <!-- Why This Bill Matters Section - Immediately Following -->
-    <section class="py-32 bg-navy-900 px-4">
+    <!-- Why This Bill Matters Section -->
+    <section class="py-20 bg-white px-4">
       <div class="max-w-6xl mx-auto">
-        <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
-          <h2 class="text-2xl font-bold text-navy-900"> WHY H.R. 1747 MATTERS</h2>
+        <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
+          <h2 class="text-2xl font-bold text-coral-500">
+            WHY H.R. 1747 MATTERS
+          </h2>
         </div>
 
         <!-- Three Feature Boxes Grid -->
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Box 1 -->
-          <div class="bg-navy-800/50 p-8 relative">
+          <div class="bg-navy-900/5 p-8 relative">
             <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
             <div class="text-coral-500 text-6xl font-bold mb-4">01</div>
-            <h3 class="text-2xl font-bold text-white mb-4">Wallet Freedom</h3>
-            <p class="text-gray-300">
-            Ensures your favorite wallet stays available by shielding service providers who don't control user assets from overburdensome regulations they can't comply with anyway.
+            <h3 class="text-2xl font-bold text-navy-900 mb-4">Wallet Freedom</h3>
+            <p class="text-navy-900/70">
+              Ensures your favorite wallet stays available by shielding service providers who don't control user assets from overburdensome regulations they can't comply with anyway.
             </p>
           </div>
 
           <!-- Box 2 -->
-          <div class="bg-navy-800/50 p-8 relative">
+          <div class="bg-navy-900/5 p-8 relative">
             <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
             <div class="text-coral-500 text-6xl font-bold mb-4">02</div>
-            <h3 class="text-2xl font-bold text-white mb-4">Developer Protection Rights</h3>
-            <p class="text-gray-300">
-            Removes unnecessary licensing cost while maintaining appropriate oversight where needed.
+            <h3 class="text-2xl font-bold text-navy-900 mb-4">Developer Protection Rights</h3>
+            <p class="text-navy-900/70">
+              Removes unnecessary licensing cost while maintaining appropriate oversight where needed.
             </p>
           </div>
 
           <!-- Box 3 -->
-          <div class="bg-navy-800/50 p-8 relative">
+          <div class="bg-navy-900/5 p-8 relative">
             <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
             <div class="text-coral-500 text-6xl font-bold mb-4">03</div>
-            <h3 class="text-2xl font-bold text-white mb-4">Balanced Approach</h3>
-            <p class="text-gray-300">
-            Ensures that America stays competitive while protecting consumers.
+            <h3 class="text-2xl font-bold text-navy-900 mb-4">Balanced Approach</h3>
+            <p class="text-navy-900/70">
+              Ensures that America stays competitive while protecting consumers.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- What Is Happening Section - Modern Card Design -->
+    <!-- Matt Corallo Quote Section -->
     <section class="py-20 bg-white px-4">
       <div class="max-w-6xl mx-auto">
-        <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
-          <h2 class="text-2xl font-bold text-coral-500">WHAT IS HAPPENING</h2>
+        <div class="flex flex-col md:flex-row items-start gap-12">
+          <div class="flex-1">
+            <blockquote class="relative pl-8 border-l-4 border-coral-500">
+              <p class="text-xl md:text-2xl text-navy-900 leading-relaxed mb-8">
+                Without clear legal protections, we risk losing the very tools that make bitcoin sovereign and censorship-resistant. H.R. 1747 is critical to ensure that building or using non-custodial wallets isn't treated like a crime. If we don't act, innovation will leave the United States — and with it, our financial freedom.
+              </p>
+              <div class="flex flex-col">
+                <cite class="text-xl text-coral-500 font-bold not-italic">Matt Corallo</cite>
+                <span class="text-navy-900/70">Bitcoin Core Developer</span>
+              </div>
+            </blockquote>
+          </div>
+
+          <div class="w-64 h-64 relative flex-shrink-0">
+            <img 
+              src="@/assets/images/mc.jpg"
+              alt="Matt Corallo" 
+              class="w-full h-full object-cover rounded-lg"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-white/50 to-transparent rounded-lg"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Is Happening Section -->
+    <section class="py-20 bg-navy-900 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
+          <h2 class="text-2xl font-bold text-navy-900">WHAT IS HAPPENING</h2>
         </div>
 
         <div class="space-y-8">
           <!-- Card 1 -->
-          <div class="group bg-gray-50 rounded-lg overflow-hidden transition-all hover:bg-gray-100">
+          <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
             <div class="relative">
               <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
-                <p class="text-2xl text-navy-900 leading-relaxed">
+                <p class="text-2xl text-white leading-relaxed">
                   The leading market structure bills currently moving through congress could prohibit US persons from utilizing non-custodial wallets and service providers
                 </p>
               </div>
@@ -130,12 +160,12 @@
           </div>
 
           <!-- Card 2 -->
-          <div class="group bg-gray-50 rounded-lg overflow-hidden transition-all hover:bg-gray-100">
+          <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
             <div class="relative">
               <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
-                <p class="text-2xl text-navy-900 leading-relaxed">
+                <p class="text-2xl text-white leading-relaxed">
                   The long-standing view of FinCEN (the regulator for money transmission) has been that wallets and services that do not have control over user assets are not "money transmitters" (as they cannot transmit what they do not control). The Biden DOJ decided to charge developers for this anyway.
                 </p>
               </div>
@@ -143,12 +173,12 @@
           </div>
 
           <!-- Card 3 -->
-          <div class="group bg-gray-50 rounded-lg overflow-hidden transition-all hover:bg-gray-100">
+          <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
             <div class="relative">
               <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
-                <p class="text-2xl text-navy-900 leading-relaxed">
+                <p class="text-2xl text-white leading-relaxed">
                   This has led to some wallets and services banning United States customers, and created a chilling effect which has prevented many new wallets from coming to market.
                 </p>
               </div>
@@ -156,12 +186,12 @@
           </div>
 
           <!-- Card 4 -->
-          <div class="group bg-gray-50 rounded-lg overflow-hidden transition-all hover:bg-gray-100">
+          <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
             <div class="relative">
               <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
-                <p class="text-2xl text-navy-900 leading-relaxed">
+                <p class="text-2xl text-white leading-relaxed">
                   If we don't fix the law, this will push yet more wallets and Americans towards custodians that censor transactions they don't like and expose many more Americans to rug-pulls.
                 </p>
               </div>
