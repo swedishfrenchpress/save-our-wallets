@@ -25,7 +25,12 @@
     <!-- Why This Bill Matters Section -->
     <section class="py-20 px-4">
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-16">
+        <!-- Decorative line -->
+        <div class="flex justify-center mb-8">
+          <div class="w-24 h-1 bg-coral-500 rounded-full"></div>
+        </div>
+
+        <h2 class="text-4xl font-bold text-center mb-16 text-white">
           Why This Bill Matters
         </h2>
 
@@ -99,6 +104,41 @@
           <p class="text-xl text-gray-700 leading-relaxed pt-4">
             This clarity helps encourage innovation while ensuring appropriate oversight of actual financial services.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Section - Full Width -->
+    <section class="py-20 bg-navy-900">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12 max-w-4xl mx-auto">
+          <!-- Quote content -->
+          <div class="text-center md:text-left flex-1">
+            <!-- Quote text with left border -->
+            <blockquote class="border-l-4 border-coral-500 pl-8">
+              <p class="text-xl md:text-2xl font-medium text-white leading-relaxed mb-8">
+                For too long, federal regulators and lawmakers have jammed the blockchain ecosystem into statutory definitions that just do not make sense. It should be simple: 
+                <span class="text-coral-500">If you don't custody consumer funds, you aren't a money transmitter.</span> 
+                My bill provides that necessary confirmation for the blockchain community.
+              </p>
+
+              <!-- Attribution -->
+              <div class="flex flex-col md:items-start items-center">
+                <cite class="text-xl text-coral-500 font-semibold not-italic">Tom Emmer</cite>
+                <span class="text-gray-400 mt-1">Congressman (House Majority Whip)</span>
+              </div>
+            </blockquote>
+          </div>
+
+          <!-- Image with gradient overlay - now on the right -->
+          <div class="w-64 h-64 relative flex-shrink-0 order-first md:order-last">
+            <div class="absolute inset-0 bg-gradient-to-tr from-navy-900/80 to-coral-500/20 mix-blend-multiply rounded-lg z-10"></div>
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/8/81/Tom_Emmer_Congressional_Photo_2.jpg"
+              alt="Congressman Tom Emmer"
+              class="w-full h-full object-cover rounded-lg"
+            />
+          </div>
         </div>
       </div>
     </section>
