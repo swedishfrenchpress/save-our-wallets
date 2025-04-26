@@ -2,44 +2,44 @@
 <template>
   <main class="min-h-screen bg-navy-900 text-white">
     <!-- Hero Section -->
-    <section class="py-20 bg-navy-900 px-4">
-      <div class="max-w-6xl mx-auto">
-        <!-- Centered Hero Content -->
-        <div class="text-center mb-20">
+    <section class="relative min-h-[80vh] bg-navy-900">
+      <!-- Background Image with More Aggressive Gradient -->
+      <div class="absolute inset-0">
+        <img 
+          src="@/assets/images/save-our-wallets.png"
+          alt="People holding Save Our Wallets signs" 
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/95 to-navy-900" style="background-image: linear-gradient(to bottom, transparent 40%, rgba(15, 23, 42, 0.95) 65%, rgb(15, 23, 42) 100%);"></div>
+      </div>
+
+      <!-- Content - Moved Down -->
+      <div class="relative h-full px-4">
+        <div class="max-w-6xl mx-auto text-center" style="padding-top: 45vh">
+          <!-- Main Title -->
           <div class="mb-8">
             <h1 class="text-6xl md:text-8xl font-bold text-white">
-              SAVE OUR WALLETS
+              Protect your right to transact freely.
             </h1>
           </div>
           
-          <!-- Subtitle - centered -->
-          <div class="flex justify-center">
+          <!-- Subtitle - Keeping Original Style -->
+          <div class="flex justify-center mb-16">
             <div class="bg-coral-500 inline-block px-6 py-3">
               <h2 class="text-2xl font-bold text-navy-900">
                 Support H.R. 1747: The Blockchain Regulatory Certainty Act
               </h2>
             </div>
           </div>
-        </div>
 
-        <!-- Split Layout for Zip Code Section -->
-        <div class="flex flex-col md:flex-row gap-12 items-start">
-          <!-- Left Content -->
-          <div class="flex-1">
-            <h3 class="text-3xl text-white font-bold mb-6">
-              Make Your Voice Heard
-            </h3>
-            
-            <p class="text-xl text-white/90 mb-8 leading-relaxed">
-              Contact your representatives to protect your right to transact freely.
-            </p>
-
+          <!-- Zip Code Section -->
+          <div class="max-w-xl mx-auto mb-0">
             <!-- Zip Code Input -->
-            <div class="bg-navy-800/80 p-8 rounded-xl border border-white/10 mb-8">
+            <div class="bg-navy-800/80 backdrop-blur-sm p-6 rounded-xl border border-white/10 mb-4">
               <label class="block text-lg text-white mb-4">
                 Enter your zip code to find your representatives
               </label>
-              <div class="flex flex-col sm:flex-row gap-4">
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <input 
                   type="text" 
                   placeholder="Zip Code" 
@@ -50,27 +50,18 @@
                 </button>
               </div>
             </div>
+
             <!-- Disclaimer -->
             <p class="text-sm text-white/60">
               Your information will only be used to look up your congressional representatives.
             </p>
-          </div>
-
-          <!-- Right Image -->
-          <div class="flex-1 relative h-[500px] w-full rounded-2xl overflow-hidden">
-            <img 
-              src="https://images.pexels.com/photos/8898633/pexels-photo-8898633.jpeg" 
-              alt="Cryptocurrency and financial freedom" 
-              class="absolute inset-0 w-full h-full object-cover rounded-2xl"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/20 to-transparent"></div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Why This Bill Matters Section - Immediately Following -->
-    <section class="py-20 bg-navy-900 px-4">
+    <section class="py-12 bg-navy-900 px-4">
       <div class="max-w-6xl mx-auto">
         <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
           <h2 class="text-2xl font-bold text-navy-900"> WHY H.R. 1747 MATTERS</h2>
