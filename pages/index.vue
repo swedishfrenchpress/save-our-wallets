@@ -24,7 +24,7 @@
           </div>
           
           <!-- Subtitle - Keeping Original Style -->
-          <div class="flex justify-center mb-16">
+          <div class="flex justify-center mb-32">
             <div class="bg-coral-500 inline-block px-6 py-3">
               <h2 class="text-2xl font-bold text-navy-900">
                 Support H.R. 1747: The Blockchain Regulatory Certainty Act
@@ -33,35 +33,41 @@
           </div>
 
           <!-- Zip Code Section -->
-          <div class="max-w-xl mx-auto mb-0">
-            <!-- Zip Code Input -->
-            <div class="bg-navy-800/80 backdrop-blur-sm p-6 rounded-xl border border-white/10 mb-4">
-              <label class="block text-lg text-white mb-4">
-                Enter your zip code to find your representatives
-              </label>
-              <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <input 
-                  type="text" 
-                  placeholder="Zip Code" 
-                  class="px-6 py-4 rounded-lg text-lg bg-white text-navy-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-coral-500 transition-all w-full sm:w-[200px]"
-                />
-                <button class="bg-coral-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-coral-400 transition-colors">
-                  Find Representatives
-                </button>
-              </div>
-            </div>
+          <div class="max-w-3xl mx-auto">
+            <h3 class="text-3xl md:text-4xl text-white font-bold mb-12 leading-relaxed">
+              Contact your representatives: Tell them your peer-to-peer transaction rights matter!
+            </h3>
 
-            <!-- Disclaimer -->
-            <p class="text-sm text-white/60">
-              Your information will only be used to look up your congressional representatives.
-            </p>
+            <!-- Zip Code Input -->
+            <div class="max-w-xl mx-auto">
+              <div class="bg-navy-800/80 backdrop-blur-sm p-6 rounded-xl border border-white/10 mb-4">
+                <label class="block text-lg text-white mb-4">
+                  Enter your zip code to find your representatives
+                </label>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                  <input 
+                    type="text" 
+                    placeholder="Zip Code" 
+                    class="px-6 py-4 rounded-lg text-lg bg-white text-navy-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-coral-500 transition-all w-full sm:w-[200px]"
+                  />
+                  <button class="bg-coral-500 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-coral-400 transition-colors">
+                    Find Representatives
+                  </button>
+                </div>
+              </div>
+
+              <!-- Disclaimer -->
+              <p class="text-sm text-white/60 pb-16">
+                Your information will only be used to look up your congressional representatives.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Why This Bill Matters Section - Immediately Following -->
-    <section class="py-12 bg-navy-900 px-4">
+    <section class="py-32 bg-navy-900 px-4">
       <div class="max-w-6xl mx-auto">
         <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
           <h2 class="text-2xl font-bold text-navy-900"> WHY H.R. 1747 MATTERS</h2>
