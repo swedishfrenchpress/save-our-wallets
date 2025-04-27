@@ -341,7 +341,7 @@
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12 flex items-center w-full">
                 <div class="text-3xl md:text-4xl font-bold text-coral-500/20 w-20">01</div>
-                <p class="text-lg md:text-2xl text-white font-medium flex-1">Don't control consumer funds</p>
+                <p class="text-lg md:text-2xl text-white font-medium flex-1">Don't control consumer funds.</p>
               </div>
             </div>
           </div>
@@ -353,7 +353,7 @@
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12 flex items-center w-full">
                 <div class="text-3xl md:text-4xl font-bold text-coral-500/20 w-20">02</div>
-                <p class="text-lg md:text-2xl text-white font-medium flex-1">Only provide software or computing services</p>
+                <p class="text-lg md:text-2xl text-white font-medium flex-1">Only provide software or computing services.</p>
               </div>
             </div>
           </div>
@@ -365,7 +365,7 @@
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12 flex items-center w-full">
                 <div class="text-3xl md:text-4xl font-bold text-coral-500/20 w-20">03</div>
-                <p class="text-lg md:text-2xl text-white font-medium flex-1">Don't act as financial intermediaries</p>
+                <p class="text-lg md:text-2xl text-white font-medium flex-1">Don't act as financial intermediaries.</p>
               </div>
             </div>
           </div>
