@@ -102,14 +102,11 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative h-screen">
-      <!-- Background image with enhanced gradient overlay -->
+    <div class="relative bg-navy-900 pb-16 md:pb-0 md:h-screen">
       <div class="absolute inset-0 bg-[url('@/assets/images/save-our-wallets.png')] bg-cover bg-center">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
       </div>
-
-      <!-- Hero content -->
-      <div class="relative h-full flex flex-col items-center justify-center px-4 translate-y-[20vh]">
+      <div class="relative flex flex-col items-center justify-center md:justify-end px-4 h-full">
         <div class="flex flex-col items-center space-y-8 md:space-y-12 max-w-6xl text-center">
           <h1 class="font-space-grotesk font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase text-white">
             Protect your right to transact freely.
