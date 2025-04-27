@@ -478,13 +478,18 @@
         </div>
 
         <!-- Right Side -->
-        <div class="text-right">
-          <div class="text-navy-900 font-bold">
-            DESIGN BY <a href="https://bitcoin.design/" class="hover:text-coral-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer">BITCOIN DESIGN</a> COMMUNITY
+        <div class="text-right flex items-center gap-4">
+          <div>
+            <div class="text-navy-900 font-bold">
+              DESIGNED BY <a href="https://bitcoin.design/" class="hover:text-coral-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer">BITCOIN DESIGN COMMUNITY</a>
+            </div>
+            <div class="text-navy-900/70 font-sedgwick text-lg">
+              (<a href="https://bitcoindesignfoundation.org/" class="hover:text-coral-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer">Support Bitcoin Design</a>)
+            </div>
           </div>
-          <div class="text-navy-900/70 font-sans italic">
-            (<a href="https://bitcoindesignfoundation.org/" class="hover:text-coral-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer">Support Bitcoin Design</a>)
-          </div>
+          <a href="https://bitcoin.design/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity duration-300">
+            <img src="@/assets/images/bdc-seal.svg" alt="Bitcoin Design Community" class="w-12 h-12">
+          </a>
         </div>
       </div>
     </footer>
@@ -544,6 +549,8 @@ onMounted(() => {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&family=Space+Grotesk:wght@300..700&display=swap');
+
 /* Add custom colors to your tailwind.config.js instead of here */
 
 /* Add these keyframes and animation classes to your CSS */
@@ -565,5 +572,10 @@ onMounted(() => {
 /* Add initial state for scroll reveal elements */
 .scroll-reveal {
   will-change: transform, opacity;
+}
+
+/* Add font family */
+.font-sedgwick {
+  font-family: 'Sedgwick Ave', cursive;
 }
 </style>
