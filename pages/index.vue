@@ -159,7 +159,7 @@
     <section id="why-matters" class="py-20 bg-white px-4">
       <div class="max-w-6xl mx-auto">
         <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
-          <h2 class="font-space-grotesk font-bold text-3xl uppercase">
+          <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
             WHY H.R. 1747 MATTERS
           </h2>
         </div>
@@ -169,9 +169,9 @@
           <!-- Box 1 -->
           <div class="bg-navy-900/5 p-8 relative">
             <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
-            <div class="text-coral-500 text-6xl font-bold mb-4">01</div>
-            <h3 class="text-2xl font-bold text-navy-900 mb-4">Wallet Freedom</h3>
-            <p class="text-navy-900/70 text-2xl">
+            <div class="text-coral-500 text-4xl md:text-6xl font-bold mb-4">01</div>
+            <h3 class="text-xl md:text-2xl font-bold text-navy-900 mb-4">Wallet Freedom</h3>
+            <p class="text-navy-900/70 text-lg md:text-2xl">
               Ensures your favorite wallet stays available by shielding service providers who don't control user assets from overburdensome regulations they can't comply with anyway.
             </p>
           </div>
@@ -179,9 +179,9 @@
           <!-- Box 2 -->
           <div class="bg-navy-900/5 p-8 relative">
             <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
-            <div class="text-coral-500 text-6xl font-bold mb-4">02</div>
-            <h3 class="text-2xl font-bold text-navy-900 mb-4">Developer Protection Rights</h3>
-            <p class="text-navy-900/70 text-2xl">
+            <div class="text-coral-500 text-4xl md:text-6xl font-bold mb-4">02</div>
+            <h3 class="text-xl md:text-2xl font-bold text-navy-900 mb-4">Developer Protection Rights</h3>
+            <p class="text-navy-900/70 text-lg md:text-2xl">
               Removes unnecessary licensing cost while maintaining appropriate oversight where needed.
             </p>
           </div>
@@ -189,9 +189,9 @@
           <!-- Box 3 -->
           <div class="bg-navy-900/5 p-8 relative">
             <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
-            <div class="text-coral-500 text-6xl font-bold mb-4">03</div>
-            <h3 class="text-2xl font-bold text-navy-900 mb-4">Balanced Approach</h3>
-            <p class="text-navy-900/70 text-2xl">
+            <div class="text-coral-500 text-4xl md:text-6xl font-bold mb-4">03</div>
+            <h3 class="text-xl md:text-2xl font-bold text-navy-900 mb-4">Balanced Approach</h3>
+            <p class="text-navy-900/70 text-lg md:text-2xl">
               Ensures that America stays competitive while protecting consumers.
             </p>
           </div>
@@ -205,11 +205,11 @@
         <div class="flex flex-col md:flex-row items-start gap-12">
           <div class="flex-1">
             <blockquote class="relative pl-8 border-l-4 border-coral-500">
-              <p class="text-xl md:text-2xl text-navy-900 leading-relaxed mb-8">
+              <p class="text-lg md:text-2xl text-navy-900 leading-relaxed mb-8">
                 Without clear legal protections, we risk losing the very tools that make bitcoin sovereign and censorship-resistant. H.R. 1747 is critical to ensure that building or using non-custodial wallets isn't treated like a crime. If we don't act, innovation will leave the United States — and with it, our financial freedom.
               </p>
               <div class="flex flex-col">
-                <cite class="text-xl text-coral-500 font-bold not-italic">Matt Corallo</cite>
+                <cite class="text-lg md:text-xl text-coral-500 font-bold not-italic">Matt Corallo</cite>
                 <span class="text-navy-900/70">Bitcoin Core Developer</span>
               </div>
             </blockquote>
@@ -231,7 +231,7 @@
     <section id="what-happening" class="py-20 bg-navy-900 px-4">
       <div class="max-w-6xl mx-auto">
         <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
-          <h2 class="font-space-grotesk font-bold text-3xl uppercase">
+          <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
             WHAT IS HAPPENING
           </h2>
         </div>
@@ -243,7 +243,7 @@
               <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
-                <p class="text-2xl text-white leading-relaxed">
+                <p class="text-lg md:text-2xl text-white leading-relaxed">
                   The leading market structure bills currently moving through congress could prohibit US persons from utilizing non-custodial wallets and service providers.
                 </p>
               </div>
@@ -256,7 +256,7 @@
               <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
-                <p class="text-2xl text-white leading-relaxed">
+                <p class="text-lg md:text-2xl text-white leading-relaxed">
                   The long-standing view of FinCEN (the regulator for money transmission) has been that wallets and services that do not have control over user assets are not "money transmitters" (as they cannot transmit what they do not control). The Biden DOJ decided to charge developers for this anyway.
                 </p>
               </div>
@@ -269,7 +269,7 @@
               <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
-                <p class="text-2xl text-white leading-relaxed">
+                <p class="text-lg md:text-2xl text-white leading-relaxed">
                   This has led to some wallets and services banning United States customers, and created a chilling effect which has prevented many new wallets from coming to market.
                 </p>
               </div>
@@ -282,7 +282,7 @@
               <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
-                <p class="text-2xl text-white leading-relaxed">
+                <p class="text-lg md:text-2xl text-white leading-relaxed">
                   If we don't fix the law, this will push yet more wallets and Americans towards custodians that censor transactions they don't like and expose many more Americans to rug-pulls.
                 </p>
               </div>
@@ -298,13 +298,13 @@
         <div class="flex flex-col md:flex-row items-start gap-12">
           <div class="flex-1">
             <blockquote class="relative pl-8 border-l-4 border-coral-500">
-              <p class="text-xl md:text-2xl text-white leading-relaxed mb-8">
+              <p class="text-lg md:text-2xl text-white leading-relaxed mb-8">
                 For too long, federal regulators and lawmakers have jammed the blockchain ecosystem into statutory definitions that just do not make sense. It should be simple: 
                 <span class="text-coral-500 font-semibold">If you don't custody consumer funds, you aren't a money transmitter.</span> 
                 My bill provides that necessary confirmation for the blockchain community.
               </p>
               <div class="flex flex-col">
-                <cite class="text-xl text-coral-500 font-bold not-italic">Tom Emmer</cite>
+                <cite class="text-lg md:text-xl text-coral-500 font-bold not-italic">Tom Emmer</cite>
                 <span class="text-white/70">Congressman (House Majority Whip)</span>
               </div>
             </blockquote>
@@ -326,14 +326,14 @@
     <section class="py-20 bg-navy-900 px-4">
       <div class="max-w-6xl mx-auto">
         <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
-          <h2 class="font-space-grotesk font-bold text-3xl uppercase">
+          <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
             WHAT THE BILL DOES
           </h2>
         </div>
 
         <!-- Intro text - full width to match boxes -->
         <div class="mb-12">
-          <p class="text-2xl text-white leading-relaxed">
+          <p class="text-lg md:text-2xl text-white leading-relaxed">
             The Blockchain Regulatory Certainty Act creates a safe harbor from licensing and registration requirements for blockchain developers and service providers who:
           </p>
         </div>
@@ -346,8 +346,8 @@
               <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12 flex items-center w-full">
-                <div class="text-4xl font-bold text-coral-500/20 w-20">01</div>
-                <p class="text-2xl text-white font-medium flex-1">Don't control consumer funds</p>
+                <div class="text-3xl md:text-4xl font-bold text-coral-500/20 w-20">01</div>
+                <p class="text-lg md:text-2xl text-white font-medium flex-1">Don't control consumer funds</p>
               </div>
             </div>
           </div>
@@ -358,8 +358,8 @@
               <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12 flex items-center w-full">
-                <div class="text-4xl font-bold text-coral-500/20 w-20">02</div>
-                <p class="text-2xl text-white font-medium flex-1">Only provide software or computing services</p>
+                <div class="text-3xl md:text-4xl font-bold text-coral-500/20 w-20">02</div>
+                <p class="text-lg md:text-2xl text-white font-medium flex-1">Only provide software or computing services</p>
               </div>
             </div>
           </div>
@@ -370,8 +370,8 @@
               <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12 flex items-center w-full">
-                <div class="text-4xl font-bold text-coral-500/20 w-20">03</div>
-                <p class="text-2xl text-white font-medium flex-1">Don't act as financial intermediaries</p>
+                <div class="text-3xl md:text-4xl font-bold text-coral-500/20 w-20">03</div>
+                <p class="text-lg md:text-2xl text-white font-medium flex-1">Don't act as financial intermediaries</p>
               </div>
             </div>
           </div>
@@ -379,7 +379,7 @@
 
         <!-- Conclusion text - full width to match boxes -->
         <div>
-          <p class="text-2xl text-white leading-relaxed">
+          <p class="text-lg md:text-2xl text-white leading-relaxed">
             This clarity helps encourage innovation while ensuring appropriate oversight of actual financial services.
           </p>
         </div>
@@ -392,11 +392,11 @@
         <!-- Header -->
         <div class="mb-12">
           <div class="bg-navy-900 inline-block px-6 py-3 mb-8">
-            <h2 class="font-space-grotesk font-bold text-3xl uppercase">
+            <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
               TAKE ACTION NOW
             </h2>
           </div>
-          <p class="text-xl md:text-2xl text-navy-900/80 leading-relaxed">
+          <p class="text-lg md:text-2xl text-navy-900/80 leading-relaxed">
             Your voice matters! Tell your representatives why clear blockchain regulation is important for American innovation.
           </p>
         </div>
