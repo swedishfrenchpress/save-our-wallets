@@ -110,28 +110,28 @@
 
       <!-- Hero content -->
       <div class="relative flex flex-col items-center text-center px-4 pt-[20vh] md:pt-[45vh]">
-        <h1 class="font-space-grotesk font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl uppercase text-white">
+        <h1 class="font-space-grotesk font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase text-white">
           Protect your right to transact freely.
         </h1>
         
         <div class="mt-4 md:mt-12">
-          <h2 class="bg-coral-500 text-white px-6 py-4 rounded-lg font-space-grotesk font-semibold text-xl sm:text-2xl md:text-3xl uppercase max-w-3xl mx-auto">
+          <h2 class="bg-coral-500 text-white px-6 py-4 font-space-grotesk font-semibold text-xl sm:text-2xl md:text-3xl uppercase max-w-3xl mx-auto">
             Support H.R. 1747: The Blockchain Regulatory Certainty Act
           </h2>
         </div>
       </div>
 
       <!-- Zip Code Section - now inside the hero, positioned in the gradient area -->
-      <div class="absolute md:bottom-12 bottom-4 left-0 right-0 px-4">
-        <div class="max-w-2xl mx-auto text-center">
-          <h2 class="font-space-grotesk text-xl md:text-3xl text-white font-bold mb-2 md:mb-4">
+      <div class="absolute md:bottom-64 bottom-4 left-0 right-0 px-4 md:-mt-32">
+        <div class="max-w-6xl mx-auto text-center">
+          <h2 class="font-space-grotesk text-xl md:text-6xl text-white font-bold mb-2 md:mb-4">
             Contact your representatives:
           </h2>
           <p class="text-white text-base md:text-xl mb-4 md:mb-8">
             Tell them your peer-to-peer transaction rights matter!
           </p>
           
-          <div class="bg-navy-800/30 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg">
+          <div class="bg-navy-800/30 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg max-w-2xl mx-auto">
             <p class="text-white text-sm md:text-base mb-4 md:mb-6">
               Enter your zip code to find your representatives
             </p>
