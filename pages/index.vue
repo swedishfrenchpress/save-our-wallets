@@ -102,7 +102,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative bg-navy-900 pb-16 md:pb-0 pt-[25vh] md:pt-0 md:h-screen">
+    <div class="relative bg-navy-900 pb-16 md:pb-0 pt-[25vh] md:pt-0 md:h-screen scroll-reveal">
       <div class="absolute inset-0 bg-[url('@/assets/images/save-our-wallets.png')] bg-cover bg-center">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
       </div>
@@ -147,7 +147,7 @@
     </div>
 
     <!-- Why This Bill Matters Section -->
-    <section id="why-matters" class="py-20 bg-white px-4">
+    <section id="why-matters" class="py-20 bg-white px-4 scroll-reveal">
       <div class="max-w-6xl mx-auto">
         <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
           <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
@@ -191,7 +191,7 @@
     </section>
 
     <!-- Matt Corallo Quote Section -->
-    <section class="py-20 bg-white px-4">
+    <section class="py-20 bg-white px-4 scroll-reveal">
       <div class="max-w-6xl mx-auto">
         <div class="flex flex-col md:flex-row items-start gap-12">
           <div class="flex-1">
@@ -219,7 +219,7 @@
     </section>
 
     <!-- What Is Happening Section -->
-    <section id="what-happening" class="py-20 bg-navy-900 px-4">
+    <section id="what-happening" class="py-20 bg-navy-900 px-4 scroll-reveal">
       <div class="max-w-6xl mx-auto">
         <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
           <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
@@ -284,7 +284,7 @@
     </section>
 
     <!-- Quote Section -->
-    <section class="py-20 bg-navy-900 px-4">
+    <section class="py-20 bg-navy-900 px-4 scroll-reveal">
       <div class="max-w-6xl mx-auto">
         <div class="flex flex-col md:flex-row items-start gap-12">
           <div class="flex-1">
@@ -314,7 +314,7 @@
     </section>
 
     <!-- What The Bill Does Section -->
-    <section class="py-20 bg-navy-900 px-4">
+    <section class="py-20 bg-navy-900 px-4 scroll-reveal">
       <div class="max-w-6xl mx-auto">
         <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
           <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
@@ -378,7 +378,7 @@
     </section>
 
     <!-- Take Action Section -->
-    <section id="take-action" class="py-20 bg-white px-4">
+    <section id="take-action" class="py-20 bg-white px-4 scroll-reveal">
       <div class="max-w-6xl mx-auto">
         <!-- Header -->
         <div class="mb-12">
@@ -492,7 +492,11 @@
 </template>
 
 <script setup>
+import { ref, watch, onMounted } from 'vue'
+import { animate } from "motion"
+
 const isMenuOpen = ref(false)
+const sections = ref([])
 
 // Optional: Add scroll lock when menu is open
 watch(isMenuOpen, (newValue) => {
@@ -501,6 +505,41 @@ watch(isMenuOpen, (newValue) => {
   } else {
     document.body.style.overflow = ''
   }
+})
+
+// Function to handle scroll reveal animations
+const setupScrollReveal = () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animate(
+          entry.target,
+          { 
+            opacity: [0, 1],
+            y: [50, 0],
+          },
+          { 
+            duration: 0.3,
+            easing: [0.17, 0.55, 0.55, 1],
+            delay: 0.1
+          }
+        )
+        observer.unobserve(entry.target)
+      }
+    })
+  }, {
+    threshold: 0.3
+  })
+
+  document.querySelectorAll('.scroll-reveal').forEach(el => {
+    el.style.opacity = '0'
+    observer.observe(el)
+  })
+}
+
+// Setup animations when component is mounted
+onMounted(() => {
+  setupScrollReveal()
 })
 </script>
 
@@ -521,5 +560,10 @@ watch(isMenuOpen, (newValue) => {
 
 .animate-menuItems {
   animation: menuItems 0.15s ease-out 0.05s forwards;
+}
+
+/* Add initial state for scroll reveal elements */
+.scroll-reveal {
+  will-change: transform, opacity;
 }
 </style>
