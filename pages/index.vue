@@ -1,6 +1,40 @@
 <!-- pages/index.vue -->
 <template>
   <main class="min-h-screen bg-navy-900 text-white">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-navy-900/80 backdrop-blur-lg border-b border-white/20 px-4 shadow-lg">
+      <div class="max-w-6xl mx-auto h-24 flex items-center justify-between">
+        <!-- Logo/Brand -->
+        <div class="font-bold text-white text-2xl tracking-tight">
+          <img src="@/assets/images/sow-logo.svg" alt="Save Our Wallets" class="w-[112px] h-[112px]">
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="flex items-center space-x-12">
+          <a 
+            href="#why-matters" 
+            class="text-white font-bold text-2xl uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
+          >
+            Why
+            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-coral-500 transition-all duration-300 group-hover:w-full"></div>
+          </a>
+          <a 
+            href="#what-happening" 
+            class="text-white font-bold text-2xl uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
+          >
+            What
+            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-coral-500 transition-all duration-300 group-hover:w-full"></div>
+          </a>
+          <a 
+            href="#take-action" 
+            class="bg-coral-500 text-white px-8 py-3 rounded-lg font-bold text-2xl uppercase tracking-wider hover:bg-coral-400 hover:transform hover:-translate-y-0.5 transition-all duration-300  hover:shadow-lg"
+          >
+            Take Action
+          </a>
+        </div>
+      </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="relative min-h-[80vh] bg-navy-900">
       <!-- Background Image with More Aggressive Gradient -->
@@ -67,7 +101,7 @@
     </section>
 
     <!-- Why This Bill Matters Section -->
-    <section class="py-20 bg-white px-4">
+    <section id="why-matters" class="py-20 bg-white px-4">
       <div class="max-w-6xl mx-auto">
         <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
           <h2 class="text-2xl font-bold text-coral-500">
@@ -82,7 +116,7 @@
             <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
             <div class="text-coral-500 text-6xl font-bold mb-4">01</div>
             <h3 class="text-2xl font-bold text-navy-900 mb-4">Wallet Freedom</h3>
-            <p class="text-navy-900/70">
+            <p class="text-navy-900/70 text-2xl">
               Ensures your favorite wallet stays available by shielding service providers who don't control user assets from overburdensome regulations they can't comply with anyway.
             </p>
           </div>
@@ -92,7 +126,7 @@
             <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
             <div class="text-coral-500 text-6xl font-bold mb-4">02</div>
             <h3 class="text-2xl font-bold text-navy-900 mb-4">Developer Protection Rights</h3>
-            <p class="text-navy-900/70">
+            <p class="text-navy-900/70 text-2xl">
               Removes unnecessary licensing cost while maintaining appropriate oversight where needed.
             </p>
           </div>
@@ -102,7 +136,7 @@
             <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
             <div class="text-coral-500 text-6xl font-bold mb-4">03</div>
             <h3 class="text-2xl font-bold text-navy-900 mb-4">Balanced Approach</h3>
-            <p class="text-navy-900/70">
+            <p class="text-navy-900/70 text-2xl">
               Ensures that America stays competitive while protecting consumers.
             </p>
           </div>
@@ -139,7 +173,7 @@
     </section>
 
     <!-- What Is Happening Section -->
-    <section class="py-20 bg-navy-900 px-4">
+    <section id="what-happening" class="py-20 bg-navy-900 px-4">
       <div class="max-w-6xl mx-auto">
         <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
           <h2 class="text-2xl font-bold text-navy-900">WHAT IS HAPPENING</h2>
@@ -153,7 +187,7 @@
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
                 <p class="text-2xl text-white leading-relaxed">
-                  The leading market structure bills currently moving through congress could prohibit US persons from utilizing non-custodial wallets and service providers
+                  The leading market structure bills currently moving through congress could prohibit US persons from utilizing non-custodial wallets and service providers.
                 </p>
               </div>
             </div>
@@ -294,7 +328,7 @@
     </section>
 
     <!-- Take Action Section -->
-    <section class="py-20 bg-white px-4">
+    <section id="take-action" class="py-20 bg-white px-4">
       <div class="max-w-6xl mx-auto">
         <!-- Header -->
         <div class="mb-12">
@@ -368,6 +402,35 @@
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 bg-white border-t border-navy-900/10">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
+        <!-- Left Side -->
+        <div class="mb-6 md:mb-0">
+          <div class="font-bold text-navy-900 flex items-center gap-4">
+            <img src="@/assets/images/sow-logo.svg" alt="Save Our Wallets" class="w-[75px] h-[75px]">
+            <div>
+              SAVE OUR WALLETS
+              <br>
+              <span class="font-mono font-normal">Block Height: 894116</span>
+              <br>
+              <span class="font-mono font-normal">📍On-Chain</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="text-right">
+          <div class="text-navy-900 font-bold">
+            DESIGN BY <a href="https://bitcoin.design/" class="hover:text-coral-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer">BITCOIN DESIGN</a> COMMUNITY
+          </div>
+          <div class="text-navy-900/70 font-sans italic">
+            (<a href="https://bitcoindesignfoundation.org/" class="hover:text-coral-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer">Support Bitcoin Design</a>)
+          </div>
+        </div>
+      </div>
+    </footer>
   </main>
 </template>
 
