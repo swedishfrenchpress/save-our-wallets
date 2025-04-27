@@ -405,12 +405,12 @@
             </div>
 
             <div class="flex flex-col items-start">
-              <h3 class="text-2xl font-bold text-white mb-2 relative group-hover:text-navy-900 transition-colors duration-300 ease-in-out">
+              <h3 class="text-3xl font-bold text-white mb-2 relative group-hover:text-navy-900 transition-colors duration-300 ease-in-out">
                 Updates
                 <div class="absolute bottom-0 left-0 right-0 h-1 bg-coral-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></div>
               </h3>
             </div>
-            <p class="text-white/70 text-lg mt-6 group-hover:text-navy-900/70 transition-colors duration-300 ease-in-out">
+            <p class="text-white/70 text-lg font-medium mt-6 group-hover:text-navy-900/70 transition-colors duration-300 ease-in-out">
               Get the latest updates on this legislation and how you can help.
             </p>
           </div>
@@ -426,12 +426,12 @@
             </div>
 
             <div class="flex flex-col items-start">
-              <h3 class="text-2xl font-bold text-navy-900 mb-2 relative transition-colors duration-300 ease-in-out">
+              <h3 class="text-3xl font-bold text-navy-900 mb-2 relative transition-colors duration-300 ease-in-out">
                 Contact
                 <div class="absolute bottom-0 left-0 right-0 h-1 bg-coral-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></div>
               </h3>
             </div>
-            <p class="text-navy-900/70 text-lg mt-6 transition-colors duration-300 ease-in-out">
+            <p class="text-navy-900/70 text-lg font-medium mt-6 transition-colors duration-300 ease-in-out">
               Find and contact your congressional representatives.
             </p>
           </div>
@@ -447,12 +447,12 @@
             </div>
 
             <div class="flex flex-col items-start">
-              <h3 class="text-2xl font-bold text-navy-900 mb-2 relative transition-colors duration-300 ease-in-out">
+              <h3 class="text-3xl font-bold text-navy-900 mb-2 relative transition-colors duration-300 ease-in-out">
                 Facts
                 <div class="absolute bottom-0 left-0 right-0 h-1 bg-coral-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></div>
               </h3>
             </div>
-            <p class="text-navy-900/70 text-lg mt-6 transition-colors duration-300 ease-in-out">
+            <p class="text-navy-900/70 text-lg font-medium mt-6 transition-colors duration-300 ease-in-out">
               Download our fact sheet about the Blockchain Regulatory Certainty Act.
             </p>
           </div>
