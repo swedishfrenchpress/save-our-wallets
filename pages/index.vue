@@ -464,7 +464,7 @@
     <footer class="py-8 px-4 bg-white border-t border-navy-900/10">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
         <!-- Left Side -->
-        <div class="mb-6 md:mb-0">
+        <div class="mb-6 md:mb-0 flex-1">
           <div class="font-bold text-navy-900 flex items-center gap-4">
             <img src="@/assets/images/sow-logo.svg" alt="Save Our Wallets" class="w-[75px] h-[75px]">
             <div>
@@ -478,8 +478,13 @@
         </div>
 
         <!-- Right Side -->
-        <div class="text-right flex items-center gap-4">
-          <div>
+        <div class="w-full md:w-auto flex flex-row items-center gap-4 md:justify-end md:flex-row-reverse flex-shrink-0">
+          <a href="https://bitcoin.design/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity duration-300 flex-shrink-0">
+            <div class="w-[75px] h-[75px] flex items-center justify-center">
+              <img src="@/assets/images/bdc-seal.svg" alt="Bitcoin Design Community" class="w-12 h-12">
+            </div>
+          </a>
+          <div class="flex-1 text-left md:text-right">
             <div class="text-navy-900 font-bold">
               DESIGNED BY <a href="https://bitcoin.design/" class="hover:text-coral-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer">BITCOIN DESIGN COMMUNITY</a>
             </div>
@@ -487,9 +492,6 @@
               (<a href="https://bitcoindesignfoundation.org/" class="hover:text-coral-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer">Support Bitcoin Design</a>)
             </div>
           </div>
-          <a href="https://bitcoin.design/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition-opacity duration-300">
-            <img src="@/assets/images/bdc-seal.svg" alt="Bitcoin Design Community" class="w-12 h-12">
-          </a>
         </div>
       </div>
     </footer>
