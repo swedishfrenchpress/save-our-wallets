@@ -102,7 +102,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative bg-navy-900 pb-16 md:pb-0 md:h-screen">
+    <div class="relative bg-navy-900 pb-16 md:pb-0 pt-[25vh] md:pt-0 md:h-screen">
       <div class="absolute inset-0 bg-[url('@/assets/images/save-our-wallets.png')] bg-cover bg-center">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
       </div>
