@@ -26,7 +26,7 @@
           </a>
           <a 
             href="#take-action" 
-            class="bg-coral-500 text-white px-8 py-3 rounded-lg font-bold text-lg uppercase tracking-wider hover:bg-coral-400 hover:transform hover:-translate-y-0.5 transition-all duration-300 shadow-md hover:shadow-lg"
+            class="bg-coral-500 text-white px-8 py-3 font-bold text-lg uppercase tracking-wider hover:bg-coral-400 hover:transform hover:-translate-y-0.5 transition-all duration-300 shadow-md hover:shadow-lg"
           >
             Take Action
           </a>
@@ -121,7 +121,7 @@
 
           <!-- Zip Code Section -->
           <div class="w-full max-w-2xl mx-auto mt-8 md:mt-16">
-            <div class="bg-navy-800/30 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg">
+            <div class="bg-navy-800/30 backdrop-blur-sm p-4 md:p-8 shadow-lg">
               <h2 class="font-space-grotesk text-xl md:text-3xl text-white font-bold mb-2 md:mb-4 text-center">
                 Contact your representatives:
               </h2>
@@ -133,9 +133,9 @@
                 <input 
                   type="text" 
                   placeholder="Zip Code" 
-                  class="w-full md:w-64 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-coral-500 text-base md:text-lg"
+                  class="w-full md:w-64 px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-coral-500 text-base md:text-lg"
                 >
-                <button class="w-full md:w-auto bg-coral-500 text-white px-6 md:px-8 py-3 rounded-lg font-bold hover:bg-coral-400 transition-colors text-base md:text-lg">
+                <button class="w-full md:w-auto bg-coral-500 text-white px-6 md:px-8 py-3 font-bold hover:bg-coral-400 transition-colors text-base md:text-lg">
                   Find Representatives
                 </button>
               </div>
