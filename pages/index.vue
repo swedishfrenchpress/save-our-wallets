@@ -109,47 +109,41 @@
       </div>
 
       <!-- Hero content -->
-      <div class="relative flex flex-col items-center text-center px-4 pt-[20vh] md:pt-[45vh]">
-        <h1 class="font-space-grotesk font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase text-white">
-          Protect your right to transact freely.
-        </h1>
-        
-        <div class="mt-4 md:mt-12">
-          <h2 class="bg-coral-500 text-white px-6 py-4 font-space-grotesk font-semibold text-xl sm:text-2xl md:text-3xl uppercase max-w-3xl mx-auto">
+      <div class="relative h-full flex flex-col items-center justify-center px-4 translate-y-[20vh]">
+        <div class="flex flex-col items-center space-y-8 md:space-y-12 max-w-6xl text-center">
+          <h1 class="font-space-grotesk font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase text-white">
+            Protect your right to transact freely.
+          </h1>
+          
+          <h2 class="bg-coral-500 text-white px-6 py-4 font-space-grotesk font-semibold text-xl sm:text-2xl md:text-3xl uppercase max-w-3xl">
             Support H.R. 1747: The Blockchain Regulatory Certainty Act
           </h2>
-        </div>
-      </div>
 
-      <!-- Zip Code Section - now inside the hero, positioned in the gradient area -->
-      <div class="absolute md:bottom-64 bottom-4 left-0 right-0 px-4 md:-mt-32">
-        <div class="max-w-6xl mx-auto text-center">
-          <h2 class="font-space-grotesk text-xl md:text-6xl text-white font-bold mb-2 md:mb-4">
-            Contact your representatives:
-          </h2>
-          <p class="text-white text-base md:text-xl mb-4 md:mb-8">
-            Tell them your peer-to-peer transaction rights matter!
-          </p>
-          
-          <div class="bg-navy-800/30 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg max-w-2xl mx-auto">
-            <p class="text-white text-sm md:text-base mb-4 md:mb-6">
-              Enter your zip code to find your representatives
-            </p>
-            
-            <div class="flex flex-col md:flex-row gap-3 md:gap-4 items-center justify-center mb-3 md:mb-4">
-              <input 
-                type="text" 
-                placeholder="Zip Code" 
-                class="w-full md:w-64 px-4 py-2 md:py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-coral-500 text-base md:text-lg"
-              >
-              <button class="w-full md:w-auto bg-coral-500 text-white px-6 md:px-8 py-2 md:py-3 rounded-lg font-bold hover:bg-coral-400 transition-colors text-base md:text-lg">
-                Find Representatives
-              </button>
+          <!-- Zip Code Section -->
+          <div class="w-full max-w-2xl mx-auto mt-8 md:mt-16">
+            <div class="bg-navy-800/30 backdrop-blur-sm rounded-xl p-4 md:p-8 shadow-lg">
+              <h2 class="font-space-grotesk text-xl md:text-3xl text-white font-bold mb-2 md:mb-4 text-center">
+                Contact your representatives:
+              </h2>
+              <p class="text-white text-base md:text-lg mb-4 md:mb-6 text-center">
+                Tell them your peer-to-peer transaction rights matter!
+              </p>
+              
+              <div class="flex flex-col md:flex-row gap-3 md:gap-4 items-center justify-center">
+                <input 
+                  type="text" 
+                  placeholder="Zip Code" 
+                  class="w-full md:w-64 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-coral-500 text-base md:text-lg"
+                >
+                <button class="w-full md:w-auto bg-coral-500 text-white px-6 md:px-8 py-3 rounded-lg font-bold hover:bg-coral-400 transition-colors text-base md:text-lg">
+                  Find Representatives
+                </button>
+              </div>
+              
+              <p class="text-white/70 text-xs md:text-sm text-center mt-4">
+                Your information will only be used to look up your congressional representatives.
+              </p>
             </div>
-            
-            <p class="text-white/70 text-xs md:text-sm">
-              Your information will only be used to look up your congressional representatives.
-            </p>
           </div>
         </div>
       </div>

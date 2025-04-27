@@ -14,12 +14,14 @@ export default defineNuxtConfig({
         {
           rel: 'preconnect',
           href: 'https://fonts.gstatic.com',
-          crossorigin: true
+          crossorigin: 'anonymous'
         },
         {
           rel: 'stylesheet',
           href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap'
-        }
+        },
+        // Simple favicon configuration
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     }
   }
