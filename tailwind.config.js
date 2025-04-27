@@ -20,6 +20,9 @@ module.exports = {
           600: '#E54E35',
         },
       },
+      fontFamily: {
+        'space-grotesk': ['Space Grotesk', 'sans-serif'],
+      },
     },
   },
   plugins: [],

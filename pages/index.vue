@@ -3,40 +3,106 @@
   <main class="min-h-screen bg-navy-900 text-white">
     <!-- Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-navy-900/80 backdrop-blur-lg border-b border-white/20 px-4 shadow-lg">
-      <div class="max-w-6xl mx-auto h-24 flex items-center justify-between">
-        <!-- Logo/Brand -->
+      <div class="max-w-6xl mx-auto h-20 md:h-32 flex items-center justify-between">
         <div class="font-bold text-white text-2xl tracking-tight">
-          <img src="@/assets/images/sow-logo.svg" alt="Save Our Wallets" class="w-[112px] h-[112px]">
+          <img src="@/assets/images/sow-logo.svg" alt="Save Our Wallets" class="w-[75px] h-[75px] md:w-[112px] md:h-[112px]">
         </div>
 
-        <!-- Navigation Links -->
-        <div class="flex items-center space-x-12">
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-12">
           <a 
             href="#why-matters" 
-            class="text-white font-bold text-2xl uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
+            class="text-white font-bold text-lg uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
           >
             Why
             <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-coral-500 transition-all duration-300 group-hover:w-full"></div>
           </a>
           <a 
             href="#what-happening" 
-            class="text-white font-bold text-2xl uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
+            class="text-white font-bold text-lg uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
           >
             What
             <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-coral-500 transition-all duration-300 group-hover:w-full"></div>
           </a>
           <a 
             href="#take-action" 
-            class="bg-coral-500 text-white px-8 py-3 rounded-lg font-bold text-2xl uppercase tracking-wider hover:bg-coral-400 hover:transform hover:-translate-y-0.5 transition-all duration-300  hover:shadow-lg"
+            class="bg-coral-500 text-white px-8 py-3 rounded-lg font-bold text-lg uppercase tracking-wider hover:bg-coral-400 hover:transform hover:-translate-y-0.5 transition-all duration-300 shadow-md hover:shadow-lg"
           >
             Take Action
           </a>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button 
+          @click="isMenuOpen = !isMenuOpen" 
+          class="md:hidden p-2 text-white"
+        >
+          <svg 
+            v-if="!isMenuOpen"
+            class="w-8 h-8" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg 
+            v-else
+            class="w-8 h-8" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
       </div>
+
+      <!-- Mobile Menu with snappier transitions -->
+      <transition
+        enter-active-class="transition-all duration-200 ease-[cubic-bezier(0.25,0.1,0.25,1.0)]"
+        enter-from-class="opacity-0 transform -translate-y-4"
+        enter-to-class="opacity-100 transform translate-y-0"
+        leave-active-class="transition-all duration-150 ease-in"
+        leave-from-class="opacity-100 transform translate-y-0"
+        leave-to-class="opacity-0 transform -translate-y-4"
+      >
+        <div 
+          v-if="isMenuOpen" 
+          class="md:hidden fixed top-[5rem] left-0 right-0 bg-navy-900/95 backdrop-blur-lg border-b border-white/20 shadow-lg"
+        >
+          <div 
+            class="flex flex-col space-y-6 p-8"
+            :class="isMenuOpen && 'animate-menuItems'"
+          >
+            <a 
+              href="#why-matters" 
+              class="text-white font-bold text-xl uppercase tracking-wider hover:text-coral-500 transition-all duration-150"
+              @click="isMenuOpen = false"
+            >
+              Why
+            </a>
+            <a 
+              href="#what-happening" 
+              class="text-white font-bold text-xl uppercase tracking-wider hover:text-coral-500 transition-all duration-150"
+              @click="isMenuOpen = false"
+            >
+              What
+            </a>
+            <a 
+              href="#take-action" 
+              class="bg-coral-500 text-white px-6 py-3 rounded-lg font-bold text-xl uppercase tracking-wider hover:bg-coral-400 transition-all duration-150 text-center"
+              @click="isMenuOpen = false"
+            >
+              Take Action
+            </a>
+          </div>
+        </div>
+      </transition>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-[80vh] bg-navy-900">
+    <section class="relative h-screen">
       <!-- Background Image with More Aggressive Gradient -->
       <div class="absolute inset-0">
         <img 
@@ -52,7 +118,7 @@
         <div class="max-w-6xl mx-auto text-center" style="padding-top: 45vh">
           <!-- Main Title -->
           <div class="mb-8">
-            <h1 class="text-6xl md:text-8xl font-bold text-white">
+            <h1 class="font-space-grotesk font-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-transform: uppercase">
               Protect your right to transact freely.
             </h1>
           </div>
@@ -60,7 +126,7 @@
           <!-- Subtitle - Keeping Original Style -->
           <div class="flex justify-center mb-32">
             <div class="bg-coral-500 inline-block px-6 py-3">
-              <h2 class="text-2xl font-bold text-navy-900">
+              <h2 class="font-space-grotesk font-semibold text-2xl text-transform: uppercase">
                 Support H.R. 1747: The Blockchain Regulatory Certainty Act
               </h2>
             </div>
@@ -104,7 +170,7 @@
     <section id="why-matters" class="py-20 bg-white px-4">
       <div class="max-w-6xl mx-auto">
         <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
-          <h2 class="text-2xl font-bold text-coral-500">
+          <h2 class="font-space-grotesk font-bold text-3xl uppercase">
             WHY H.R. 1747 MATTERS
           </h2>
         </div>
@@ -176,7 +242,9 @@
     <section id="what-happening" class="py-20 bg-navy-900 px-4">
       <div class="max-w-6xl mx-auto">
         <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
-          <h2 class="text-2xl font-bold text-navy-900">WHAT IS HAPPENING</h2>
+          <h2 class="font-space-grotesk font-bold text-3xl uppercase">
+            WHAT IS HAPPENING
+          </h2>
         </div>
 
         <div class="space-y-8">
@@ -269,7 +337,9 @@
     <section class="py-20 bg-navy-900 px-4">
       <div class="max-w-6xl mx-auto">
         <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
-          <h2 class="text-2xl font-bold text-navy-900">WHAT THE BILL DOES</h2>
+          <h2 class="font-space-grotesk font-bold text-3xl uppercase">
+            WHAT THE BILL DOES
+          </h2>
         </div>
 
         <!-- Intro text - full width to match boxes -->
@@ -333,7 +403,9 @@
         <!-- Header -->
         <div class="mb-12">
           <div class="bg-navy-900 inline-block px-6 py-3 mb-8">
-            <h2 class="text-2xl font-bold text-coral-500">TAKE ACTION NOW</h2>
+            <h2 class="font-space-grotesk font-bold text-3xl uppercase">
+              TAKE ACTION NOW
+            </h2>
           </div>
           <p class="text-xl md:text-2xl text-navy-900/80 leading-relaxed">
             Your voice matters! Tell your representatives why clear blockchain regulation is important for American innovation.
@@ -435,9 +507,34 @@
 </template>
 
 <script setup>
-// No script needed for this layout
+const isMenuOpen = ref(false)
+
+// Optional: Add scroll lock when menu is open
+watch(isMenuOpen, (newValue) => {
+  if (newValue) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
+})
 </script>
 
 <style>
 /* Add custom colors to your tailwind.config.js instead of here */
+
+/* Add these keyframes and animation classes to your CSS */
+@keyframes menuItems {
+  0% {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-menuItems {
+  animation: menuItems 0.15s ease-out 0.05s forwards;
+}
 </style>
