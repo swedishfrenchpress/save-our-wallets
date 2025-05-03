@@ -103,7 +103,12 @@
 
     <!-- Hero Section -->
     <div class="relative bg-navy-900 pb-16 md:pb-0 pt-[25vh] md:pt-0 md:h-screen scroll-reveal">
-      <div class="absolute inset-0 bg-[url('@/assets/images/hero-2.jpg')] bg-cover bg-center">
+      <!-- Desktop Hero Image -->
+      <div class="absolute inset-0 bg-[url('@/assets/images/hero-2.jpg')] bg-cover bg-center hidden md:block">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
+      </div>
+      <!-- Mobile Hero Image -->
+      <div class="absolute inset-0 bg-[url('@/assets/images/sow-mobile.jpg')] bg-cover bg-center block md:hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
       </div>
       <div class="relative flex flex-col items-center justify-center md:justify-end px-4 h-full">
