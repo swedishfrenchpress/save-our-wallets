@@ -108,7 +108,7 @@
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
       </div>
       <!-- Mobile Hero Image -->
-      <div class="absolute inset-0 bg-[url('@/assets/images/sow-mobile.jpg')] bg-cover bg-center block md:hidden">
+      <div class="absolute inset-0 bg-[url('@/assets/images/sow-mobile-2.jpg')] bg-contain bg-tile block md:hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
       </div>
       <div class="relative flex flex-col items-center justify-center md:justify-end px-4 h-full">
