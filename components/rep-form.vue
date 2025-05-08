@@ -9,7 +9,7 @@
     </p>
     
     <!-- Primary Action: Zip Code -->
-    <form @submit.prevent="findRepresentatives" class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-center justify-center mb-4 w-full">
+    <form @submit.prevent="submitForm" class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-center justify-center mb-4 w-full">
       <input 
         v-model="zipCode"
         type="text" 
@@ -59,6 +59,7 @@
 </template>
 
 <script setup>
+import repDummyData from '@/data/rep-dummy.json'
 import { computed } from 'vue'
 
 const zipCode = ref('')
@@ -68,6 +69,14 @@ const error = ref('')
 const isValidZip = computed(() => {
   return /^\d{5}$/.test(zipCode.value)
 })
+
+async function submitForm() {
+  if(zipCode.value == '11111') {
+    useDummyData()
+  } else {
+    await findRepresentatives()
+  }
+}
 
 async function findRepresentatives() {
   if (!isValidZip.value) {
@@ -91,6 +100,11 @@ async function findRepresentatives() {
     error.value = 'An error occurred while fetching representatives. Please try again.'
     representatives.value = []
   }
+}
+
+const useDummyData = () => {
+  representatives.value = repDummyData.representatives
+  error.value = ''
 }
 </script>
 

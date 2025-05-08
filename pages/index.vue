@@ -102,7 +102,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative bg-navy-900 pb-16 md:pb-0 pt-[25vh] md:pt-0 md:h-screen scroll-reveal">
+    <div class="relative bg-navy-900 pb-16 md:pb-0 pt-[25vh] md:pt-0 scroll-reveal">
       <!-- Desktop Hero Image -->
       <div class="absolute inset-0 bg-[url('@/assets/images/hero-2.jpg')] bg-cover bg-center hidden md:block">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
@@ -111,7 +111,7 @@
       <div class="absolute inset-0 bg-[url('@/assets/images/sow-mobile-2.jpg')] bg-contain bg-tile block md:hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
       </div>
-      <div class="relative flex flex-col items-center justify-center md:justify-end px-4 h-full">
+      <div class="relative flex flex-col items-center justify-center md:justify-end py-10 px-4 md:pt-[400px]">
         <div class="max-w-6xl mx-auto w-full">
           <div class="flex flex-col items-center space-y-8 md:space-y-12 text-center">
             <h1 class="font-space-grotesk font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl uppercase text-white">
