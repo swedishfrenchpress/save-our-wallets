@@ -32,7 +32,7 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'Save Our Wallets – Protect Your Right to Transact Freely' },
         { property: 'og:description', content: 'Support H.R. 1747: The Blockchain Regulatory Certainty Act. Protect your right to transact freely and keep innovation in America.' },
         { property: 'og:image', content: '/og_image.png' },
-        { property: 'og:url', content: 'https://yourdomain.com/' },
+        { property: 'og:url', content: 'https://saveourwallets.org/' },
         { property: 'og:type', content: 'website' },
 
         // Twitter Card
