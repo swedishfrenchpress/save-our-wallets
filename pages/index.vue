@@ -458,9 +458,9 @@
             <div>
               SAVE OUR WALLETS
               <br>
-              <span class="font-mono font-normal">Block Height: 894116</span>
+               <span class="font-mono font-normal">📍On-Chain</span>
               <br>
-              <span class="font-mono font-normal">📍On-Chain</span>
+              <span class="font-mono font-normal">2025</span>
             </div>
           </div>
         </div>
