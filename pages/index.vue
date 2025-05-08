@@ -488,6 +488,25 @@
 
 <script setup>
 const isMenuOpen = ref(false)
+
+// Simple scroll reveal functionality
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed')
+      }
+    })
+  }, {
+    threshold: 0.1,
+    rootMargin: '-50px'
+  })
+
+  // Observe all elements with scroll-reveal class
+  document.querySelectorAll('.scroll-reveal').forEach(el => {
+    observer.observe(el)
+  })
+})
 </script>
 
 <style>
@@ -509,9 +528,16 @@ const isMenuOpen = ref(false)
   animation: menuItems 0.15s ease-out 0.05s forwards;
 }
 
-/* Add initial state for scroll reveal elements */
+/* Scroll reveal animations */
 .scroll-reveal {
-  will-change: transform, opacity;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Add font family */
