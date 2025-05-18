@@ -25,50 +25,82 @@
       </button>
     </form>
 
-    <!-- Representatives Results -->
-    <div v-if="error" class="text-coral-500 mb-4 fade-in">
-      {{ error }}
-    </div>
+    <!-- Representatives Results Container - Fixed Height with Smooth Transitions -->
+    <div class="rep-results-container">
+      <!-- Error Message -->
+      <div v-if="error" class="text-coral-500 mb-4 fade-in">
+        {{ error }}
+      </div>
 
-    <transition-group 
-      name="rep-list" 
-      tag="div" 
-      class="space-y-6 w-full"
-      @before-enter="beforeEnter"
-      @enter="enter"
-    >
-      <div v-if="representatives.length > 0" key="container" class="space-y-6 w-full">
-        <div 
-          v-for="(rep, index) in representatives" 
-          :key="rep.id" 
-          class="bg-white/10 p-6 rounded-lg rep-item"
-          :style="{ '--rep-index': index }"
-        >
+      <!-- Loading Placeholder -->
+      <div v-if="loading" class="space-y-6 w-full">
+        <div v-for="i in 3" :key="`skeleton-${i}`" class="bg-white/5 p-6 rounded-lg animate-pulse">
           <div class="flex flex-col md:flex-row gap-6">
-            <img
-              :src="rep.photoURL"
-              :alt="rep.name"
-              class="w-32 h-32 object-cover rounded-lg"
-            >
+            <div class="w-32 h-32 bg-white/10 rounded-lg"></div>
             <div class="flex-1">
-              <h3 class="text-xl font-bold mb-2">{{ rep.name }}</h3>
-              <p class="text-white/70 mb-2">{{ rep.party }} - {{ rep.area }}</p>
-              <p class="text-white/70 mb-4">{{ rep.reason }}</p>
+              <div class="h-6 bg-white/10 rounded w-1/3 mb-2"></div>
+              <div class="h-4 bg-white/10 rounded w-1/2 mb-2"></div>
+              <div class="h-4 bg-white/10 rounded w-3/4 mb-4"></div>
               <div class="space-y-2">
-                <p class="font-bold text-coral-500">Main Office:</p>
-                <p class="text-white">{{ rep.phone }}</p>
-                <div v-if="rep.field_offices && rep.field_offices.length > 0">
-                  <p class="font-bold text-coral-500 mt-4 mb-2">Local Offices:</p>
-                  <div v-for="(office, officeIndex) in rep.field_offices" :key="officeIndex" class="text-white">
-                    {{ office.city }}: {{ office.phone }}
+                <div class="h-4 bg-white/10 rounded w-1/4 mb-2"></div>
+                <div class="h-4 bg-white/10 rounded w-1/3 mb-4"></div>
+                <div class="h-4 bg-white/10 rounded w-1/2 mt-4 mb-2"></div>
+                <div class="h-4 bg-white/10 rounded w-3/5"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <transition-group 
+        name="rep-list" 
+        tag="div" 
+        class="space-y-6 w-full"
+        @before-enter="beforeEnter"
+        @enter="enter"
+      >
+        <div v-if="representatives.length > 0 && !loading" key="container" class="space-y-6 w-full">
+          <div 
+            v-for="(rep, index) in representatives" 
+            :key="rep.id" 
+            class="bg-white/10 p-6 rounded-lg rep-item"
+            :style="{ '--rep-index': index }"
+          >
+            <div class="flex flex-col md:flex-row gap-6">
+              <img
+                :src="rep.photoURL"
+                :alt="rep.name"
+                class="w-32 h-32 object-cover rounded-lg"
+              >
+              <div class="flex-1">
+                <h3 class="text-xl font-bold mb-2">{{ rep.name }}</h3>
+                <p class="text-white/70 mb-2">{{ rep.party }} - {{ rep.area }}</p>
+                <p class="text-white/70 mb-4">{{ rep.reason }}</p>
+                <div class="space-y-2">
+                  <p class="font-bold text-coral-500">Main Office:</p>
+                  <p class="text-white">{{ rep.phone }}</p>
+                  <div v-if="rep.field_offices && rep.field_offices.length > 0">
+                    <p class="font-bold text-coral-500 mt-4 mb-2">Local Offices:</p>
+                    <div v-for="(office, officeIndex) in rep.field_offices" :key="officeIndex" class="text-white">
+                      {{ office.city }}: {{ office.phone }}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </transition-group>
+      
+      <!-- Empty State Placeholder (when not loading and no results) -->
+      <div 
+        v-if="!loading && representatives.length === 0 && !error && zipCodeEntered" 
+        class="text-white/70 text-center py-8 fade-in"
+      >
+        No representatives found for this zip code.
       </div>
-    </transition-group>
+    </div>
   </div>
 </template>
 
@@ -80,6 +112,7 @@ const zipCode = ref('')
 const representatives = ref([])
 const error = ref('')
 const loading = ref(false)
+const zipCodeEntered = ref(false)
 
 const isValidZip = computed(() => {
   return /^\d{5}$/.test(zipCode.value)
@@ -91,6 +124,7 @@ async function submitForm() {
   loading.value = true
   error.value = ''
   representatives.value = []
+  zipCodeEntered.value = true
   
   // Short delay to show loading state
   await new Promise(resolve => setTimeout(resolve, 600))
@@ -150,6 +184,13 @@ const enter = (el, done) => {
 </script>
 
 <style>
+.rep-results-container {
+  min-height: 100px;
+  position: relative;
+  transition: height 0.5s ease-out;
+  overflow: hidden;
+}
+
 .rep-list-enter-active,
 .rep-list-leave-active {
   transition: all 0.5s ease-out;
@@ -201,5 +242,15 @@ const enter = (el, done) => {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* Animation for loading placeholder */
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.3; }
+}
+
+.animate-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
 }
 </style>
