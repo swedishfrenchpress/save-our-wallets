@@ -129,6 +129,7 @@
             <div class="w-full max-w-2xl mx-auto mt-8 md:mt-16 relative z-10">
               <div class="bg-navy-800/30 backdrop-blur-sm p-4 md:p-8 shadow-lg">
                 <RepForm />
+                <EmailForm />
               </div>
             </div>
           </div>
