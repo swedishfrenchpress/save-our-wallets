@@ -18,43 +18,57 @@
       >
       <button
         type="submit"
-        :disabled="!isValidZip"
-        class="w-full bg-coral-500 text-white px-6 py-3 font-bold hover:bg-coral-400 transition-colors text-base md:text-lg">
-        Find Representatives
+        :disabled="!isValidZip || loading"
+        class="w-full bg-coral-500 text-white px-6 py-3 font-bold hover:bg-coral-400 transition-colors text-base md:text-lg flex items-center justify-center">
+        <span v-if="loading" class="loading-spinner mr-2"></span>
+        {{ loading ? 'Searching...' : 'Find Representatives' }}
       </button>
     </form>
 
     <!-- Representatives Results -->
-    <div v-if="error" class="text-coral-500 mb-4">
+    <div v-if="error" class="text-coral-500 mb-4 fade-in">
       {{ error }}
     </div>
 
-    <div v-if="representatives.length > 0" class="space-y-6 w-full">
-      <div v-for="rep in representatives" :key="rep.id" class="bg-white/10 p-6 rounded-lg">
-        <div class="flex flex-col md:flex-row gap-6">
-          <img
-            :src="rep.photoURL"
-            :alt="rep.name"
-            class="w-32 h-32 object-cover rounded-lg"
-          >
-          <div class="flex-1">
-            <h3 class="text-xl font-bold mb-2">{{ rep.name }}</h3>
-            <p class="text-white/70 mb-2">{{ rep.party }} - {{ rep.area }}</p>
-            <p class="text-white/70 mb-4">{{ rep.reason }}</p>
-            <div class="space-y-2">
-              <p class="font-bold text-coral-500">Main Office:</p>
-              <p class="text-white">{{ rep.phone }}</p>
-              <div v-if="rep.field_offices && rep.field_offices.length > 0">
-                <p class="font-bold text-coral-500 mt-4 mb-2">Local Offices:</p>
-                <div v-for="(office, index) in rep.field_offices" :key="index" class="text-white">
-                  {{ office.city }}: {{ office.phone }}
+    <transition-group 
+      name="rep-list" 
+      tag="div" 
+      class="space-y-6 w-full"
+      @before-enter="beforeEnter"
+      @enter="enter"
+    >
+      <div v-if="representatives.length > 0" key="container" class="space-y-6 w-full">
+        <div 
+          v-for="(rep, index) in representatives" 
+          :key="rep.id" 
+          class="bg-white/10 p-6 rounded-lg rep-item"
+          :style="{ '--rep-index': index }"
+        >
+          <div class="flex flex-col md:flex-row gap-6">
+            <img
+              :src="rep.photoURL"
+              :alt="rep.name"
+              class="w-32 h-32 object-cover rounded-lg"
+            >
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-2">{{ rep.name }}</h3>
+              <p class="text-white/70 mb-2">{{ rep.party }} - {{ rep.area }}</p>
+              <p class="text-white/70 mb-4">{{ rep.reason }}</p>
+              <div class="space-y-2">
+                <p class="font-bold text-coral-500">Main Office:</p>
+                <p class="text-white">{{ rep.phone }}</p>
+                <div v-if="rep.field_offices && rep.field_offices.length > 0">
+                  <p class="font-bold text-coral-500 mt-4 mb-2">Local Offices:</p>
+                  <div v-for="(office, officeIndex) in rep.field_offices" :key="officeIndex" class="text-white">
+                    {{ office.city }}: {{ office.phone }}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </transition-group>
   </div>
 </template>
 
@@ -65,17 +79,29 @@ import { computed } from 'vue'
 const zipCode = ref('')
 const representatives = ref([])
 const error = ref('')
+const loading = ref(false)
 
 const isValidZip = computed(() => {
   return /^\d{5}$/.test(zipCode.value)
 })
 
 async function submitForm() {
+  if (!isValidZip.value) return
+  
+  loading.value = true
+  error.value = ''
+  representatives.value = []
+  
+  // Short delay to show loading state
+  await new Promise(resolve => setTimeout(resolve, 600))
+  
   if(zipCode.value == '11111') {
     useDummyData()
   } else {
     await findRepresentatives()
   }
+  
+  loading.value = false
 }
 
 async function findRepresentatives() {
@@ -106,8 +132,74 @@ const useDummyData = () => {
   representatives.value = repDummyData.representatives
   error.value = ''
 }
+
+// Custom enter animation for staggered reveal
+const beforeEnter = (el) => {
+  el.style.opacity = 0
+}
+
+const enter = (el, done) => {
+  const delay = 150  // Base delay
+  
+  setTimeout(() => {
+    el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)'
+    el.style.opacity = 1
+    done()
+  }, delay)
+}
 </script>
 
 <style>
+.rep-list-enter-active,
+.rep-list-leave-active {
+  transition: all 0.5s ease-out;
+}
 
+.rep-list-enter-from,
+.rep-list-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.rep-item {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: rep-item-reveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: calc(var(--rep-index) * 150ms);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes rep-item-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 </style>
