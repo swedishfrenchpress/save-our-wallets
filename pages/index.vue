@@ -102,16 +102,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative bg-navy-900 pb-16 md:pb-0 pt-[25vh] md:pt-0 scroll-reveal">
-      <!-- Desktop Hero Image -->
-      <div class="absolute inset-0 bg-[url('@/assets/images/hero-2.jpg')] bg-cover bg-center hidden md:block">
+    <div class="relative bg-navy-900 pt-[25vh] md:pt-0 scroll-reveal">
+      <!-- Extended background for form overflow -->
+      <div class="absolute inset-x-0 top-0 h-[1200px] md:h-[1400px] bg-navy-900 -z-10"></div>
+      
+      <!-- Desktop Hero Image (with fixed height) -->
+      <div class="absolute inset-x-0 top-0 h-[850px] md:h-[1000px] bg-[url('@/assets/images/hero-2.jpg')] bg-cover bg-center hidden md:block">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
       </div>
-      <!-- Mobile Hero Image -->
-      <div class="absolute inset-0 bg-[url('@/assets/images/sow-mobile-2.jpg')] bg-contain bg-tile block md:hidden">
+      <!-- Mobile Hero Image (with fixed height) -->
+      <div class="absolute inset-x-0 top-0 h-[850px] bg-[url('@/assets/images/sow-mobile-2.jpg')] bg-contain bg-tile block md:hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
       </div>
-      <div class="relative flex flex-col items-center justify-center md:justify-end py-10 px-4 md:pt-[400px]">
+      <div class="relative flex flex-col items-center justify-start py-10 px-4 md:pt-[400px] min-h-[850px] md:min-h-[1000px]">
         <div class="max-w-6xl mx-auto w-full">
           <div class="flex flex-col items-center space-y-8 md:space-y-12 text-center">
             <h1 class="font-space-grotesk font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl uppercase text-white">
@@ -123,10 +126,9 @@
             </h2>
 
             <!-- Zip Code Section -->
-            <div class="w-full max-w-2xl mx-auto mt-8 md:mt-16">
+            <div class="w-full max-w-2xl mx-auto mt-8 md:mt-16 relative z-10">
               <div class="bg-navy-800/30 backdrop-blur-sm p-4 md:p-8 shadow-lg">
                 <RepForm />
-                <EmailForm />
               </div>
             </div>
           </div>
