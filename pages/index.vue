@@ -427,12 +427,12 @@
             </p>
           </div>
 
-          <!-- Facts Card - Coral -->
+          <!-- Share Card - Coral -->
           <div class="bg-coral-500 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer">
             <div class="w-20 h-20 mb-6">
               <img 
-                src="@/assets/images/facts.png" 
-                alt="Facts" 
+                src="@/assets/images/share.png" 
+                alt="Share" 
                 class="w-full h-full object-contain"
               >
             </div>
