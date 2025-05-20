@@ -105,7 +105,6 @@
 </template>
 
 <script setup>
-import repDummyData from '@/data/rep-dummy.json'
 import { computed } from 'vue'
 
 const zipCode = ref('')
@@ -129,11 +128,7 @@ async function submitForm() {
   // Short delay to show loading state
   await new Promise(resolve => setTimeout(resolve, 600))
   
-  if(zipCode.value == '11111') {
-    useDummyData()
-  } else {
-    await findRepresentatives()
-  }
+  await findRepresentatives()
   
   loading.value = false
 }
@@ -160,11 +155,6 @@ async function findRepresentatives() {
     error.value = 'An error occurred while fetching representatives. Please try again.'
     representatives.value = []
   }
-}
-
-const useDummyData = () => {
-  representatives.value = repDummyData.representatives
-  error.value = ''
 }
 
 // Custom enter animation for staggered reveal
