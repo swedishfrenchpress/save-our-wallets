@@ -125,9 +125,6 @@ async function submitForm() {
   representatives.value = []
   zipCodeEntered.value = true
   
-  // Short delay to show loading state
-  await new Promise(resolve => setTimeout(resolve, 600))
-  
   await findRepresentatives()
   
   loading.value = false
