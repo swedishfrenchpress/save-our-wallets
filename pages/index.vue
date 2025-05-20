@@ -142,7 +142,7 @@
       <div class="max-w-6xl mx-auto">
         <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
           <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
-            WHY H.R. 1747 MATTERS
+            WHY THE BLOCKCHAIN REGULATORY CERTAINTY ACT MATTERS
           </h2>
         </div>
 
@@ -152,9 +152,9 @@
           <div class="bg-navy-900/5 p-8 relative">
             <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
             <div class="text-coral-500 text-4xl md:text-6xl font-bold mb-4">01</div>
-            <h3 class="text-xl md:text-2xl font-bold text-navy-900 mb-4">Wallet Freedom</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-navy-900 mb-4">Ensures Wallet Freedom</h3>
             <p class="text-navy-900/70 text-lg md:text-2xl">
-              Ensures your favorite wallet stays available by shielding service providers who don't control user assets from overburdensome regulations they can't comply with anyway.
+              The BRCA Guarantees that your favorite wallet stays available by shielding service providers who don't control user assets from overburdensome regulations they can't comply with anyway.
             </p>
           </div>
 
@@ -162,9 +162,9 @@
           <div class="bg-navy-900/5 p-8 relative">
             <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
             <div class="text-coral-500 text-4xl md:text-6xl font-bold mb-4">02</div>
-            <h3 class="text-xl md:text-2xl font-bold text-navy-900 mb-4">Developer Protection Rights</h3>
+            <h3 class="text-xl md:text-2xl font-bold text-navy-900 mb-4">Protects Developer Rights</h3>
             <p class="text-navy-900/70 text-lg md:text-2xl">
-              Removes unnecessary licensing cost while maintaining appropriate oversight where needed.
+              The bill removes unnecessary licensing cost while maintaining appropriate oversight where needed.
             </p>
           </div>
 
@@ -174,7 +174,7 @@
             <div class="text-coral-500 text-4xl md:text-6xl font-bold mb-4">03</div>
             <h3 class="text-xl md:text-2xl font-bold text-navy-900 mb-4">Balanced Approach</h3>
             <p class="text-navy-900/70 text-lg md:text-2xl">
-              Ensures that America stays competitive while protecting consumers.
+              Keeps America competitive while protecting consumers.
             </p>
           </div>
         </div>
@@ -226,7 +226,7 @@
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
                 <p class="text-lg md:text-2xl text-white leading-relaxed">
-                  The leading market structure bills currently moving through congress could prohibit US persons from utilizing non-custodial wallets and service providers.
+                  The leading market structure bills moving through Congress could leave US persons prohibited from utilizing non-custodial wallets and service providers.
                 </p>
               </div>
             </div>
@@ -239,7 +239,7 @@
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
                 <p class="text-lg md:text-2xl text-white leading-relaxed">
-                  The long-standing view of FinCEN (the regulator for money transmission) has been that wallets and services that do not have control over user assets are not "money transmitters" (as they cannot transmit what they do not control). The Biden DOJ decided to charge developers for this anyway.
+                  The long-standing view of FinCEN (the regulator for money transmission) has been that wallets and services that do not have control over user assets are not "money transmitters" since they cannot transmit what they do not control. The Biden DOJ decided to charge developers for this anyway.
                 </p>
               </div>
             </div>
@@ -252,7 +252,7 @@
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
                 <p class="text-lg md:text-2xl text-white leading-relaxed">
-                  This has led to some wallets and services banning United States customers, and created a chilling effect which has prevented many new wallets from coming to market.
+                  This has led to some wallets and services banning United States customers creating a chilling effect that has prevented many new wallets from coming to market.
                 </p>
               </div>
             </div>
@@ -265,7 +265,7 @@
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
                 <p class="text-lg md:text-2xl text-white leading-relaxed">
-                  If we don't fix the law, this will push yet more wallets and Americans towards custodians that censor transactions they don't like and expose many more Americans to rug-pulls.
+                  If we don't fix the law, more wallets and Americans will be pushed towards custodians who censor transactions they don't like, exposing many more Americans to rug-pulls.
                 </p>
               </div>
             </div>
@@ -379,7 +379,7 @@
             </h2>
           </div>
           <p class="text-lg md:text-2xl text-navy-900/80 leading-relaxed">
-            Your voice matters! Tell your representatives why clear blockchain regulation is important for American innovation.
+            Your voice matters! Tell your representatives why clear, fair blockchain regulation is necessary to continue innovating in this increasingly important space.
           </p>
         </div>
 
@@ -402,7 +402,7 @@
               </h3>
             </div>
             <p class="text-white/70 text-lg font-medium mt-6 group-hover:text-navy-900/70 transition-colors duration-300 ease-in-out">
-              Get the latest updates on this legislation and how you can help.
+              Get the latest updates about this legislation and how you can help support it.
             </p>
           </div>
 
@@ -423,7 +423,7 @@
               </h3>
             </div>
             <p class="text-navy-900/70 text-lg font-medium mt-6 transition-colors duration-300 ease-in-out">
-              Find and contact your congressional representatives.
+              Contact your congressional representatives and tell them why you support the Blockchain Regulatory Certainty Act.
             </p>
           </div>
 
@@ -439,12 +439,12 @@
 
             <div class="flex flex-col items-start">
               <h3 class="text-3xl font-bold text-navy-900 mb-2 relative transition-colors duration-300 ease-in-out">
-                Facts
+                Share
                 <div class="absolute bottom-0 left-0 right-0 h-1 bg-coral-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></div>
               </h3>
             </div>
             <p class="text-navy-900/70 text-lg font-medium mt-6 transition-colors duration-300 ease-in-out">
-              Download our fact sheet about the Blockchain Regulatory Certainty Act.
+              Share the importance of sensible blockchain regulation with your friends and colleagues and ask them to reach out.
             </p>
           </div>
         </div>
