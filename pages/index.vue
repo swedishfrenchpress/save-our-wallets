@@ -122,7 +122,7 @@
             </h1>
             
             <h2 class="bg-coral-500 text-white px-6 py-4 font-space-grotesk font-semibold text-xl sm:text-2xl md:text-3xl uppercase w-full text-center">
-              Support H.R. 1747: The Blockchain Regulatory Certainty Act
+              Support The Blockchain Regulatory Certainty Act
             </h2>
 
             <!-- Zip Code Section -->
@@ -188,7 +188,7 @@
           <div class="flex-1">
             <blockquote class="relative pl-8 border-l-4 border-coral-500">
               <p class="text-lg md:text-2xl text-navy-900 leading-relaxed mb-8">
-                Without clear legal protections, we risk losing the very tools that make bitcoin sovereign and censorship-resistant. H.R. 1747 is critical to ensure that building or using non-custodial wallets isn't treated like a crime. If we don't act, innovation will leave the United States — and with it, our financial freedom.
+                Without clear legal protections, we risk losing the very tools that make bitcoin sovereign and censorship-resistant. The BRCA is critical to ensure that building or using non-custodial wallets isn't treated like a crime. If we don't act, innovation will leave the United States — and with it, our financial freedom.
               </p>
               <div class="flex flex-col">
                 <cite class="text-lg md:text-xl text-coral-500 font-bold not-italic">Matt Corallo</cite>
@@ -265,7 +265,7 @@
               <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
               <div class="p-8 pl-12">
                 <p class="text-lg md:text-2xl text-white leading-relaxed">
-                  If we don't fix the law, more wallets and Americans will be pushed towards custodians who censor transactions they don't like, exposing many more Americans to rug-pulls.
+                  If we don't fix the law, more wallets and Americans will be pushed towards custodians in poorly-regulated jurisdictions who censor transactions they don't like, exposing many more Americans to rug-pulls.
                 </p>
               </div>
             </div>
