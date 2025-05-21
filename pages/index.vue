@@ -488,18 +488,25 @@
     </footer>
   <div class="g-recaptcha"
       data-sitekey="6LeuOkIrAAAAAAUh5HJyIw13B2YbsjyLCccDrxlF"
-	  data-callback="recaptchaApproved"
+      data-callback="recaptchaApproved"
       data-size="invisible">
   </div>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </main>
 </template>
 
 <script setup>
 const isMenuOpen = ref(false)
 
-// Simple scroll reveal functionality
+// Load reCAPTCHA script
 onMounted(() => {
+  // Load reCAPTCHA script
+  const script = document.createElement('script')
+  script.src = 'https://www.google.com/recaptcha/api.js'
+  script.async = true
+  script.defer = true
+  document.head.appendChild(script)
+
+  // Simple scroll reveal functionality
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -515,6 +522,14 @@ onMounted(() => {
   document.querySelectorAll('.scroll-reveal').forEach(el => {
     observer.observe(el)
   })
+})
+
+// Clean up script when component is unmounted
+onUnmounted(() => {
+  const script = document.querySelector('script[src="https://www.google.com/recaptcha/api.js"]')
+  if (script) {
+    script.remove()
+  }
 })
 </script>
 
