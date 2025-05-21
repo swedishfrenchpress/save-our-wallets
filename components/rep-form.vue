@@ -71,7 +71,7 @@
               <img
                 :src="rep.photoURL"
                 :alt="rep.name"
-                class="w-32 h-32 object-cover rounded-lg"
+                class="w-32 h-32 object-cover rounded-lg mx-auto md:mx-0 mb-4 md:mb-0"
               >
               <div class="flex-1">
                 <h3 class="text-xl font-bold mb-2">{{ rep.name }}</h3>
