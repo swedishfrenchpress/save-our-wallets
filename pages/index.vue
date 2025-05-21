@@ -362,8 +362,18 @@
         <!-- Conclusion text - full width to match boxes -->
         <div>
           <p class="text-lg md:text-2xl text-white leading-relaxed">
-            This clarity helps encourage innovation while ensuring appropriate oversight of actual financial services.
+            This clarity helps encourage innovation while ensuring appropriate oversight of actual financial services. This bill is short and direct, you can read the full bill text for yourself.
           </p>
+          <!-- Secondary CTA: Read The Bill -->
+          <a
+            href="https://emmer.house.gov/_cache/files/3/9/391fb470-d4a5-4eef-aedd-df1626dfb21a/BDDB1A4E71AE7CE1CBFABC4AB43BFCB2B087D8654CEACBCF0BC3EF5792D67A7A.brca-119.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="animated-link underline text-coral-500 hover:text-coral-400 font-semibold mt-4 inline-block text-lg md:text-2xl transition-colors duration-200"
+          >
+            Read The Bill
+            <span aria-hidden="true" class="ml-1 arrow-animate">↗</span>
+          </a>
         </div>
       </div>
     </section>
@@ -379,7 +389,7 @@
             </h2>
           </div>
           <p class="text-lg md:text-2xl text-navy-900/80 leading-relaxed">
-            Your voice matters! Tell your representatives why clear, fair blockchain regulation is necessary to continue innovating in this increasingly important space.
+            Your voice matters! Tell your representatives why clear, fair blockchain regulation is necessary to continue innovating in this increasingly important space. 
           </p>
         </div>
 
@@ -567,5 +577,14 @@ onUnmounted(() => {
 /* Add font family */
 .font-sedgwick {
   font-family: 'Sedgwick Ave', cursive;
+}
+
+.animated-link .arrow-animate {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+.animated-link:hover .arrow-animate {
+  transform: translateX(6px) scale(1.1);
 }
 </style>
