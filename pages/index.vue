@@ -486,6 +486,12 @@
         </div>
       </div>
     </footer>
+  <div class="g-recaptcha"
+      data-sitekey="6LeuOkIrAAAAAAUh5HJyIw13B2YbsjyLCccDrxlF"
+	  data-callback="recaptchaApproved"
+      data-size="invisible">
+  </div>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </main>
 </template>
 
