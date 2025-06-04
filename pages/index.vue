@@ -280,34 +280,7 @@
     </section>
 
     <!-- Quote Section -->
-    <section class="py-20 bg-navy-900 px-4 scroll-reveal">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row items-start gap-12">
-          <div class="flex-1">
-            <blockquote class="relative pl-8 border-l-4 border-coral-500">
-              <p class="text-lg md:text-2xl text-white leading-relaxed mb-8">
-                For too long, federal regulators and lawmakers have jammed the blockchain ecosystem into statutory definitions that just do not make sense. It should be simple: 
-                <span class="text-coral-500 font-semibold">If you don't custody consumer funds, you aren't a money transmitter.</span> 
-                My bill provides that necessary confirmation for the blockchain community.
-              </p>
-              <div class="flex flex-col">
-                <cite class="text-lg md:text-xl text-coral-500 font-bold not-italic">Tom Emmer</cite>
-                <span class="text-white/70">Congressman (House Majority Whip)</span>
-              </div>
-            </blockquote>
-          </div>
-
-          <div class="w-64 h-64 relative flex-shrink-0">
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/8/81/Tom_Emmer_Congressional_Photo_2.jpg"
-              alt="Congressman Tom Emmer"
-              class="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-            <div class="absolute inset-0 bg-gradient-to-r from-navy-900 to-transparent rounded-lg"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <QuoteCarousel />
 
     <!-- What The Bill Does Section -->
     <section class="py-20 bg-navy-900 px-4 scroll-reveal">
@@ -369,16 +342,29 @@
           <p class="text-lg md:text-2xl text-white leading-relaxed">
             This clarity helps encourage innovation while ensuring appropriate oversight of actual financial services. This bill is short and direct, you can read the full bill text for yourself.
           </p>
-          <!-- Secondary CTA: Read The Bill -->
-          <a
-            href="https://emmer.house.gov/_cache/files/3/9/391fb470-d4a5-4eef-aedd-df1626dfb21a/BDDB1A4E71AE7CE1CBFABC4AB43BFCB2B087D8654CEACBCF0BC3EF5792D67A7A.brca-119.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="animated-link underline text-coral-500 hover:text-coral-400 font-semibold mt-4 inline-block text-lg md:text-2xl transition-colors duration-200"
-          >
-            Read The Bill
-            <span aria-hidden="true" class="ml-1 arrow-animate">↗</span>
-          </a>
+          <!-- Bill Viewing Options -->
+          <div class="mt-8 space-y-4">
+            <!-- Embedded Bill Viewer -->
+            <div class="bg-navy-800/50 rounded-lg overflow-hidden">
+              <div class="p-4 border-b border-white/20 flex justify-between items-center">
+                <h3 class="text-white font-bold">H.R. 1747, Blockchain Regulatory Certainty Act</h3>
+                <a
+                  href="https://emmer.house.gov/_cache/files/3/9/391fb470-d4a5-4eef-aedd-df1626dfb21a/BDDB1A4E71AE7CE1CBFABC4AB43BFCB2B087D8654CEACBCF0BC3EF5792D67A7A.brca-119.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-coral-500 hover:text-coral-400 text-sm flex items-center gap-1"
+                >
+                  Open in new tab
+                  <span class="arrow-animate">↗</span>
+                </a>
+              </div>
+              <iframe
+                src="/brca-119.pdf"
+                class="w-full h-[600px] bg-white"
+                title="Blockchain Regulatory Certainty Act"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -510,6 +496,8 @@
 </template>
 
 <script setup>
+import QuoteCarousel from '@/components/QuoteCarousel.vue'
+
 const isMenuOpen = ref(false)
 
 // Load reCAPTCHA script
