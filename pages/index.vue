@@ -125,10 +125,15 @@
               Support The Blockchain Regulatory Certainty Act
             </h2>
 
-            <!-- Zip Code Section -->
-            <div class="w-full max-w-2xl mx-auto mt-8 md:mt-16 relative z-10">
-              <div class="bg-navy-800/30 backdrop-blur-sm p-4 md:p-8 shadow-lg">
+            <!-- Forms Section -->
+            <div class="w-full max-w-2xl mx-auto mt-8 md:mt-16 relative z-10 space-y-6">
+              <!-- Representative Form Section -->
+              <div class="bg-navy-800/30 backdrop-blur-sm p-4 md:p-8 shadow-lg rounded-lg">
                 <RepForm />
+              </div>
+              
+              <!-- Email Form Section -->
+              <div class="bg-navy-800/30 backdrop-blur-sm p-4 md:p-8 shadow-lg rounded-lg">
                 <EmailForm />
               </div>
             </div>
