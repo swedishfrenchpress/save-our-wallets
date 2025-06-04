@@ -107,7 +107,7 @@
       <div class="absolute inset-x-0 top-0 h-[1200px] md:h-[1400px] bg-navy-900 -z-10"></div>
       
       <!-- Desktop Hero Image (with fixed height) -->
-      <div class="absolute inset-x-0 top-0 h-[850px] md:h-[1000px] bg-[url('@/assets/images/hero-2.jpg')] bg-cover bg-center hidden md:block">
+      <div class="absolute inset-x-0 top-0 h-[850px] md:h-[1000px] bg-[url('@/assets/images/hero-3.jpg')] bg-cover bg-center hidden md:block">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
       </div>
       <!-- Mobile Hero Image (with fixed height) -->
@@ -186,33 +186,8 @@
       </div>
     </section>
 
-    <!-- Matt Corallo Quote Section -->
-    <section class="py-20 bg-white px-4 scroll-reveal">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row items-start gap-12">
-          <div class="flex-1">
-            <blockquote class="relative pl-8 border-l-4 border-coral-500">
-              <p class="text-lg md:text-2xl text-navy-900 leading-relaxed mb-8">
-                Without clear legal protections, we risk losing the very tools that make bitcoin sovereign and censorship-resistant. The BRCA is critical to ensure that building or using non-custodial wallets isn't treated like a crime. If we don't act, innovation will leave the United States — and with it, our financial freedom.
-              </p>
-              <div class="flex flex-col">
-                <cite class="text-lg md:text-xl text-coral-500 font-bold not-italic">Matt Corallo</cite>
-                <span class="text-navy-900/70">Bitcoin Core Developer</span>
-              </div>
-            </blockquote>
-          </div>
-
-          <div class="w-64 h-64 relative flex-shrink-0">
-            <img 
-              src="@/assets/images/mc.jpg"
-              alt="Matt Corallo" 
-              class="w-full h-full object-cover rounded-lg"
-            />
-            <div class="absolute inset-0 bg-gradient-to-r from-white/50 to-transparent rounded-lg"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Developer Quotes Section -->
+    <DeveloperCarousel />
 
     <!-- What Is Happening Section -->
     <section id="what-happening" class="py-20 bg-navy-900 px-4 scroll-reveal">
@@ -497,6 +472,7 @@
 
 <script setup>
 import QuoteCarousel from '@/components/QuoteCarousel.vue'
+import DeveloperCarousel from '@/components/DeveloperCarousel.vue'
 
 const isMenuOpen = ref(false)
 
