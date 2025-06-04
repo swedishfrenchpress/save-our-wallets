@@ -2,31 +2,40 @@
 <template>
   <main class="min-h-screen bg-navy-900 text-white">
     <!-- Navigation Bar -->
-    <nav class="sticky top-0 z-50 bg-navy-900/80 backdrop-blur-lg border-b border-white/20 px-4 shadow-lg">
-      <div class="max-w-6xl mx-auto h-20 md:h-32 flex items-center justify-between">
+    <nav :class="[
+      'sticky top-0 z-50 bg-navy-900/80 backdrop-blur-lg border-b border-white/20 px-4 shadow-lg transition-all duration-300',
+      isScrolled ? 'h-16 md:h-20' : 'h-20 md:h-32'
+    ]">
+      <div class="max-w-6xl mx-auto h-full flex items-center justify-between">
         <div class="font-bold text-white text-2xl tracking-tight">
-          <img src="@/assets/images/sow-logo.svg" alt="Save Our Wallets" class="w-[75px] h-[75px] md:w-[112px] md:h-[112px]">
+          <img src="@/assets/images/sow-logo.svg" alt="Save Our Wallets" :class="[
+            'transition-all duration-300',
+            isScrolled ? 'w-[50px] h-[50px] md:w-[75px] md:h-[75px]' : 'w-[75px] h-[75px] md:w-[112px] md:h-[112px]'
+          ]">
         </div>
 
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-12">
           <a 
             href="#why-matters" 
-            class="text-white font-bold text-lg uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
+            class="text-white font-bold uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
+            :class="isScrolled ? 'text-base' : 'text-lg'"
           >
             Why
             <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-coral-500 transition-all duration-300 group-hover:w-full"></div>
           </a>
           <a 
             href="#what-happening" 
-            class="text-white font-bold text-lg uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
+            class="text-white font-bold uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
+            :class="isScrolled ? 'text-base' : 'text-lg'"
           >
             What
             <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-coral-500 transition-all duration-300 group-hover:w-full"></div>
           </a>
           <a 
             href="#take-action" 
-            class="bg-coral-500 text-white px-8 py-3 font-bold text-lg uppercase tracking-wider hover:bg-coral-400 hover:transform hover:-translate-y-0.5 transition-all duration-300 shadow-md hover:shadow-lg"
+            class="bg-coral-500 text-white font-bold uppercase tracking-wider hover:bg-coral-400 hover:transform hover:-translate-y-0.5 transition-all duration-300 shadow-md hover:shadow-lg"
+            :class="isScrolled ? 'px-6 py-2 text-base' : 'px-8 py-3 text-lg'"
           >
             Take Action
           </a>
@@ -475,9 +484,20 @@ import QuoteCarousel from '@/components/QuoteCarousel.vue'
 import DeveloperCarousel from '@/components/DeveloperCarousel.vue'
 
 const isMenuOpen = ref(false)
+const isScrolled = ref(false)
 
-// Load reCAPTCHA script
+// Handle scroll events
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50
+}
+
 onMounted(() => {
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScroll)
+  
+  // Initial check
+  handleScroll()
+
   // Load reCAPTCHA script
   const script = document.createElement('script')
   script.src = 'https://www.google.com/recaptcha/api.js'
@@ -503,8 +523,9 @@ onMounted(() => {
   })
 })
 
-// Clean up script when component is unmounted
+// Clean up event listeners when component is unmounted
 onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
   const script = document.querySelector('script[src="https://www.google.com/recaptcha/api.js"]')
   if (script) {
     script.remove()
