@@ -4,7 +4,7 @@
     <h2 class="font-space-grotesk text-xl md:text-3xl text-white font-bold mb-2 md:mb-4 text-center">
       Contact your representatives:
     </h2>
-    <p class="text-white text-base md:text-lg mb-4 md:mb-6 text-left">
+    <p class="text-white text-base md:text-lg mb-4 md:mb-6 text-center">
       Tell them your peer-to-peer transaction rights matter!
     </p>
     

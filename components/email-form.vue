@@ -2,7 +2,7 @@
 <template>
   <div class="email-form">
     <!-- Secondary Action: Email Signup -->
-    <h3 class="text-white text-base md:text-lg mb-4 text-left">
+    <h3 class="text-white text-base md:text-lg mb-4 text-center">
       Sign up for the mailing list to stay informed on the campaign.
     </h3>
     <form @submit.prevent="submitForm" v-if="!signed_up" class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-center justify-center w-full">

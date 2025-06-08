@@ -2,31 +2,40 @@
 <template>
   <main class="min-h-screen bg-navy-900 text-white">
     <!-- Navigation Bar -->
-    <nav class="sticky top-0 z-50 bg-navy-900/80 backdrop-blur-lg border-b border-white/20 px-4 shadow-lg">
-      <div class="max-w-6xl mx-auto h-20 md:h-32 flex items-center justify-between">
+    <nav :class="[
+      'sticky top-0 z-50 bg-navy-900/80 backdrop-blur-lg border-b border-white/20 px-4 shadow-lg transition-all duration-300',
+      isScrolled ? 'h-16 md:h-20' : 'h-20 md:h-32'
+    ]">
+      <div class="max-w-6xl mx-auto h-full flex items-center justify-between">
         <div class="font-bold text-white text-2xl tracking-tight">
-          <img src="@/assets/images/sow-logo.svg" alt="Save Our Wallets" class="w-[75px] h-[75px] md:w-[112px] md:h-[112px]">
+          <img src="@/assets/images/sow-logo.svg" alt="Save Our Wallets" :class="[
+            'transition-all duration-300',
+            isScrolled ? 'w-[50px] h-[50px] md:w-[75px] md:h-[75px]' : 'w-[75px] h-[75px] md:w-[112px] md:h-[112px]'
+          ]">
         </div>
 
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-12">
           <a 
             href="#why-matters" 
-            class="text-white font-bold text-lg uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
+            class="text-white font-bold uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
+            :class="isScrolled ? 'text-base' : 'text-lg'"
           >
             Why
             <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-coral-500 transition-all duration-300 group-hover:w-full"></div>
           </a>
           <a 
             href="#what-happening" 
-            class="text-white font-bold text-lg uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
+            class="text-white font-bold uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
+            :class="isScrolled ? 'text-base' : 'text-lg'"
           >
             What
             <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-coral-500 transition-all duration-300 group-hover:w-full"></div>
           </a>
           <a 
             href="#take-action" 
-            class="bg-coral-500 text-white px-8 py-3 font-bold text-lg uppercase tracking-wider hover:bg-coral-400 hover:transform hover:-translate-y-0.5 transition-all duration-300 shadow-md hover:shadow-lg"
+            class="bg-coral-500 text-white font-bold uppercase tracking-wider hover:bg-coral-400 hover:transform hover:-translate-y-0.5 transition-all duration-300 shadow-md hover:shadow-lg"
+            :class="isScrolled ? 'px-6 py-2 text-base' : 'px-8 py-3 text-lg'"
           >
             Take Action
           </a>
@@ -107,7 +116,7 @@
       <div class="absolute inset-x-0 top-0 h-[1200px] md:h-[1400px] bg-navy-900 -z-10"></div>
       
       <!-- Desktop Hero Image (with fixed height) -->
-      <div class="absolute inset-x-0 top-0 h-[850px] md:h-[1000px] bg-[url('@/assets/images/hero-2.jpg')] bg-cover bg-center hidden md:block">
+      <div class="absolute inset-x-0 top-0 h-[850px] md:h-[1000px] bg-[url('@/assets/images/hero-3.jpg')] bg-cover bg-center hidden md:block">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
       </div>
       <!-- Mobile Hero Image (with fixed height) -->
@@ -125,10 +134,15 @@
               Support The Blockchain Regulatory Certainty Act
             </h2>
 
-            <!-- Zip Code Section -->
-            <div class="w-full max-w-2xl mx-auto mt-8 md:mt-16 relative z-10">
-              <div class="bg-navy-800/30 backdrop-blur-sm p-4 md:p-8 shadow-lg">
+            <!-- Forms Section -->
+            <div class="w-full max-w-2xl mx-auto mt-8 md:mt-16 relative z-10 space-y-6">
+              <!-- Representative Form Section -->
+              <div class="bg-navy-800/30 backdrop-blur-sm p-4 md:p-8 shadow-lg rounded-lg">
                 <RepForm />
+              </div>
+              
+              <!-- Email Form Section -->
+              <div class="bg-navy-800/30 backdrop-blur-sm p-4 md:p-8 shadow-lg rounded-lg">
                 <EmailForm />
               </div>
             </div>
@@ -181,33 +195,8 @@
       </div>
     </section>
 
-    <!-- Matt Corallo Quote Section -->
-    <section class="py-20 bg-white px-4 scroll-reveal">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row items-start gap-12">
-          <div class="flex-1">
-            <blockquote class="relative pl-8 border-l-4 border-coral-500">
-              <p class="text-lg md:text-2xl text-navy-900 leading-relaxed mb-8">
-                Without clear legal protections, we risk losing the very tools that make bitcoin sovereign and censorship-resistant. The BRCA is critical to ensure that building or using non-custodial wallets isn't treated like a crime. If we don't act, innovation will leave the United States — and with it, our financial freedom.
-              </p>
-              <div class="flex flex-col">
-                <cite class="text-lg md:text-xl text-coral-500 font-bold not-italic">Matt Corallo</cite>
-                <span class="text-navy-900/70">Bitcoin Core Developer</span>
-              </div>
-            </blockquote>
-          </div>
-
-          <div class="w-64 h-64 relative flex-shrink-0">
-            <img 
-              src="@/assets/images/mc.jpg"
-              alt="Matt Corallo" 
-              class="w-full h-full object-cover rounded-lg"
-            />
-            <div class="absolute inset-0 bg-gradient-to-r from-white/50 to-transparent rounded-lg"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Developer Quotes Section -->
+    <DeveloperCarousel />
 
     <!-- What Is Happening Section -->
     <section id="what-happening" class="py-20 bg-navy-900 px-4 scroll-reveal">
@@ -275,34 +264,7 @@
     </section>
 
     <!-- Quote Section -->
-    <section class="py-20 bg-navy-900 px-4 scroll-reveal">
-      <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row items-start gap-12">
-          <div class="flex-1">
-            <blockquote class="relative pl-8 border-l-4 border-coral-500">
-              <p class="text-lg md:text-2xl text-white leading-relaxed mb-8">
-                For too long, federal regulators and lawmakers have jammed the blockchain ecosystem into statutory definitions that just do not make sense. It should be simple: 
-                <span class="text-coral-500 font-semibold">If you don't custody consumer funds, you aren't a money transmitter.</span> 
-                My bill provides that necessary confirmation for the blockchain community.
-              </p>
-              <div class="flex flex-col">
-                <cite class="text-lg md:text-xl text-coral-500 font-bold not-italic">Tom Emmer</cite>
-                <span class="text-white/70">Congressman (House Majority Whip)</span>
-              </div>
-            </blockquote>
-          </div>
-
-          <div class="w-64 h-64 relative flex-shrink-0">
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/8/81/Tom_Emmer_Congressional_Photo_2.jpg"
-              alt="Congressman Tom Emmer"
-              class="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-            <div class="absolute inset-0 bg-gradient-to-r from-navy-900 to-transparent rounded-lg"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <QuoteCarousel />
 
     <!-- What The Bill Does Section -->
     <section class="py-20 bg-navy-900 px-4 scroll-reveal">
@@ -396,7 +358,10 @@
         <!-- Action Cards -->
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Updates Card - Navy -->
-          <div class="bg-navy-900 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer">
+          <div 
+            class="bg-navy-900 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer"
+            @click="isUpdatesModalOpen = true"
+          >
             <div class="w-16 h-16 mb-6">
               <img 
                 src="@/assets/images/updates.png" 
@@ -417,7 +382,10 @@
           </div>
 
           <!-- Contact Card - Grey -->
-          <div class="bg-navy-900/5 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer">
+          <div 
+            class="bg-navy-900/5 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer"
+            @click="isContactModalOpen = true"
+          >
             <div class="w-20 h-20 mb-6">
               <img 
                 src="@/assets/images/contact.png" 
@@ -438,7 +406,10 @@
           </div>
 
           <!-- Share Card - Coral -->
-          <div class="bg-coral-500 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer">
+          <div 
+            class="bg-coral-500 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer"
+            @click="isShareModalOpen = true"
+          >
             <div class="w-20 h-20 mb-6">
               <img 
                 src="@/assets/images/share.png" 
@@ -460,6 +431,20 @@
         </div>
       </div>
     </section>
+
+    <!-- Add Modal Components -->
+    <UpdatesModal 
+      :is-open="isUpdatesModalOpen"
+      @close="isUpdatesModalOpen = false"
+    />
+    <ContactModal 
+      :is-open="isContactModalOpen"
+      @close="isContactModalOpen = false"
+    />
+    <ShareModal 
+      :is-open="isShareModalOpen"
+      @close="isShareModalOpen = false"
+    />
 
     <!-- Footer -->
     <footer class="py-8 px-4 bg-white border-t border-navy-900/10">
@@ -505,10 +490,30 @@
 </template>
 
 <script setup>
-const isMenuOpen = ref(false)
+import QuoteCarousel from '@/components/QuoteCarousel.vue'
+import DeveloperCarousel from '@/components/DeveloperCarousel.vue'
+import UpdatesModal from '@/components/UpdatesModal.vue'
+import ContactModal from '@/components/ContactModal.vue'
+import ShareModal from '@/components/ShareModal.vue'
 
-// Load reCAPTCHA script
+const isMenuOpen = ref(false)
+const isScrolled = ref(false)
+const isUpdatesModalOpen = ref(false)
+const isContactModalOpen = ref(false)
+const isShareModalOpen = ref(false)
+
+// Handle scroll events
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50
+}
+
 onMounted(() => {
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScroll)
+  
+  // Initial check
+  handleScroll()
+
   // Load reCAPTCHA script
   const script = document.createElement('script')
   script.src = 'https://www.google.com/recaptcha/api.js'
@@ -534,8 +539,9 @@ onMounted(() => {
   })
 })
 
-// Clean up script when component is unmounted
+// Clean up event listeners when component is unmounted
 onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
   const script = document.querySelector('script[src="https://www.google.com/recaptcha/api.js"]')
   if (script) {
     script.remove()
