@@ -73,7 +73,7 @@ const closeModal = () => {
 
 function shareOnTwitter() {
   const text = encodeURIComponent(
-    "Protect your right to transact freely! Support H.R. 1747, the Blockchain Regulatory Certainty Act. Learn more at https://saveourwallets.org #SaveOurWallets #BRCA"
+    "Protect your right to transact freely! Support the Blockchain Regulatory Certainty Act. Learn more at https://saveourwallets.org #SaveOurWallets #BRCA"
   )
   const url = 'https://twitter.com/intent/tweet?text=' + text
   window.open(url, '_blank')
