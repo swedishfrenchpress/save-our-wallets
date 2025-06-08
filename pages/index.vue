@@ -371,7 +371,10 @@
         <!-- Action Cards -->
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Updates Card - Navy -->
-          <div class="bg-navy-900 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer">
+          <div 
+            class="bg-navy-900 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer"
+            @click="isUpdatesModalOpen = true"
+          >
             <div class="w-16 h-16 mb-6">
               <img 
                 src="@/assets/images/updates.png" 
@@ -436,6 +439,12 @@
       </div>
     </section>
 
+    <!-- Add Modal Component -->
+    <UpdatesModal 
+      :is-open="isUpdatesModalOpen"
+      @close="isUpdatesModalOpen = false"
+    />
+
     <!-- Footer -->
     <footer class="py-8 px-4 bg-white border-t border-navy-900/10">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -482,9 +491,11 @@
 <script setup>
 import QuoteCarousel from '@/components/QuoteCarousel.vue'
 import DeveloperCarousel from '@/components/DeveloperCarousel.vue'
+import UpdatesModal from '@/components/UpdatesModal.vue'
 
 const isMenuOpen = ref(false)
 const isScrolled = ref(false)
+const isUpdatesModalOpen = ref(false)
 
 // Handle scroll events
 const handleScroll = () => {
