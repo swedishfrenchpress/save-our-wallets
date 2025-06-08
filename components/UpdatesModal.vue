@@ -89,7 +89,7 @@ async function submitForm() {
   }
 }
 
-async function recaptchaApproved(token) {
+async function recaptchaUpdatesApproved(token) {
   try {
     const res = await fetch(`https://saveourwallets.org/email-signup/?token=${token}&email=${email.value.value}`)
     if (!res.ok) {
@@ -105,11 +105,11 @@ async function recaptchaApproved(token) {
 }
 
 onMounted(() => {
-  window.recaptchaApproved = recaptchaApproved
+  window.recaptchaUpdatesApproved = recaptchaUpdatesApproved
 })
 
 onUnmounted(() => {
-  delete window.recaptchaApproved
+  delete window.recaptchaUpdatesApproved
 })
 </script>
 
@@ -132,4 +132,4 @@ onUnmounted(() => {
     transform: rotate(360deg);
   }
 }
-</style> 
+</style>
