@@ -395,7 +395,10 @@
           </div>
 
           <!-- Contact Card - Grey -->
-          <div class="bg-navy-900/5 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer">
+          <div 
+            class="bg-navy-900/5 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer"
+            @click="isContactModalOpen = true"
+          >
             <div class="w-20 h-20 mb-6">
               <img 
                 src="@/assets/images/contact.png" 
@@ -439,10 +442,14 @@
       </div>
     </section>
 
-    <!-- Add Modal Component -->
+    <!-- Add Modal Components -->
     <UpdatesModal 
       :is-open="isUpdatesModalOpen"
       @close="isUpdatesModalOpen = false"
+    />
+    <ContactModal 
+      :is-open="isContactModalOpen"
+      @close="isContactModalOpen = false"
     />
 
     <!-- Footer -->
@@ -492,10 +499,12 @@
 import QuoteCarousel from '@/components/QuoteCarousel.vue'
 import DeveloperCarousel from '@/components/DeveloperCarousel.vue'
 import UpdatesModal from '@/components/UpdatesModal.vue'
+import ContactModal from '@/components/ContactModal.vue'
 
 const isMenuOpen = ref(false)
 const isScrolled = ref(false)
 const isUpdatesModalOpen = ref(false)
+const isContactModalOpen = ref(false)
 
 // Handle scroll events
 const handleScroll = () => {
