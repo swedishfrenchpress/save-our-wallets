@@ -481,9 +481,14 @@
         </div>
       </div>
     </footer>
-  <div class="g-recaptcha"
+  <div class="g-recaptcha" id="recaptcha-main"
       data-sitekey="6LeuOkIrAAAAAAUh5HJyIw13B2YbsjyLCccDrxlF"
       data-callback="recaptchaApproved"
+      data-size="invisible">
+  </div>
+  <div class="g-recaptcha" id="recaptcha-updates"
+      data-sitekey="6LeuOkIrAAAAAAUh5HJyIw13B2YbsjyLCccDrxlF"
+      data-callback="recaptchaUpdatesApproved"
       data-size="invisible">
   </div>
   </main>
@@ -516,7 +521,7 @@ onMounted(() => {
 
   // Load reCAPTCHA script
   const script = document.createElement('script')
-  script.src = 'https://www.google.com/recaptcha/api.js'
+  script.src = 'https://www.google.com/recaptcha/api.js?onload=recaptchaSetup&render=explicit'
   script.async = true
   script.defer = true
   document.head.appendChild(script)
@@ -547,6 +552,27 @@ onUnmounted(() => {
     script.remove()
   }
 })
+</script>
+
+<script>
+
+export function recaptchaSetup() {
+  window.sow_recaptcha_main = grecaptcha.render('recaptcha-main', {
+    'sitekey': '6LeuOkIrAAAAAAUh5HJyIw13B2YbsjyLCccDrxlF',
+    'callback': 'recaptchaApproved',
+  });
+
+  //Render recaptcha2 on element with ID "recaptcha2"
+  window.sow_recaptcha_updates = grecaptcha.render('recaptcha-updates', {
+    'sitekey': '6LeuOkIrAAAAAAUh5HJyIw13B2YbsjyLCccDrxlF',
+    'callback': 'recaptchaUpdatesApproved'
+  });
+};
+export default {
+  mounted() {
+    window.recaptchaSetup = recaptchaSetup
+  }
+}
 </script>
 
 <style>
