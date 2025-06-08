@@ -11,7 +11,7 @@
           &#8592;
         </button>
         <div class="flex-1 flex justify-center min-h-[300px]">
-          <transition :name="transitionName" mode="out-in">
+          <transition :name="transitionName" mode="out-in" @after-enter="onTransitionEnd">
             <div
               class="flex flex-col md:flex-row items-center gap-8 w-full"
               :key="quotes[currentQuote].author"
@@ -70,23 +70,37 @@ const quotes = [
 const currentQuote = ref(0)
 const direction = ref('right')
 let intervalId = null
+const isTransitioning = ref(false)
+
+function resetInterval() {
+  if (intervalId) clearInterval(intervalId)
+  intervalId = setInterval(goToNext, 6000)
+}
 
 const goToNext = () => {
+  if (isTransitioning.value) return
   direction.value = 'right'
   currentQuote.value = (currentQuote.value + 1) % quotes.length
+  resetInterval()
+  isTransitioning.value = true
 }
 
 const goToPrev = () => {
+  if (isTransitioning.value) return
   direction.value = 'left'
   currentQuote.value = (currentQuote.value - 1 + quotes.length) % quotes.length
+  resetInterval()
+  isTransitioning.value = true
 }
 
 const transitionName = computed(() => direction.value === 'right' ? 'carousel-slide-right' : 'carousel-slide-left')
 
+function onTransitionEnd() {
+  isTransitioning.value = false
+}
+
 onMounted(() => {
-  intervalId = setInterval(() => {
-    goToNext()
-  }, 6000)
+  resetInterval()
 })
 
 onUnmounted(() => {
