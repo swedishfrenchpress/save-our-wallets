@@ -326,29 +326,16 @@
           <p class="text-lg md:text-2xl text-white leading-relaxed">
             This clarity helps encourage innovation while ensuring appropriate oversight of actual financial services. This bill is short and direct, you can read the full bill text for yourself.
           </p>
-          <!-- Bill Viewing Options -->
-          <div class="mt-8 space-y-4">
-            <!-- Embedded Bill Viewer -->
-            <div class="bg-navy-800/50 rounded-lg overflow-hidden">
-              <div class="p-4 border-b border-white/20 flex justify-between items-center">
-                <h3 class="text-white font-bold">H.R. 1747, Blockchain Regulatory Certainty Act</h3>
-                <a
-                  href="https://emmer.house.gov/_cache/files/3/9/391fb470-d4a5-4eef-aedd-df1626dfb21a/BDDB1A4E71AE7CE1CBFABC4AB43BFCB2B087D8654CEACBCF0BC3EF5792D67A7A.brca-119.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-coral-500 hover:text-coral-400 text-sm flex items-center gap-1"
-                >
-                  Open in new tab
-                  <span class="arrow-animate">↗</span>
-                </a>
-              </div>
-              <iframe
-                src="/brca-119.pdf"
-                class="w-full h-[600px] bg-white"
-                title="Blockchain Regulatory Certainty Act"
-              ></iframe>
-            </div>
-          </div>
+          <!-- Secondary CTA: Read The Bill -->
+          <a
+            href="https://emmer.house.gov/_cache/files/3/9/391fb470-d4a5-4eef-aedd-df1626dfb21a/BDDB1A4E71AE7CE1CBFABC4AB43BFCB2B087D8654CEACBCF0BC3EF5792D67A7A.brca-119.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="animated-link underline text-coral-500 hover:text-coral-400 font-semibold mt-4 inline-block text-lg md:text-2xl transition-colors duration-200"
+          >
+            Read The Bill
+            <span aria-hidden="true" class="ml-1 arrow-animate">↗</span>
+          </a>
         </div>
       </div>
     </section>
