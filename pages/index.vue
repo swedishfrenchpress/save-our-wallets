@@ -419,7 +419,10 @@
           </div>
 
           <!-- Share Card - Coral -->
-          <div class="bg-coral-500 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer">
+          <div 
+            class="bg-coral-500 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer"
+            @click="isShareModalOpen = true"
+          >
             <div class="w-20 h-20 mb-6">
               <img 
                 src="@/assets/images/share.png" 
@@ -450,6 +453,10 @@
     <ContactModal 
       :is-open="isContactModalOpen"
       @close="isContactModalOpen = false"
+    />
+    <ShareModal 
+      :is-open="isShareModalOpen"
+      @close="isShareModalOpen = false"
     />
 
     <!-- Footer -->
@@ -500,11 +507,13 @@ import QuoteCarousel from '@/components/QuoteCarousel.vue'
 import DeveloperCarousel from '@/components/DeveloperCarousel.vue'
 import UpdatesModal from '@/components/UpdatesModal.vue'
 import ContactModal from '@/components/ContactModal.vue'
+import ShareModal from '@/components/ShareModal.vue'
 
 const isMenuOpen = ref(false)
 const isScrolled = ref(false)
 const isUpdatesModalOpen = ref(false)
 const isContactModalOpen = ref(false)
+const isShareModalOpen = ref(false)
 
 // Handle scroll events
 const handleScroll = () => {
