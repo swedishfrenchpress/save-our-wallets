@@ -69,27 +69,28 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['close'])
-
 const closeModal = () => {
   emit('close')
 }
 
-const email = ref(null)
-const result = ref('')
-const signed_up = ref(false)
-const submitting = ref(false)
-
 async function submitForm() {
   submitting.value = true
   try {
-    grecaptcha.execute()
+    grecaptcha.execute(window.sow_recaptcha_updates)
   } catch(e) {
     result.value = "reCAPTCHA failed to initialize, please refresh the page and try again"
     submitting.value = false
   }
 }
+</script>
 
-async function recaptchaApproved(token) {
+<script>
+const email = useTemplateRef('email')
+const result = useTemplateRef('result')
+const signed_up = useTemplateRef('signed_up')
+const submitting = useTemplateRef('submitting')
+
+export async function recaptchaUpdatesApproved(token) {
   try {
     const res = await fetch(`https://saveourwallets.org/email-signup/?token=${token}&email=${email.value.value}`)
     if (!res.ok) {
@@ -104,13 +105,14 @@ async function recaptchaApproved(token) {
   submitting.value = false
 }
 
-onMounted(() => {
-  window.recaptchaApproved = recaptchaApproved
-})
-
-onUnmounted(() => {
-  delete window.recaptchaApproved
-})
+export default {
+  mounted() {
+    window.recaptchaUpdatesApproved = recaptchaUpdatesApproved
+  },
+  unmounted() {
+    delete window.recaptchaUpdatesApproved
+  }
+};
 </script>
 
 <style scoped>
@@ -132,4 +134,4 @@ onUnmounted(() => {
     transform: rotate(360deg);
   }
 }
-</style> 
+</style>
