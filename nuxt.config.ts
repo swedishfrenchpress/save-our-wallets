@@ -25,12 +25,12 @@ export default defineNuxtConfig({
       ],
       meta: [
         // Basic SEO
-        { name: 'description', content: 'Support H.R. 1747: The Blockchain Regulatory Certainty Act. Protect your right to transact freely and keep innovation in America.' },
-        { name: 'keywords', content: 'blockchain, H.R. 1747, crypto, wallets, regulation, financial freedom, peer-to-peer, innovation' },
+        { name: 'description', content: 'Support H.R.3633: the Digital Asset Market Clarity Act of 2025. Protect your right to transact freely and keep innovation in America.' },
+        { name: 'keywords', content: 'blockchain, H.R. 3633, crypto, wallets, regulation, financial freedom, peer-to-peer, innovation' },
 
         // Open Graph
         { property: 'og:title', content: 'Save Our Wallets – Protect Your Right to Transact Freely' },
-        { property: 'og:description', content: 'Support H.R. 1747: The Blockchain Regulatory Certainty Act. Protect your right to transact freely and keep innovation in America.' },
+        { property: 'og:description', content: 'Support H.R. 3633: the Digital Asset Market Clarity Act of 2025. Protect your right to transact freely and keep innovation in America.' },
         { property: 'og:image', content: 'https://saveourwallets.org/images/og_image.png' },
         { property: 'og:url', content: 'https://saveourwallets.org/' },
         { property: 'og:type', content: 'website' },
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Save Our Wallets – Protect Your Right to Transact Freely' },
-        { name: 'twitter:description', content: 'Support H.R. 1747: The Blockchain Regulatory Certainty Act. Protect your right to transact freely and keep innovation in America.' },
+        { name: 'twitter:description', content: 'Support H.R. 3633: the Digital Asset Market Clarity Act of 2025. Protect your right to transact freely and keep innovation in America.' },
         { name: 'twitter:image', content: 'https://saveourwallets.org/images/og_image.png' }
       ]
     }
