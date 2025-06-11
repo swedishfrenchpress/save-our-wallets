@@ -131,7 +131,7 @@
             </h1>
             
             <h2 class="bg-coral-500 text-white px-6 py-4 font-space-grotesk font-semibold text-xl sm:text-2xl md:text-3xl uppercase w-full text-center">
-              Support The CLARITY Act
+              Support Section 110 of the CLARITY Act
             </h2>
 
             <!-- Forms Section -->
@@ -168,7 +168,7 @@
             <div class="text-coral-500 text-4xl md:text-6xl font-bold mb-4">01</div>
             <h3 class="text-xl md:text-2xl font-bold text-navy-900 mb-4">Ensures Wallet Freedom</h3>
             <p class="text-navy-900/70 text-lg md:text-2xl">
-              The CLARITY Act of 2025 guarantees that your favorite wallet stays available by shielding service providers who don't control user assets from overburdensome regulations they can't comply with anyway.
+              Section 110 of the CLARITY Act guarantees that your favorite wallet stays available by shielding service providers who don't control user assets from overburdensome regulations they can't comply with anyway.
             </p>
           </div>
 
@@ -278,7 +278,7 @@
         <!-- Intro text - full width to match boxes -->
         <div class="mb-12">
           <p class="text-lg md:text-2xl text-white leading-relaxed">
-            The CLARITY Act of 2025 creates a safe harbor from licensing and registration requirements for blockchain developers and service providers who:
+            Section 110 of the CLARITY Act creates a safe harbor from licensing and registration requirements for blockchain developers and service providers who:
           </p>
         </div>
 
@@ -401,7 +401,7 @@
               </h3>
             </div>
             <p class="text-navy-900/70 text-lg font-medium mt-6 transition-colors duration-300 ease-in-out">
-              Contact your congressional representatives and tell them why you support the CLARITY Act.
+              Contact your congressional representatives and tell them why you support Section 110 of the CLARITY Act.
             </p>
           </div>
 

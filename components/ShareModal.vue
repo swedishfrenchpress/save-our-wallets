@@ -73,7 +73,7 @@ const closeModal = () => {
 
 function shareOnTwitter() {
   const text = encodeURIComponent(
-    "Protect your right to transact freely! Support the CLARITY Act. Learn more at https://saveourwallets.org @saveourwalets #SaveOurWallets #CLARITYAct"
+    "Protect your right to transact freely! Support Section 110 of the CLARITY Act. Learn more at https://saveourwallets.org @saveourwalets #SaveOurWallets #CLARITYAct"
   )
   const url = 'https://twitter.com/intent/tweet?text=' + text
   window.open(url, '_blank')
