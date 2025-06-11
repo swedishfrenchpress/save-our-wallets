@@ -131,7 +131,7 @@
             </h1>
             
             <h2 class="bg-coral-500 text-white px-6 py-4 font-space-grotesk font-semibold text-xl sm:text-2xl md:text-3xl uppercase w-full text-center">
-              Support The Blockchain Regulatory Certainty Act
+              Support Section 110 of the CLARITY Act
             </h2>
 
             <!-- Forms Section -->
@@ -156,7 +156,7 @@
       <div class="max-w-6xl mx-auto">
         <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
           <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
-            WHY THE BLOCKCHAIN REGULATORY CERTAINTY ACT MATTERS
+            WHY THE CLARITY ACT MATTERS
           </h2>
         </div>
 
@@ -168,7 +168,7 @@
             <div class="text-coral-500 text-4xl md:text-6xl font-bold mb-4">01</div>
             <h3 class="text-xl md:text-2xl font-bold text-navy-900 mb-4">Ensures Wallet Freedom</h3>
             <p class="text-navy-900/70 text-lg md:text-2xl">
-              The BRCA Guarantees that your favorite wallet stays available by shielding service providers who don't control user assets from overburdensome regulations they can't comply with anyway.
+              Section 110 of the CLARITY Act guarantees that your favorite wallet stays available by shielding service providers who don't control user assets from overburdensome regulations they can't comply with anyway.
             </p>
           </div>
 
@@ -278,7 +278,7 @@
         <!-- Intro text - full width to match boxes -->
         <div class="mb-12">
           <p class="text-lg md:text-2xl text-white leading-relaxed">
-            The Blockchain Regulatory Certainty Act creates a safe harbor from licensing and registration requirements for blockchain developers and service providers who:
+            Section 110 of the CLARITY Act creates a safe harbor from licensing and registration requirements for blockchain developers and service providers who:
           </p>
         </div>
 
@@ -328,7 +328,7 @@
           </p>
           <!-- Secondary CTA: Read The Bill -->
           <a
-            href="https://emmer.house.gov/_cache/files/3/9/391fb470-d4a5-4eef-aedd-df1626dfb21a/BDDB1A4E71AE7CE1CBFABC4AB43BFCB2B087D8654CEACBCF0BC3EF5792D67A7A.brca-119.pdf"
+            href="https://docs.house.gov/meetings/AG/AG00/20250610/118382/BILLS-119pih-AmendmentintheNatureofaSubstituteOfferedbyChairmanThompsonofPennsylvania-U1.pdf"
             target="_blank"
             rel="noopener noreferrer"
             class="animated-link underline text-coral-500 hover:text-coral-400 font-semibold mt-4 inline-block text-lg md:text-2xl transition-colors duration-200"
@@ -351,7 +351,7 @@
             </h2>
           </div>
           <p class="text-lg md:text-2xl text-navy-900/80 leading-relaxed">
-            Your voice matters! Tell your representatives why clear, fair blockchain regulation is necessary to continue innovating in this increasingly important space. 
+            Your voice matters! Call your representatives today and express the need for clear, fair blockchain regulation to drive innovation in this rapidly evolving space. Be sure to mention Section 110 of the CLARITY Act, and let them know that you support bringing clarity and regulatory certainty to the digital asset market.
           </p>
         </div>
 
@@ -401,7 +401,7 @@
               </h3>
             </div>
             <p class="text-navy-900/70 text-lg font-medium mt-6 transition-colors duration-300 ease-in-out">
-              Contact your congressional representatives and tell them why you support the Blockchain Regulatory Certainty Act.
+              Contact your congressional representatives and tell them why you support Section 110 of the CLARITY Act.
             </p>
           </div>
 

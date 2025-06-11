@@ -56,7 +56,7 @@ import pierreImage from '@/assets/images/pierre.jpg'
 
 const quotes = [
   {
-    text: `Without clear legal protections, we risk losing the very tools that make bitcoin sovereign and censorship-resistant. The BRCA is critical to ensure that building or using non-custodial wallets isn't treated like a crime. If we don't act, innovation will leave the United States — and with it, our financial freedom.`,
+    text: `Without clear legal protections, we risk losing the very tools that make bitcoin sovereign and censorship-resistant. Section 110 of the CLARITY Act is critical to ensure that building or using non-custodial wallets isn't treated like a crime. If we don't act, innovation will leave the United States — and with it, our financial freedom.`,
     author: 'Matt Corallo',
     title: 'Bitcoin Core Developer',
     image: mcImage
