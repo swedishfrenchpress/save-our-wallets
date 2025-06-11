@@ -278,7 +278,7 @@
         <!-- Intro text - full width to match boxes -->
         <div class="mb-12">
           <p class="text-lg md:text-2xl text-white leading-relaxed">
-            Section 110 of the CLARITY Act creates a safe harbor from licensing and registration requirements for blockchain developers and service providers who:
+            Section 110 of the CLARITY Act protects from impossible licensing and registration requirements blockchain developers and service providers who:
           </p>
         </div>
 
@@ -328,7 +328,7 @@
           </p>
           <!-- Secondary CTA: Read The Bill -->
           <a
-            href="https://docs.house.gov/meetings/AG/AG00/20250610/118382/BILLS-119pih-AmendmentintheNatureofaSubstituteOfferedbyChairmanThompsonofPennsylvania-U1.pdf"
+            href="/CLARITY_act_section110.pdf"
             target="_blank"
             rel="noopener noreferrer"
             class="animated-link underline text-coral-500 hover:text-coral-400 font-semibold mt-4 inline-block text-lg md:text-2xl transition-colors duration-200"
@@ -351,7 +351,7 @@
             </h2>
           </div>
           <p class="text-lg md:text-2xl text-navy-900/80 leading-relaxed">
-            Your voice matters! Call your representatives today and express the need for clear, fair blockchain regulation to drive innovation in this rapidly evolving space. Be sure to mention Section 110 of the CLARITY Act, and let them know that you support bringing clarity and regulatory certainty to the digital asset market.
+            Your voice matters! Call your representatives today and express the need for clear, fair blockchain regulation to drive innovation in this rapidly evolving space. Be sure to mention Section 110 of the CLARITY Act, and let them know that your rights to access wallets and developer rights to build them matter.
           </p>
         </div>
 
