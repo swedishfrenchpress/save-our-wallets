@@ -156,7 +156,7 @@
       <div class="max-w-6xl mx-auto">
         <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
           <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
-            WHY THE CLARITY ACT MATTERS
+            WHY SECTION 110 MATTERS
           </h2>
         </div>
 
