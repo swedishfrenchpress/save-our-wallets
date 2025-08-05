@@ -34,7 +34,7 @@
                 Contact your representatives:
               </h2>
               <p class="text-navy-900 text-base md:text-lg mb-4 md:mb-6 text-center">
-                Tell them you support Section 110 of the CLARITY Act!
+                Tell them you support Section 109 of the CLARITY Act!
               </p>
               
               <!-- Primary Action: Zip Code -->

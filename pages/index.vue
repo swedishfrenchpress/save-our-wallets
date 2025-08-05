@@ -131,7 +131,7 @@
             </h1>
             
             <h2 class="bg-coral-500 text-white px-6 py-4 font-space-grotesk font-semibold text-xl sm:text-2xl md:text-3xl uppercase w-full text-center">
-              Support Section 110 of the CLARITY Act
+              Support Section 109 of the CLARITY Act
             </h2>
 
             <!-- Forms Section -->
@@ -156,7 +156,7 @@
       <div class="max-w-6xl mx-auto">
         <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
           <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
-            WHY SECTION 110 MATTERS
+            WHY SECTION 109 MATTERS
           </h2>
         </div>
 
@@ -168,7 +168,7 @@
             <div class="text-coral-500 text-4xl md:text-6xl font-bold mb-4">01</div>
             <h3 class="text-xl md:text-2xl font-bold text-navy-900 mb-4">Ensures Wallet Freedom</h3>
             <p class="text-navy-900/70 text-lg md:text-2xl">
-              Section 110 of the CLARITY Act guarantees that your favorite wallet stays available by shielding service providers who don't control user assets from overburdensome regulations they can't comply with anyway.
+              Section 109 of the CLARITY Act guarantees that your favorite wallet stays available by shielding service providers who don't control user assets from overburdensome regulations they can't comply with anyway.
             </p>
           </div>
 
@@ -278,7 +278,7 @@
         <!-- Intro text - full width to match boxes -->
         <div class="mb-12">
           <p class="text-lg md:text-2xl text-white leading-relaxed">
-            Section 110 of the CLARITY Act protects from impossible licensing and registration requirements blockchain developers and service providers who:
+            Section 109 of the CLARITY Act protects from impossible licensing and registration requirements blockchain developers and service providers who:
           </p>
         </div>
 
@@ -328,7 +328,7 @@
           </p>
           <!-- Secondary CTA: Read The Bill -->
           <a
-            href="/CLARITY_act_section110.pdf"
+            href="https://www.congress.gov/bill/119th-congress/house-bill/3633/text#HDAC4A4FC88F74B25990B58714F4164FF"
             target="_blank"
             rel="noopener noreferrer"
             class="animated-link underline text-coral-500 hover:text-coral-400 font-semibold mt-4 inline-block text-lg md:text-2xl transition-colors duration-200"
@@ -351,7 +351,7 @@
             </h2>
           </div>
           <p class="text-lg md:text-2xl text-navy-900/80 leading-relaxed">
-            Your voice matters! Call your representatives today and express the need for clear, fair blockchain regulation to drive innovation in this rapidly evolving space. Be sure to mention Section 110 of the CLARITY Act, and let them know that your rights to access wallets and developer rights to build them matter.
+            Your voice matters! Call your representatives today and express the need for clear, fair blockchain regulation to drive innovation in this rapidly evolving space. Be sure to mention Section 109 of the CLARITY Act, and let them know that your rights to access wallets and developer rights to build them matter.
           </p>
         </div>
 
@@ -401,7 +401,7 @@
               </h3>
             </div>
             <p class="text-navy-900/70 text-lg font-medium mt-6 transition-colors duration-300 ease-in-out">
-              Contact your congressional representatives and tell them why you support Section 110 of the CLARITY Act.
+              Contact your congressional representatives and tell them why you support Section 109 of the CLARITY Act.
             </p>
           </div>
 
