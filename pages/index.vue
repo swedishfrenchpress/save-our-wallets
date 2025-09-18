@@ -474,28 +474,32 @@
     </section>
 
     <!-- Stay Updated Section -->
-    <section id="stay-updated" class="py-20 bg-white px-4 scroll-reveal">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="font-space-grotesk font-bold text-4xl md:text-5xl text-navy-900 mb-6">
-          Stay Updated
-        </h2>
-        
-        <p class="text-lg md:text-xl text-navy-900/70 mb-12 max-w-2xl mx-auto">
-          Get critical updates & important activations delivered to your inbox
-        </p>
+    <section id="stay-updated" class="py-20 bg-gray-50 px-4 scroll-reveal">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
+          <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase text-white">
+            Stay Updated
+          </h2>
+        </div>
 
-        <div class="bg-navy-900/5 p-8 md:p-12 rounded-lg max-w-2xl mx-auto">
+        <div class="text-center mb-8">
+          <p class="text-navy-900/80 text-base md:text-lg">
+            Get critical updates & important activations delivered to your inbox
+          </p>
+        </div>
+
+        <div class="bg-navy-900/5 p-8 rounded-lg">
           <div class="flex items-center justify-center mb-6">
             <svg class="w-8 h-8 text-navy-900 mr-3" fill="currentColor" viewBox="0 0 20 20">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
             </svg>
-            <h3 class="text-2xl md:text-3xl font-bold text-navy-900">
+            <h3 class="text-xl md:text-2xl font-bold text-navy-900">
               Join the Campaign
             </h3>
           </div>
           
-          <p class="text-navy-900/80 text-base md:text-lg mb-8">
+          <p class="text-navy-900/80 text-base md:text-lg mb-8 text-center">
             Be the first to know about new developments and action opportunities
           </p>
           
@@ -510,7 +514,7 @@
             <button 
               type="submit" 
               :disabled="emailSubmitting" 
-              class="w-full bg-navy-900/80 text-white px-6 py-3 font-bold hover:bg-navy-900 transition-colors text-base md:text-lg rounded-lg flex items-center justify-center"
+              class="w-full bg-navy-900 text-white px-6 py-3 font-bold hover:bg-navy-800 transition-colors text-base md:text-lg rounded-lg flex items-center justify-center"
             >
               <span v-if="emailSubmitting" class="loading-spinner mr-2"></span>
               {{ emailSubmitting ? 'Signing up...' : 'Sign Up' }}
@@ -533,19 +537,23 @@
 
     <!-- Share Campaign Section -->
     <section id="share-campaign" class="py-20 bg-white px-4 scroll-reveal">
-      <div class="max-w-6xl mx-auto text-center">
-        <h2 class="font-space-grotesk font-bold text-4xl md:text-5xl text-navy-900 mb-6">
-          Share the Campaign
-        </h2>
-        
-        <p class="text-lg md:text-xl text-navy-900/70 mb-12 max-w-2xl mx-auto">
-          Spread the word and help protect our financial freedom
-        </p>
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
+          <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase text-white">
+            Share the Campaign
+          </h2>
+        </div>
+
+        <div class="text-center mb-8">
+          <p class="text-navy-900/80 text-base md:text-lg">
+            Spread the word and help protect our financial freedom
+          </p>
+        </div>
 
         <!-- Two Column Layout -->
-        <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
           <!-- Left Column: Image -->
-          <div class="order-2 md:order-1">
+          <div>
             <img 
               src="@/assets/images/satoshi-needs-you.png" 
               alt="Satoshi Needs You" 
@@ -562,18 +570,18 @@
           </div>
           
           <!-- Right Column: Share Box -->
-          <div class="order-1 md:order-2">
+          <div>
             <div class="bg-navy-900/5 p-8 rounded-lg">
               <div class="flex items-center justify-center mb-6">
                 <svg class="w-8 h-8 text-navy-900 mr-3" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/>
                 </svg>
-                <h3 class="text-2xl md:text-3xl font-bold text-navy-900">
+                <h3 class="text-xl md:text-2xl font-bold text-navy-900">
                   One-Click Sharing
                 </h3>
               </div>
               
-              <p class="text-navy-900/80 text-base md:text-lg mb-8">
+              <p class="text-navy-900/80 text-base md:text-lg mb-8 text-center">
                 Share on your favorite social networks with pre-written messages
               </p>
               
