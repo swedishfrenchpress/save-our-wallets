@@ -353,134 +353,41 @@
       </div>
     </section>
 
-    <!-- Take Action Section -->
-    <section id="take-action" class="py-20 bg-white px-4 scroll-reveal">
-      <div class="max-w-6xl mx-auto">
-        <!-- Header -->
-        <div class="mb-12">
-          <div class="bg-navy-900 inline-block px-6 py-3 mb-8">
-            <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
-              TAKE ACTION NOW
-            </h2>
-          </div>
-          <p class="text-lg md:text-2xl text-navy-900/80 leading-relaxed">
-            Your voice matters! Call your representatives today and express the need for clear, fair blockchain regulation to drive innovation in this rapidly evolving space. Be sure to mention Section 109 of the CLARITY Act, and let them know that your rights to access wallets and developer rights to build them matter.
-          </p>
-        </div>
-
-        <!-- Action Cards -->
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Updates Card - Navy -->
-          <div 
-            class="bg-navy-900 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer"
-            @click="isUpdatesModalOpen = true"
-          >
-            <div class="w-16 h-16 mb-6">
-              <img 
-                src="@/assets/images/updates.png" 
-                alt="Updates" 
-                class="w-full h-full object-contain"
-              >
-            </div>
-
-            <div class="flex flex-col items-start">
-              <h3 class="text-3xl font-bold text-white mb-2 relative group-hover:text-navy-900 transition-colors duration-300 ease-in-out">
-                Updates
-                <div class="absolute bottom-0 left-0 right-0 h-1 bg-coral-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></div>
-              </h3>
-            </div>
-            <p class="text-white/70 text-lg font-medium mt-6 group-hover:text-navy-900/70 transition-colors duration-300 ease-in-out">
-              Get the latest updates about this legislation and how you can help support it.
-            </p>
-          </div>
-
-          <!-- Contact Card - Grey -->
-          <div 
-            class="bg-navy-900/5 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer"
-            @click="isContactModalOpen = true"
-          >
-            <div class="w-20 h-20 mb-6">
-              <img 
-                src="@/assets/images/contact.png" 
-                alt="Contact" 
-                class="w-full h-full object-contain"
-              >
-            </div>
-
-            <div class="flex flex-col items-start">
-              <h3 class="text-3xl font-bold text-navy-900 mb-2 relative transition-colors duration-300 ease-in-out">
-                Contact
-                <div class="absolute bottom-0 left-0 right-0 h-1 bg-coral-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></div>
-              </h3>
-            </div>
-            <p class="text-navy-900/70 text-lg font-medium mt-6 transition-colors duration-300 ease-in-out">
-              Contact your congressional representatives and tell them why you support Section 109 of the CLARITY Act.
-            </p>
-          </div>
-
-          <!-- Share Card - Coral -->
-          <div 
-            class="bg-coral-500 rounded-xl p-8 flex flex-col group hover:bg-white transition-all duration-300 ease-in-out cursor-pointer"
-            @click="isShareModalOpen = true"
-          >
-            <div class="w-20 h-20 mb-6">
-              <img 
-                src="@/assets/images/share.png" 
-                alt="Share" 
-                class="w-full h-full object-contain"
-              >
-            </div>
-
-            <div class="flex flex-col items-start">
-              <h3 class="text-3xl font-bold text-navy-900 mb-2 relative transition-colors duration-300 ease-in-out">
-                Share
-                <div class="absolute bottom-0 left-0 right-0 h-1 bg-coral-500 transform scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100"></div>
-              </h3>
-            </div>
-            <p class="text-navy-900/70 text-lg font-medium mt-6 transition-colors duration-300 ease-in-out">
-              Share the importance of sensible blockchain regulation with your friends and colleagues and ask them to reach out.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Contact Your Representative Section -->
-    <section id="contact-representatives" class="py-20 bg-navy-900 px-4 scroll-reveal">
+    <section id="contact-representatives" class="py-20 bg-white px-4 scroll-reveal">
       <div class="max-w-4xl mx-auto">
-        <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
-          <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
-            CONTACT YOUR REPRESENTATIVE
+        <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
+          <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase text-white">
+            Contact Your Representatives
           </h2>
         </div>
 
-        <div class="bg-navy-800/50 backdrop-blur-sm p-8 rounded-lg">
-          <h3 class="font-space-grotesk text-xl md:text-2xl text-white font-bold mb-4 text-center">
-            Find your representatives:
-          </h3>
-          <p class="text-white/80 text-base md:text-lg mb-6 text-center">
+        <div class="text-center mb-8">
+          <p class="text-navy-900/80 text-base md:text-lg">
             Tell them you support Section 109 of the CLARITY Act!
           </p>
-          
+        </div>
+
+        <div class="bg-navy-900/5 p-8 rounded-lg">
           <!-- ZIP Code Form -->
           <form @submit.prevent="submitRepForm" class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center mb-6 w-full">
             <input 
               v-model="repZipCode"
               type="text" 
-              placeholder="Enter your ZIP code" 
-              class="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-coral-500 text-base md:text-lg rounded-lg"
+              placeholder="94110" 
+              class="w-full px-4 py-3 bg-white border border-navy-900/20 text-navy-900 placeholder-navy-900/50 focus:outline-none focus:border-coral-500 text-base md:text-lg rounded-lg"
             >
             <button
               type="submit"
               :disabled="!isValidRepZip || repLoading"
-              class="w-full bg-coral-500 text-white px-6 py-3 font-bold hover:bg-coral-400 transition-colors text-base md:text-lg flex items-center justify-center rounded-lg">
+              class="w-full bg-navy-900 text-white px-6 py-3 font-bold hover:bg-navy-800 transition-colors text-base md:text-lg flex items-center justify-center rounded-lg">
               <span v-if="repLoading" class="loading-spinner mr-2"></span>
-              {{ repLoading ? 'Searching...' : 'Find Your Representative' }}
+              {{ repLoading ? 'Searching...' : 'Find Representatives' }}
             </button>
           </form>
 
           <!-- Error Message -->
-          <div v-if="repError" class="text-red-400 text-center mb-4 bg-red-400/10 p-4 rounded-lg">
+          <div v-if="repError" class="text-red-600 text-center mb-4 bg-red-100 p-4 rounded-lg">
             {{ repError }}
           </div>
 
@@ -495,7 +402,7 @@
               <div 
                 v-for="(rep, index) in representatives" 
                 :key="rep.id" 
-                class="bg-white/10 p-6 rounded-lg rep-item"
+                class="bg-white border border-navy-900/10 p-6 rounded-lg rep-item shadow-sm"
                 :style="{ '--rep-index': index }"
               >
                 <div class="flex flex-col md:flex-row gap-6">
@@ -505,16 +412,42 @@
                     class="w-32 h-32 object-cover rounded-lg mx-auto md:mx-0"
                   >
                   <div class="flex-1">
-                    <h4 class="text-xl font-bold mb-2 text-white">{{ rep.name }}</h4>
-                    <p class="text-white/70 mb-2">{{ rep.party }} - {{ rep.area }}</p>
-                    <p class="text-white/70 mb-4">{{ rep.reason }}</p>
+                    <div class="flex items-start justify-between mb-4">
+                      <div>
+                        <div class="flex items-center gap-2 mb-2">
+                          <span class="text-sm font-medium text-navy-900/70">{{ rep.reason }}</span>
+                          <span class="bg-navy-900/10 text-navy-900 px-2 py-1 rounded text-xs font-medium">{{ rep.party }}</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-navy-900">{{ rep.name }}</h4>
+                        <p class="text-navy-900/70 text-sm">{{ rep.area }}</p>
+                      </div>
+                      <div class="text-right">
+                        <p class="text-sm font-medium text-navy-900/70 mb-1">Key Message:</p>
+                        <p class="text-sm text-navy-900/80 max-w-xs">
+                          "I support Section 109 of the CLARITY Act to protect non-custodial wallet development and preserve financial innovation in America."
+                        </p>
+                      </div>
+                    </div>
                     <div class="space-y-2">
-                      <p class="font-bold text-coral-500">Main Office:</p>
-                      <p class="text-white">{{ rep.phone }}</p>
-                      <div v-if="rep.field_offices && rep.field_offices.length > 0">
-                        <p class="font-bold text-coral-500 mt-4 mb-2">Local Offices:</p>
-                        <div v-for="(office, officeIndex) in rep.field_offices" :key="officeIndex" class="text-white">
-                          {{ office.city }}: {{ office.phone }}
+                      <div class="flex items-center gap-3 p-3 bg-navy-900/5 rounded">
+                        <svg class="w-4 h-4 text-navy-900/70" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                        <span class="text-navy-900 font-medium">{{ rep.phone }}</span>
+                      </div>
+                      <button class="flex items-center gap-3 p-3 bg-navy-900/5 rounded hover:bg-navy-900/10 transition-colors w-full">
+                        <svg class="w-4 h-4 text-navy-900/70" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                        <span class="text-navy-900 font-medium">Send Email</span>
+                      </button>
+                      <div v-if="rep.field_offices && rep.field_offices.length > 0" class="mt-4">
+                        <div v-for="(office, officeIndex) in rep.field_offices" :key="officeIndex" class="flex items-center gap-3 p-3 bg-navy-900/5 rounded mb-2">
+                          <svg class="w-4 h-4 text-navy-900/70" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                          </svg>
+                          <span class="text-navy-900">{{ office.city }}: {{ office.phone }}</span>
                         </div>
                       </div>
                     </div>
@@ -527,7 +460,7 @@
           <!-- Empty State -->
           <div 
             v-if="!repLoading && representatives.length === 0 && !repError && repZipCodeEntered" 
-            class="text-white/70 text-center py-8"
+            class="text-navy-900/70 text-center py-8"
           >
             No representatives found for this zip code.
           </div>
@@ -537,33 +470,42 @@
 
     <!-- Stay Updated Section -->
     <section id="stay-updated" class="py-20 bg-white px-4 scroll-reveal">
-      <div class="max-w-4xl mx-auto">
-        <div class="bg-navy-900 inline-block px-6 py-3 mb-12">
-          <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase text-white">
-            STAY UPDATED
-          </h2>
-        </div>
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-space-grotesk font-bold text-4xl md:text-5xl text-navy-900 mb-6">
+          Stay Updated
+        </h2>
+        
+        <p class="text-lg md:text-xl text-navy-900/70 mb-12 max-w-2xl mx-auto">
+          Get critical updates & important activations delivered to your inbox
+        </p>
 
-        <div class="bg-navy-900/5 p-8 rounded-lg">
-          <h3 class="text-navy-900 text-xl md:text-2xl font-bold mb-4 text-center">
-            Get the latest campaign updates
-          </h3>
-          <p class="text-navy-900/80 text-base md:text-lg mb-6 text-center">
-            Sign up for our mailing list to stay informed about the CLARITY Act.
+        <div class="bg-navy-900/5 p-8 md:p-12 rounded-lg max-w-2xl mx-auto">
+          <div class="flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-navy-900 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+            </svg>
+            <h3 class="text-2xl md:text-3xl font-bold text-navy-900">
+              Join the Campaign
+            </h3>
+          </div>
+          
+          <p class="text-navy-900/80 text-base md:text-lg mb-8">
+            Be the first to know about new developments and action opportunities
           </p>
           
           <!-- Email Form -->
-          <form @submit.prevent="submitEmailForm" v-if="!emailSignedUp" class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center w-full">
+          <form @submit.prevent="submitEmailForm" v-if="!emailSignedUp" class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center justify-center w-full mb-6">
             <input 
               type="email" 
               placeholder="Enter your email address" 
               ref="emailInput"
-              class="w-full px-4 py-3 bg-white border border-navy-900/20 text-navy-900 placeholder-navy-900/50 focus:outline-none focus:border-coral-500 text-base md:text-lg rounded-lg"
+              class="md:col-span-2 w-full px-4 py-3 bg-white border border-navy-900/20 text-navy-900 placeholder-navy-900/50 focus:outline-none focus:border-coral-500 text-base md:text-lg rounded-lg"
             >
             <button 
               type="submit" 
               :disabled="emailSubmitting" 
-              class="w-full border border-coral-500 text-coral-500 px-6 py-3 font-bold hover:bg-coral-500 hover:text-white transition-colors text-base md:text-lg bg-transparent rounded-lg"
+              class="w-full bg-navy-900/80 text-white px-6 py-3 font-bold hover:bg-navy-900 transition-colors text-base md:text-lg rounded-lg flex items-center justify-center"
             >
               <span v-if="emailSubmitting" class="loading-spinner mr-2"></span>
               {{ emailSubmitting ? 'Signing up...' : 'Sign Up' }}
@@ -574,21 +516,26 @@
             {{ emailResult }}
           </p>
 
-          <p class="text-navy-900/70 text-xs md:text-sm text-center mt-4">
-            Your information will only be used to keep you updated on the campaign.
-          </p>
+          <div class="flex items-center justify-center text-navy-900/60 text-sm mt-6">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+            </svg>
+            Your information will only be used to look up your congressional representatives or keep you updated.
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Share Campaign Section -->
-    <section id="share-campaign" class="py-20 bg-navy-900 px-4 scroll-reveal">
-      <div class="max-w-6xl mx-auto">
-        <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
-          <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
-            SHARE CAMPAIGN
-          </h2>
-        </div>
+    <section id="share-campaign" class="py-20 bg-white px-4 scroll-reveal">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="font-space-grotesk font-bold text-4xl md:text-5xl text-navy-900 mb-6">
+          Share the Campaign
+        </h2>
+        
+        <p class="text-lg md:text-xl text-navy-900/70 mb-12 max-w-2xl mx-auto">
+          Spread the word and help protect our financial freedom
+        </p>
 
         <!-- Two Column Layout -->
         <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -599,28 +546,45 @@
               alt="Satoshi Needs You" 
               class="w-full h-auto rounded-lg shadow-lg"
             >
+            <div class="mt-6 text-center">
+              <button class="inline-flex items-center gap-2 px-6 py-3 bg-navy-900/5 text-navy-900 rounded-lg hover:bg-navy-900/10 transition-colors font-medium">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+                Download Image
+              </button>
+            </div>
           </div>
           
           <!-- Right Column: Share Box -->
           <div class="order-1 md:order-2">
-            <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
-              <h3 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
-                One Quick Share
-              </h3>
+            <div class="bg-navy-900/5 p-8 rounded-lg">
+              <div class="flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-navy-900 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/>
+                </svg>
+                <h3 class="text-2xl md:text-3xl font-bold text-navy-900">
+                  One-Click Sharing
+                </h3>
+              </div>
+              
+              <p class="text-navy-900/80 text-base md:text-lg mb-8">
+                Share on your favorite social networks with pre-written messages
+              </p>
               
               <div class="space-y-4">
                 <button class="w-full bg-blue-500 hover:bg-blue-600 text-white px-6 py-4 font-bold text-lg transition-colors duration-300 rounded-lg flex items-center justify-center gap-3">
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                   </svg>
-                  Share on Twitter
+                  Share on Twitter/X
                 </button>
                 
-                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 font-bold text-lg transition-colors duration-300 rounded-lg flex items-center justify-center gap-3">
+                <button class="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-4 font-bold text-lg transition-colors duration-300 rounded-lg flex items-center justify-center gap-3">
                   <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                   </svg>
-                  Share on Facebook
+                  Share on Nostr
                 </button>
                 
                 <button class="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-4 font-bold text-lg transition-colors duration-300 rounded-lg flex items-center justify-center gap-3">
