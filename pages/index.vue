@@ -115,36 +115,49 @@
       <!-- Extended background for form overflow -->
       <div class="absolute inset-x-0 top-0 h-[1200px] md:h-[1400px] bg-navy-900 -z-10"></div>
       
-      <!-- Desktop Hero Image (with fixed height) -->
-      <div class="absolute inset-x-0 top-0 h-[850px] md:h-[1000px] bg-[url('@/assets/images/hero-3.jpg')] bg-cover bg-center hidden md:block">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
+      <!-- Hero Background Image with Navy Overlay -->
+      <div class="absolute inset-x-0 top-0 h-[850px] md:h-[1000px] bg-[url('@/assets/images/satoshi-needs-you.png')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-navy-900/60"></div>
       </div>
-      <!-- Mobile Hero Image (with fixed height) -->
-      <div class="absolute inset-x-0 top-0 h-[850px] bg-[url('@/assets/images/sow-mobile-2.jpg')] bg-contain bg-tile block md:hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-900/80 to-navy-900"></div>
-      </div>
-      <div class="relative flex flex-col items-center justify-start py-10 px-4 md:pt-[400px] min-h-[850px] md:min-h-[1000px]">
+      
+      <div class="relative flex flex-col items-center justify-center py-10 px-4 min-h-[850px] md:min-h-[1000px]">
         <div class="max-w-6xl mx-auto w-full">
           <div class="flex flex-col items-center space-y-8 md:space-y-12 text-center">
+            <!-- Updated Hero Title -->
             <h1 class="font-space-grotesk font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl uppercase text-white">
-              Protect your right to transact freely.
+              SATOSHI NEEDS YOU
             </h1>
             
-            <h2 class="bg-coral-500 text-white px-6 py-4 font-space-grotesk font-semibold text-xl sm:text-2xl md:text-3xl uppercase w-full text-center">
-              Support Section 109 of the CLARITY Act
+            <!-- Updated Hero Subtitle -->
+            <h2 class="font-space-grotesk font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase text-coral-500">
+              TO SAVE OUR WALLETS
             </h2>
 
-            <!-- Forms Section -->
-            <div class="w-full max-w-2xl mx-auto mt-8 md:mt-16 relative z-10 space-y-6">
-              <!-- Representative Form Section -->
-              <div class="bg-navy-800/30 backdrop-blur-sm p-4 md:p-8 shadow-lg rounded-lg">
-                <RepForm />
-              </div>
-              
-              <!-- Email Form Section -->
-              <div class="bg-navy-800/30 backdrop-blur-sm p-4 md:p-8 shadow-lg rounded-lg">
-                <EmailForm />
-              </div>
+            <!-- Hero Description -->
+            <p class="text-lg md:text-xl text-white/90 max-w-4xl leading-relaxed">
+              Protect your right to transact freely. Support Section 109 of the CLARITY Act to ensure wallet freedom and protect developer rights.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 mt-8 md:mt-12">
+              <button 
+                @click="isContactModalOpen = true"
+                class="bg-white/20 backdrop-blur-sm text-white px-6 py-3 md:px-8 md:py-4 font-bold text-lg uppercase tracking-wider hover:bg-white/30 transition-all duration-300 border border-white/30 hover:border-white/50"
+              >
+                Find Your Representatives
+              </button>
+              <button 
+                @click="isUpdatesModalOpen = true"
+                class="bg-white/20 backdrop-blur-sm text-white px-6 py-3 md:px-8 md:py-4 font-bold text-lg uppercase tracking-wider hover:bg-white/30 transition-all duration-300 border border-white/30 hover:border-white/50"
+              >
+                Stay Updated
+              </button>
+              <button 
+                @click="isShareModalOpen = true"
+                class="bg-coral-500 text-white px-6 py-3 md:px-8 md:py-4 font-bold text-lg uppercase tracking-wider hover:bg-coral-400 transition-all duration-300 border border-coral-500 hover:border-coral-400"
+              >
+                Share Campaign
+              </button>
             </div>
           </div>
         </div>
