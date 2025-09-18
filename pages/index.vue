@@ -211,65 +211,144 @@
     <!-- Developer Quotes Section -->
     <DeveloperCarousel />
 
-    <!-- What Is Happening Section -->
+    <!-- What Is Happening & What The Bill Does - Combined Section -->
     <section id="what-happening" class="py-20 bg-navy-900 px-4 scroll-reveal">
-      <div class="max-w-6xl mx-auto">
-        <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
-          <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
-            WHAT IS HAPPENING
-          </h2>
-        </div>
+      <div class="max-w-7xl mx-auto">
+        <!-- Two Column Layout -->
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          
+          <!-- Left Column: What Is Happening -->
+          <div class="space-y-8">
+            <div class="bg-coral-500 inline-block px-6 py-3 mb-8">
+              <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
+                What Is Happening
+              </h2>
+            </div>
 
-        <div class="space-y-8">
-          <!-- Card 1 -->
-          <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
-            <div class="relative">
-              <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
-              <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
-              <div class="p-8 pl-12">
-                <p class="text-lg md:text-2xl text-white leading-relaxed">
-                  The leading market structure bills moving through Congress could leave US persons prohibited from utilizing non-custodial wallets and service providers.
-                </p>
+            <div class="space-y-6">
+              <!-- Card 1 -->
+              <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
+                <div class="relative">
+                  <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
+                  <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
+                  <div class="p-6 pl-10">
+                    <p class="text-base md:text-lg text-white leading-relaxed">
+                      The leading market structure bills moving through Congress could leave US persons prohibited from utilizing non-custodial wallets and service providers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
+                <div class="relative">
+                  <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
+                  <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
+                  <div class="p-6 pl-10">
+                    <p class="text-base md:text-lg text-white leading-relaxed">
+                      The long-standing view of FinCEN (the regulator for money transmission) has been that wallets and services that do not have control over user assets are not "money transmitters" since they cannot transmit what they do not control. The Biden DOJ decided to charge developers for this anyway.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
+                <div class="relative">
+                  <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
+                  <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
+                  <div class="p-6 pl-10">
+                    <p class="text-base md:text-lg text-white leading-relaxed">
+                      This has led to some wallets and services banning United States customers creating a chilling effect that has prevented many new wallets from coming to market.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 - Final Warning -->
+              <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700 border-l-4 border-coral-500">
+                <div class="relative">
+                  <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
+                  <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
+                  <div class="p-6 pl-10">
+                    <p class="text-base md:text-lg text-coral-400 font-medium leading-relaxed">
+                      If we don't fix the law, more wallets and Americans will be pushed towards custodians in poorly-regulated jurisdictions who censor transactions they don't like, exposing many more Americans to rug-pulls.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 2 -->
-          <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
-            <div class="relative">
-              <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
-              <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
-              <div class="p-8 pl-12">
-                <p class="text-lg md:text-2xl text-white leading-relaxed">
-                  The long-standing view of FinCEN (the regulator for money transmission) has been that wallets and services that do not have control over user assets are not "money transmitters" since they cannot transmit what they do not control. The Biden DOJ decided to charge developers for this anyway.
-                </p>
+          <!-- Right Column: What The Bill Does -->
+          <div class="space-y-8">
+            <div class="bg-coral-500 inline-block px-6 py-3 mb-8">
+              <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
+                What The Bill Does
+              </h2>
+            </div>
+
+            <!-- Intro text -->
+            <div class="mb-8">
+              <p class="text-base md:text-lg text-white leading-relaxed">
+                Section 109 of the CLARITY Act protects from impossible licensing and registration requirements blockchain developers and service providers who:
+              </p>
+            </div>
+
+            <!-- Cards -->
+            <div class="space-y-4 mb-8">
+              <!-- Card 1 -->
+              <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
+                <div class="relative flex items-center">
+                  <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
+                  <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
+                  <div class="p-6 pl-10 flex items-center w-full">
+                    <div class="text-2xl md:text-3xl font-bold text-coral-500/30 w-16 flex-shrink-0">01</div>
+                    <p class="text-base md:text-lg text-white font-medium flex-1">Don't control consumer funds.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
+                <div class="relative flex items-center">
+                  <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
+                  <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
+                  <div class="p-6 pl-10 flex items-center w-full">
+                    <div class="text-2xl md:text-3xl font-bold text-coral-500/30 w-16 flex-shrink-0">02</div>
+                    <p class="text-base md:text-lg text-white font-medium flex-1">Only provide software or computing services.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
+                <div class="relative flex items-center">
+                  <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
+                  <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
+                  <div class="p-6 pl-10 flex items-center w-full">
+                    <div class="text-2xl md:text-3xl font-bold text-coral-500/30 w-16 flex-shrink-0">03</div>
+                    <p class="text-base md:text-lg text-white font-medium flex-1">Don't act as financial intermediaries.</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Card 3 -->
-          <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
-            <div class="relative">
-              <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
-              <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
-              <div class="p-8 pl-12">
-                <p class="text-lg md:text-2xl text-white leading-relaxed">
-                  This has led to some wallets and services banning United States customers creating a chilling effect that has prevented many new wallets from coming to market.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
-            <div class="relative">
-              <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
-              <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
-              <div class="p-8 pl-12">
-                <p class="text-lg md:text-2xl text-white leading-relaxed">
-                  If we don't fix the law, more wallets and Americans will be pushed towards custodians in poorly-regulated jurisdictions who censor transactions they don't like, exposing many more Americans to rug-pulls.
-                </p>
-              </div>
+            <!-- Conclusion text -->
+            <div>
+              <p class="text-base md:text-lg text-white leading-relaxed mb-6">
+                This clarity helps encourage innovation while ensuring appropriate oversight of actual financial services. This bill is short and direct, you can read the full bill text for yourself.
+              </p>
+              <!-- Secondary CTA: Read The Bill -->
+              <a
+                href="https://www.congress.gov/bill/119th-congress/house-bill/3633/text#HDAC4A4FC88F74B25990B58714F4164FF"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="animated-link underline text-coral-500 hover:text-coral-400 font-semibold inline-block text-base md:text-lg transition-colors duration-200"
+              >
+                Read The Bill
+                <span aria-hidden="true" class="ml-1 arrow-animate">↗</span>
+              </a>
             </div>
           </div>
         </div>
@@ -278,80 +357,6 @@
 
     <!-- Quote Section -->
     <QuoteCarousel />
-
-    <!-- What The Bill Does Section -->
-    <section class="py-20 bg-navy-900 px-4 scroll-reveal">
-      <div class="max-w-6xl mx-auto">
-        <div class="bg-coral-500 inline-block px-6 py-3 mb-12">
-          <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase">
-            WHAT THE BILL DOES
-          </h2>
-        </div>
-
-        <!-- Intro text - full width to match boxes -->
-        <div class="mb-12">
-          <p class="text-lg md:text-2xl text-white leading-relaxed">
-            Section 109 of the CLARITY Act protects from impossible licensing and registration requirements blockchain developers and service providers who:
-          </p>
-        </div>
-
-        <!-- Cards -->
-        <div class="space-y-6 mb-12">
-          <!-- Card 1 -->
-          <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
-            <div class="relative flex items-center">
-              <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
-              <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
-              <div class="p-8 pl-12 flex items-center w-full">
-                <div class="text-3xl md:text-4xl font-bold text-coral-500/20 w-20">01</div>
-                <p class="text-lg md:text-2xl text-white font-medium flex-1">Don't control consumer funds.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
-            <div class="relative flex items-center">
-              <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
-              <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
-              <div class="p-8 pl-12 flex items-center w-full">
-                <div class="text-3xl md:text-4xl font-bold text-coral-500/20 w-20">02</div>
-                <p class="text-lg md:text-2xl text-white font-medium flex-1">Only provide software or computing services.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="group bg-navy-800 rounded-lg overflow-hidden transition-all hover:bg-navy-700">
-            <div class="relative flex items-center">
-              <div class="absolute top-0 left-0 w-1 h-full bg-coral-500"></div>
-              <div class="absolute top-0 left-0 w-16 h-1 bg-coral-500"></div>
-              <div class="p-8 pl-12 flex items-center w-full">
-                <div class="text-3xl md:text-4xl font-bold text-coral-500/20 w-20">03</div>
-                <p class="text-lg md:text-2xl text-white font-medium flex-1">Don't act as financial intermediaries.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Conclusion text - full width to match boxes -->
-        <div>
-          <p class="text-lg md:text-2xl text-white leading-relaxed">
-            This clarity helps encourage innovation while ensuring appropriate oversight of actual financial services. This bill is short and direct, you can read the full bill text for yourself.
-          </p>
-          <!-- Secondary CTA: Read The Bill -->
-          <a
-            href="https://www.congress.gov/bill/119th-congress/house-bill/3633/text#HDAC4A4FC88F74B25990B58714F4164FF"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="animated-link underline text-coral-500 hover:text-coral-400 font-semibold mt-4 inline-block text-lg md:text-2xl transition-colors duration-200"
-          >
-            Read The Bill
-            <span aria-hidden="true" class="ml-1 arrow-animate">↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
 
     <!-- Contact Your Representative Section -->
     <section id="contact-representatives" class="py-20 bg-white px-4 scroll-reveal">
