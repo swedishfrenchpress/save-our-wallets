@@ -1,6 +1,16 @@
 <template>
   <section class="py-20 bg-gray-50 px-4 scroll-reveal">
     <div class="max-w-6xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="font-space-grotesk font-bold text-4xl md:text-5xl text-gray-900 mb-4">
+          Congressional Leaders Speak
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
+          Why the CLARITY Act is critical for U.S. industry.
+        </p>
+      </div>
+      
       <div class="flex items-center justify-center">
         <!-- Left Arrow (desktop only) -->
         <button

@@ -239,49 +239,40 @@
           
           <!-- Left Column: What Is Happening -->
           <div class="space-y-8">
-            <!-- Header Badge -->
-            <div class="bg-coral-500 inline-block px-8 py-3 rounded-2xl">
-              <h2 class="font-space-grotesk font-bold text-xl md:text-2xl uppercase text-white tracking-wide">
+            <!-- Header -->
+            <div>
+              <h2 class="font-space-grotesk font-bold text-3xl md:text-4xl text-gray-900 mb-6">
                 What Is Happening
               </h2>
             </div>
 
-
-            <div class="space-y-4">
-              <!-- Card 1 -->
-              <div class="bg-gray-100/80 backdrop-blur-md rounded-2xl border border-gray-200 transition-all hover:bg-gray-100/90">
-                <div class="p-6">
-                    <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-                      The leading market structure bills moving through Congress could leave US persons prohibited from utilizing non-custodial wallets and service providers.
-                    </p>
-                </div>
+            <div class="space-y-6">
+              <!-- Point 1 -->
+              <div>
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  The leading market structure bills moving through Congress could leave US persons prohibited from utilizing non-custodial wallets and service providers.
+                </p>
               </div>
 
-              <!-- Card 2 -->
-              <div class="bg-gray-100/80 backdrop-blur-md rounded-2xl border border-gray-200 transition-all hover:bg-gray-100/90">
-                <div class="p-6">
-                    <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-                      The long-standing view of FinCEN (the regulator for money transmission) has been that wallets and services that do not have control over user assets are not "money transmitters" since they cannot transmit what they do not control. The Biden DOJ decided to charge developers for this anyway.
-                    </p>
-                </div>
+              <!-- Point 2 -->
+              <div>
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  The long-standing view of FinCEN (the regulator for money transmission) has been that wallets and services that do not have control over user assets are not "money transmitters" since they cannot transmit what they do not control. The Biden DOJ decided to charge developers for this anyway.
+                </p>
               </div>
 
-              <!-- Card 3 -->
-              <div class="bg-gray-100/80 backdrop-blur-md rounded-2xl border border-gray-200 transition-all hover:bg-gray-100/90">
-                <div class="p-6">
-                    <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-                      This has led to some wallets and services banning United States customers creating a chilling effect that has prevented many new wallets from coming to market.
-                    </p>
-                </div>
+              <!-- Point 3 -->
+              <div>
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                  This has led to some wallets and services banning United States customers creating a chilling effect that has prevented many new wallets from coming to market.
+                </p>
               </div>
 
-              <!-- Card 4 - Final Warning -->
-              <div class="bg-gray-100/80 backdrop-blur-md rounded-2xl border border-gray-200 transition-all hover:bg-gray-100/90">
-                <div class="p-6">
-                    <p class="text-base md:text-lg text-coral-600 font-medium leading-relaxed">
-                      If we don't fix the law, more wallets and Americans will be pushed towards custodians in poorly-regulated jurisdictions who censor transactions they don't like, exposing many more Americans to rug-pulls.
-                    </p>
-                </div>
+              <!-- Point 4 - Final Warning -->
+              <div>
+                <p class="text-lg md:text-xl text-coral-600 font-semibold leading-relaxed">
+                  If we don't fix the law, more wallets and Americans will be pushed towards custodians in poorly-regulated jurisdictions who censor transactions they don't like, exposing many more Americans to rug-pulls.
+                </p>
               </div>
             </div>
           </div>
