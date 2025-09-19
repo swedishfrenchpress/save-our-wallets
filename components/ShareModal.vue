@@ -6,7 +6,7 @@
 
     <!-- Modal panel -->
     <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-      <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+      <div class="relative transform overflow-hidden rounded-2xl bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
         <!-- Close button -->
         <div class="absolute right-0 top-0 pr-4 pt-4">
           <button
@@ -23,31 +23,31 @@
 
         <!-- Modal content -->
         <div class="flex flex-col items-center">
-          <h3 class="text-2xl font-bold leading-6 text-navy-900 mb-6" id="modal-title">
+          <h3 class="text-2xl font-bold leading-6 text-gray-900 mb-6" id="modal-title">
             Share This Campaign
           </h3>
           <img
             :src="ogImage"
             alt="Shareable Campaign Image"
-            class="w-full max-w-md rounded-lg border mb-4"
+            class="w-full max-w-md rounded-2xl border border-gray-200 mb-4"
           >
           <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
             <a
               :href="ogImage"
               download="save-our-wallets.png"
-              class="flex-1 bg-coral-500 text-white font-bold py-3 px-6 rounded-lg text-center hover:bg-coral-400 transition-colors"
+              class="flex-1 bg-coral-500/90 backdrop-blur-sm text-white font-bold py-3 px-6 rounded-xl text-center hover:bg-coral-400/90 transition-colors"
             >
               Download Image
             </a>
             <button
               @click="shareOnTwitter"
-              class="flex-1 flex items-center justify-center gap-2 bg-black text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors"
+              class="flex-1 flex items-center justify-center gap-2 bg-black/90 backdrop-blur-sm text-white font-bold py-3 px-6 rounded-xl hover:bg-gray-800/90 transition-colors"
             >
               <span class="font-extrabold text-xl" aria-hidden="true">X</span>
               Share on X
             </button>
           </div>
-          <p class="text-navy-900/70 text-xs text-center mt-4">
+          <p class="text-gray-500 text-xs text-center mt-4">
             Download and share this image, or post directly to X (Twitter) to help spread the word!
           </p>
         </div>

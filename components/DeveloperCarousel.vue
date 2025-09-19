@@ -5,7 +5,7 @@
         <!-- Left Arrow (desktop only) -->
         <button
           @click="goToPrev"
-          class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-navy-800/80 hover:bg-coral-500 text-white shadow transition mx-2"
+          class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm hover:bg-coral-500/90 text-gray-900 hover:text-white transition mx-2 border border-white/30"
           aria-label="Previous quote"
         >
           &#8592;
@@ -19,10 +19,10 @@
             >
               <div class="flex-1">
                 <blockquote class="relative pl-8 border-l-4 border-coral-500">
-                  <p class="text-lg md:text-2xl text-navy-900 leading-relaxed mb-8" v-html="quotes[currentQuote].text"></p>
+                  <p class="text-lg md:text-2xl text-gray-900 leading-relaxed mb-8" v-html="quotes[currentQuote].text"></p>
                   <div class="flex flex-col">
                     <cite class="text-lg md:text-xl text-coral-500 font-bold not-italic">{{ quotes[currentQuote].author }}</cite>
-                    <span class="text-navy-900/70">{{ quotes[currentQuote].title }}</span>
+                    <span class="text-gray-600">{{ quotes[currentQuote].title }}</span>
                   </div>
                 </blockquote>
               </div>
@@ -30,7 +30,7 @@
                 <img 
                   :src="quotes[currentQuote].image"
                   :alt="quotes[currentQuote].author"
-                  class="w-full h-full object-cover rounded-lg"
+                  class="w-full h-full object-cover rounded-2xl"
                 />
               </div>
             </div>
@@ -39,7 +39,7 @@
         <!-- Right Arrow (desktop only) -->
         <button
           @click="goToNext"
-          class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-navy-800/80 hover:bg-coral-500 text-white shadow transition mx-2"
+          class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm hover:bg-coral-500/90 text-gray-900 hover:text-white transition mx-2 border border-white/30"
           aria-label="Next quote"
         >
           &#8594;

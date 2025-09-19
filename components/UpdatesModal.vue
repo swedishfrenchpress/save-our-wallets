@@ -6,7 +6,7 @@
 
     <!-- Modal panel -->
     <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-      <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+      <div class="relative transform overflow-hidden rounded-2xl bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
         <!-- Close button -->
         <div class="absolute right-0 top-0 pr-4 pt-4">
           <button
@@ -24,13 +24,13 @@
         <!-- Modal content -->
         <div class="sm:flex sm:items-start">
           <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
-            <h3 class="text-2xl font-bold leading-6 text-navy-900 mb-6" id="modal-title">
+            <h3 class="text-2xl font-bold leading-6 text-gray-900 mb-6" id="modal-title">
               Stay Updated
             </h3>
             
             <!-- Email Form -->
             <div class="email-form">
-              <h3 class="text-navy-900 text-base md:text-lg mb-4 text-center">
+              <h3 class="text-gray-900 text-base md:text-lg mb-4 text-center">
                 Sign up for the mailing list to stay informed on the campaign.
               </h3>
               <form @submit.prevent="submitForm" v-if="!signed_up" class="grid grid-cols-1 gap-4 items-center justify-center w-full">
@@ -38,18 +38,18 @@
                   type="email" 
                   placeholder="Email" 
                   ref="email"
-                  class="w-full px-4 py-3 bg-white border border-navy-900/20 text-navy-900 placeholder-navy-900/50 focus:outline-none focus:border-coral-500 text-base md:text-lg rounded-lg"
+                  class="w-full px-4 py-3 bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-coral-500 focus:ring-2 focus:ring-coral-500/20 text-base md:text-lg rounded-xl"
                 >
-                <button type="submit" :disabled="submitting" class="w-full border border-coral-500 text-coral-500 px-6 py-3 font-bold hover:bg-coral-500 hover:text-white transition-colors text-base md:text-lg bg-transparent rounded-lg">
+                <button type="submit" :disabled="submitting" class="w-full border border-coral-500 text-coral-500 px-6 py-3 font-bold hover:bg-coral-500/90 hover:text-white transition-colors text-base md:text-lg bg-transparent backdrop-blur-sm rounded-xl">
                   <span v-if="submitting" class="loading-spinner mr-2"></span>
                   {{ submitting ? 'Signing up...' : 'Sign Up' }}
                 </button>
               </form>
-              <p v-if="result != ''" class="text-navy-900 mt-4 text-center">
+              <p v-if="result != ''" class="text-gray-900 mt-4 text-center">
                 {{result}}
               </p>
 
-              <p class="text-navy-900/70 text-xs md:text-sm text-center mt-4">
+              <p class="text-gray-500 text-xs md:text-sm text-center mt-4">
                 Your information will only be used to keep you updated on the campaign.
               </p>
             </div>
