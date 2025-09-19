@@ -803,10 +803,9 @@ async function submitEmailForm() {
 // Social Media Sharing Functions
 const shareData = {
   title: 'Save Our Wallets - Support Section 109 of the CLARITY Act',
-  text: 'Protect your right to transact freely! Support Section 109 of the CLARITY Act to ensure wallet freedom and protect developer rights. #SaveOurWallets #CLARITYAct #Bitcoin #CryptoRights',
+  text: 'Satoshi needs you! Protect non-custodial wallets and financial freedom. Support Section 109 of the CLARITY Act. #SaveOurWallets #Bitcoin #CLARITYACT #DontTrustVerify',
   url: 'https://saveourwallets.org',
-  hashtags: ['SaveOurWallets', 'CLARITYAct', 'Bitcoin', 'CryptoRights', 'WalletFreedom'],
-  imageUrl: 'https://saveourwallets.org/images/og_image.png'
+  hashtags: ['SaveOurWallets', 'Bitcoin', 'CLARITYACT', 'DontTrustVerify']
 }
 
 // Detect if user is on mobile
@@ -839,14 +838,14 @@ const copyToClipboard = async (text) => {
 
 // Share on Twitter/X
 const shareOnTwitter = () => {
-  const text = encodeURIComponent(`${shareData.text}\n\n${shareData.url}`)
+  const text = encodeURIComponent(`${shareData.text} ${shareData.url}`)
   const url = `https://twitter.com/intent/tweet?text=${text}`
   window.open(url, '_blank', 'width=600,height=400')
 }
 
 // Share on Nostr (using Nostr web clients)
 const shareOnNostr = () => {
-  const text = encodeURIComponent(`${shareData.text}\n\n${shareData.url}`)
+  const text = encodeURIComponent(`${shareData.text} ${shareData.url}`)
   
   // Try multiple Nostr web clients
   const nostrClients = [
@@ -967,23 +966,16 @@ const shareNative = async () => {
 }
 
 // Download image function
-const downloadImage = async () => {
+const downloadImage = () => {
   try {
-    // Fetch the image from the assets folder
-    const response = await fetch('/assets/images/satoshi-needs-you.png')
-    const blob = await response.blob()
-    
-    // Create download link
-    const url = window.URL.createObjectURL(blob)
+    // Create a simple download link - this should work in both dev and production
     const link = document.createElement('a')
-    link.href = url
+    link.href = '/images/satoshi-needs-you.png'
     link.download = 'satoshi-needs-you.png'
+    link.target = '_blank'
     document.body.appendChild(link)
     link.click()
-    
-    // Cleanup
     document.body.removeChild(link)
-    window.URL.revokeObjectURL(url)
   } catch (error) {
     console.error('Error downloading image:', error)
     alert('Error downloading image. Please try again.')
