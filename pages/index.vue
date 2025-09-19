@@ -358,7 +358,7 @@
     <section id="contact-representatives" class="py-8 bg-white px-4 scroll-reveal">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-4">
-          <div class="flex items-center justify-center gap-4 mb-4">
+          <div class="flex items-center justify-center gap-4 mb-1">
             <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase text-gray-900">
               Contact Your Representatives
             </h2>
@@ -480,7 +480,7 @@
     <section id="stay-updated" class="py-8 bg-gray-50 px-4 scroll-reveal">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-4">
-          <div class="flex items-center justify-center gap-4 mb-4">
+          <div class="flex items-center justify-center gap-4 mb-1">
             <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase text-gray-900">
               Stay Updated
             </h2>
@@ -548,8 +548,8 @@
     <!-- Share Campaign Section -->
     <section id="share-campaign" class="py-8 bg-white px-4 scroll-reveal">
       <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-          <div class="flex items-center justify-center gap-4 mb-4">
+        <div class="text-center mb-2">
+          <div class="flex items-center justify-center gap-4 mb-1">
             <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase text-gray-900">
               Share the Campaign
             </h2>
@@ -967,13 +967,27 @@ const shareNative = async () => {
 }
 
 // Download image function
-const downloadImage = () => {
-  const link = document.createElement('a')
-  link.href = '/images/satoshi-needs-you.png'
-  link.download = 'satoshi-needs-you.png'
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link)
+const downloadImage = async () => {
+  try {
+    // Fetch the image from the assets folder
+    const response = await fetch('/assets/images/satoshi-needs-you.png')
+    const blob = await response.blob()
+    
+    // Create download link
+    const url = window.URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.href = url
+    link.download = 'satoshi-needs-you.png'
+    document.body.appendChild(link)
+    link.click()
+    
+    // Cleanup
+    document.body.removeChild(link)
+    window.URL.revokeObjectURL(url)
+  } catch (error) {
+    console.error('Error downloading image:', error)
+    alert('Error downloading image. Please try again.')
+  }
 }
 
 // Animation functions for representatives
