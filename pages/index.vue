@@ -15,30 +15,38 @@
         </div>
 
         <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center space-x-12">
-          <a 
-            href="#why-matters" 
+        <div class="hidden md:flex items-center space-x-4">
+          <button 
+            @click="scrollToSection('contact-representatives')" 
             class="text-gray-900 font-bold uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
-            :class="isScrolled ? 'text-base' : 'text-lg'"
+            :class="isScrolled ? 'text-sm' : 'text-base'"
           >
-            Why
+            Find Representatives
             <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-coral-500 transition-all duration-300 group-hover:w-full"></div>
-          </a>
-          <a 
-            href="#what-happening" 
+          </button>
+          <button 
+            @click="scrollToSection('stay-updated')" 
             class="text-gray-900 font-bold uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
-            :class="isScrolled ? 'text-base' : 'text-lg'"
+            :class="isScrolled ? 'text-sm' : 'text-base'"
           >
-            What
+            Stay Updated
             <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-coral-500 transition-all duration-300 group-hover:w-full"></div>
-          </a>
-          <a 
-            href="#take-action" 
+          </button>
+          <button 
+            @click="scrollToSection('share-campaign')" 
+            class="text-gray-900 font-bold uppercase tracking-wider hover:text-coral-500 transition-all duration-300 relative group"
+            :class="isScrolled ? 'text-sm' : 'text-base'"
+          >
+            Share
+            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-coral-500 transition-all duration-300 group-hover:w-full"></div>
+          </button>
+          <button 
+            @click="scrollToSection('contact-representatives')" 
             class="bg-coral-500/90 backdrop-blur-sm text-white font-bold uppercase tracking-wider hover:bg-coral-400/90 hover:transform hover:-translate-y-0.5 transition-all duration-300 rounded-xl"
-            :class="isScrolled ? 'px-6 py-2 text-base' : 'px-8 py-3 text-lg'"
+            :class="isScrolled ? 'px-6 py-2 text-sm' : 'px-8 py-3 text-base'"
           >
             Take Action
-          </a>
+          </button>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -84,27 +92,30 @@
             class="flex flex-col space-y-6 p-8"
             :class="isMenuOpen && 'animate-menuItems'"
           >
-            <a 
-              href="#why-matters" 
-              class="text-gray-900 font-bold text-xl uppercase tracking-wider hover:text-coral-500 transition-all duration-150"
-              @click="isMenuOpen = false"
+            <button 
+              @click="scrollToSection('contact-representatives'); isMenuOpen = false" 
+              class="text-gray-900 font-bold text-lg uppercase tracking-wider hover:text-coral-500 transition-all duration-150 text-left w-full"
             >
-              Why
-            </a>
-            <a 
-              href="#what-happening" 
-              class="text-gray-900 font-bold text-xl uppercase tracking-wider hover:text-coral-500 transition-all duration-150"
-              @click="isMenuOpen = false"
+              Find Representatives
+            </button>
+            <button 
+              @click="scrollToSection('stay-updated'); isMenuOpen = false" 
+              class="text-gray-900 font-bold text-lg uppercase tracking-wider hover:text-coral-500 transition-all duration-150 text-left w-full"
             >
-              What
-            </a>
-            <a 
-              href="#take-action" 
-              class="bg-coral-500 text-white px-6 py-3 rounded-xl font-bold text-xl uppercase tracking-wider hover:bg-coral-400 transition-all duration-150 text-center"
-              @click="isMenuOpen = false"
+              Stay Updated
+            </button>
+            <button 
+              @click="scrollToSection('share-campaign'); isMenuOpen = false" 
+              class="text-gray-900 font-bold text-lg uppercase tracking-wider hover:text-coral-500 transition-all duration-150 text-left w-full"
+            >
+              Share
+            </button>
+            <button 
+              @click="scrollToSection('contact-representatives'); isMenuOpen = false" 
+              class="bg-coral-500 text-white px-6 py-3 rounded-xl font-bold text-lg uppercase tracking-wider hover:bg-coral-400 transition-all duration-150 text-center w-full"
             >
               Take Action
-            </a>
+            </button>
           </div>
         </div>
       </transition>
