@@ -43,7 +43,7 @@
                   v-model="zipCode"
                   type="text" 
                   placeholder="Zip Code" 
-                  class="w-full px-4 py-3 bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-coral-500 focus:ring-2 focus:ring-coral-500/20 text-base md:text-lg rounded-xl"
+                  class="w-full px-4 py-3 bg-gray-100 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-coral-500 focus:ring-2 focus:ring-coral-500/20 text-base md:text-lg rounded-xl"
                 >
                 <button
                   type="submit"
@@ -63,7 +63,7 @@
 
                 <!-- Loading Placeholder -->
                 <div v-if="loading" class="space-y-6 w-full">
-                  <div v-for="i in 3" :key="`skeleton-${i}`" class="bg-gray-50 p-6 rounded-2xl animate-pulse border border-gray-100">
+                  <div v-for="i in 3" :key="`skeleton-${i}`" class="bg-gray-100 p-6 rounded-2xl animate-pulse border border-gray-100">
                     <div class="flex flex-col md:flex-row gap-6">
                       <div class="w-32 h-32 bg-gray-200 rounded-2xl"></div>
                       <div class="flex-1">

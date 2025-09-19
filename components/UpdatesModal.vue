@@ -38,7 +38,7 @@
                   type="email" 
                   placeholder="Email" 
                   ref="email"
-                  class="w-full px-4 py-3 bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-coral-500 focus:ring-2 focus:ring-coral-500/20 text-base md:text-lg rounded-xl"
+                  class="w-full px-4 py-3 bg-gray-100 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-coral-500 focus:ring-2 focus:ring-coral-500/20 text-base md:text-lg rounded-xl"
                 >
                 <button type="submit" :disabled="submitting" class="w-full border border-coral-500 text-coral-500 px-6 py-3 font-bold hover:bg-coral-500/90 hover:text-white transition-colors text-base md:text-lg bg-transparent backdrop-blur-sm rounded-xl">
                   <span v-if="submitting" class="loading-spinner mr-2"></span>

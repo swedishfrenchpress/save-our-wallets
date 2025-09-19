@@ -122,9 +122,9 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative bg-gray-50 pt-[25vh] md:pt-0 scroll-reveal">
+    <div class="relative bg-gray-100 pt-[25vh] md:pt-0 scroll-reveal">
       <!-- Extended background for form overflow -->
-      <div class="absolute inset-x-0 top-0 h-[1200px] md:h-[1400px] bg-gray-50 -z-10"></div>
+      <div class="absolute inset-x-0 top-0 h-[1200px] md:h-[1400px] bg-gray-100 -z-10"></div>
       
       <!-- Hero Background Image with Light Overlay -->
       <div class="absolute inset-x-0 top-0 h-[850px] md:h-[1000px] bg-[url('@/assets/images/satoshi-needs-you.png')] bg-cover bg-center">
@@ -193,7 +193,7 @@
         <!-- Three Feature Cards Grid -->
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Card 1 -->
-          <div class="bg-gray-50/60 backdrop-blur-md p-8 rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-all duration-300">
+          <div class="bg-gray-100/60 backdrop-blur-md p-8 rounded-2xl border border-gray-100 hover:bg-gray-100/80 transition-all duration-300">
             <div class="flex items-center justify-center w-16 h-16 bg-coral-500 rounded-full mb-6 mx-auto relative">
               <span class="text-2xl font-bold text-white">01</span>
             </div>
@@ -204,7 +204,7 @@
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-gray-50/60 backdrop-blur-md p-8 rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-all duration-300">
+          <div class="bg-gray-100/60 backdrop-blur-md p-8 rounded-2xl border border-gray-100 hover:bg-gray-100/80 transition-all duration-300">
             <div class="flex items-center justify-center w-16 h-16 bg-coral-500 rounded-full mb-6 mx-auto relative">
               <span class="text-2xl font-bold text-white">02</span>
             </div>
@@ -215,7 +215,7 @@
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-gray-50/60 backdrop-blur-md p-8 rounded-2xl border border-gray-100 hover:bg-gray-50/80 transition-all duration-300">
+          <div class="bg-gray-100/60 backdrop-blur-md p-8 rounded-2xl border border-gray-100 hover:bg-gray-100/80 transition-all duration-300">
             <div class="flex items-center justify-center w-16 h-16 bg-coral-500 rounded-full mb-6 mx-auto relative">
               <span class="text-2xl font-bold text-white">03</span>
             </div>
@@ -378,9 +378,8 @@
           </p>
         </div>
 
-        <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100">
-          <!-- ZIP Code Form -->
-          <form @submit.prevent="submitRepForm" class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center mb-6 w-full">
+        <!-- ZIP Code Form -->
+        <form @submit.prevent="submitRepForm" class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center mb-6 w-full max-w-2xl mx-auto">
             <input 
               v-model="repZipCode"
               type="text" 
@@ -439,13 +438,13 @@
                       </div>
                     </div>
                     <div class="space-y-2">
-                      <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl border border-gray-100">
+                      <div class="flex items-center gap-3 p-3 bg-gray-100 rounded-xl border border-gray-100">
                         <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
                         </svg>
                         <span class="text-gray-900 font-medium">{{ rep.phone }}</span>
                       </div>
-                      <button class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors w-full border border-gray-100">
+                      <button class="flex items-center gap-3 p-3 bg-gray-100 rounded-xl hover:bg-gray-100 transition-colors w-full border border-gray-100">
                         <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                           <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
@@ -453,7 +452,7 @@
                         <span class="text-gray-900 font-medium">Send Email</span>
                       </button>
                       <div v-if="rep.field_offices && rep.field_offices.length > 0" class="mt-4">
-                        <div v-for="(office, officeIndex) in rep.field_offices" :key="officeIndex" class="flex items-center gap-3 p-3 bg-gray-50 rounded-xl mb-2 border border-gray-100">
+                        <div v-for="(office, officeIndex) in rep.field_offices" :key="officeIndex" class="flex items-center gap-3 p-3 bg-gray-100 rounded-xl mb-2 border border-gray-100">
                           <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
                           </svg>
@@ -467,19 +466,18 @@
             </div>
           </transition-group>
           
-          <!-- Empty State -->
-          <div 
-            v-if="!repLoading && representatives.length === 0 && !repError && repZipCodeEntered" 
-            class="text-gray-600 text-center py-8"
-          >
-            No representatives found for this zip code.
-          </div>
+        <!-- Empty State -->
+        <div 
+          v-if="!repLoading && representatives.length === 0 && !repError && repZipCodeEntered" 
+          class="text-gray-600 text-center py-8"
+        >
+          No representatives found for this zip code.
         </div>
       </div>
     </section>
 
     <!-- Stay Updated Section -->
-    <section id="stay-updated" class="py-8 bg-gray-50 px-4 scroll-reveal">
+    <section id="stay-updated" class="py-8 bg-white px-4 scroll-reveal">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-4">
           <div class="flex items-center justify-center gap-4 mb-1">
@@ -500,7 +498,7 @@
           </p>
         </div>
 
-        <div class="bg-white/60 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+        <div class="bg-gray-100 p-8 rounded-2xl border border-gray-100">
           <div class="flex items-center justify-center mb-6">
             <svg class="w-8 h-8 text-gray-900 mr-3" fill="currentColor" viewBox="0 0 20 20">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
@@ -521,7 +519,7 @@
               type="email" 
               placeholder="Enter your email address" 
               ref="emailInput"
-              class="md:col-span-2 w-full px-4 py-3 bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-coral-500 focus:ring-2 focus:ring-coral-500/20 text-base md:text-lg rounded-xl"
+              class="md:col-span-2 w-full px-4 py-3 bg-gray-100 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-coral-500 focus:ring-2 focus:ring-coral-500/20 text-base md:text-lg rounded-xl"
             >
             <button 
               type="submit" 
@@ -579,7 +577,7 @@
               class="w-full h-auto rounded-2xl"
             >
             <div class="mt-6 text-center">
-              <button @click="downloadImage" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-50 text-gray-900 rounded-xl hover:bg-gray-100 transition-colors font-medium border border-gray-200">
+              <button @click="downloadImage" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-900 rounded-xl hover:bg-gray-100 transition-colors font-medium border border-gray-200">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
                 </svg>

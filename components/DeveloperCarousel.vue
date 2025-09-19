@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20 bg-white px-4 scroll-reveal">
+  <section class="py-20 bg-gray-100 px-4 scroll-reveal">
     <div class="max-w-6xl mx-auto">
       <!-- Section Header -->
       <div class="text-center mb-16">
