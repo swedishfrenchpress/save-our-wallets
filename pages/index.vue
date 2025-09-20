@@ -444,7 +444,10 @@
                         </svg>
                         <span class="text-gray-900 font-medium">{{ rep.phone }}</span>
                       </div>
-                      <button class="flex items-center gap-3 p-3 bg-gray-100 rounded-xl hover:bg-gray-100 transition-colors w-full border border-gray-100">
+                      <button 
+                        @click="openEmailModal(rep)"
+                        class="flex items-center gap-3 p-3 bg-gray-100 rounded-xl hover:bg-gray-200 transition-colors w-full border border-gray-100"
+                      >
                         <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
                           <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                           <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
@@ -656,6 +659,76 @@
       @close="isShareModalOpen = false"
     />
 
+    <!-- Email Modal -->
+    <div 
+      v-if="isEmailModalOpen" 
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+      @click="closeEmailModal"
+    >
+      <div 
+        class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] flex flex-col"
+        @click.stop
+      >
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <h2 class="text-xl font-semibold text-gray-900">
+            Email {{ currentRepresentative?.name || 'Representative' }}
+          </h2>
+          <button
+            @click="closeEmailModal"
+            class="text-gray-400 hover:text-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="flex-1 p-6 overflow-hidden">
+          <textarea
+            v-model="emailModalText"
+            class="w-full h-96 p-4 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-coral-500 focus:border-transparent font-mono text-sm leading-relaxed"
+            placeholder="Your letter content..."
+          />
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-between p-6 border-t border-gray-200 bg-gray-50 rounded-b-lg">
+          <button
+            @click="copyEmailToClipboard"
+            :class="[
+              'flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2',
+              copySuccess 
+                ? 'bg-green-100 text-green-700 ring-green-500' 
+                : 'bg-gray-100 hover:bg-gray-200 text-gray-700 ring-gray-500'
+            ]"
+          >
+            <svg v-if="copySuccess" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <svg v-else class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+            {{ copySuccess ? 'Copied!' : 'Copy to Clipboard' }}
+          </button>
+
+          <div class="text-center flex-1 mx-4">
+            <p class="text-sm text-gray-600">
+              Copy the text, then open your email app and paste it
+            </p>
+          </div>
+
+          <button
+            @click="closeEmailModal"
+            class="bg-coral-500 hover:bg-coral-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-coral-500 focus:ring-offset-2"
+          >
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer class="py-8 px-4 bg-white border-t border-gray-200">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -729,6 +802,12 @@ const emailInput = ref(null)
 const emailResult = ref('')
 const emailSignedUp = ref(false)
 const emailSubmitting = ref(false)
+
+// Email modal data
+const isEmailModalOpen = ref(false)
+const currentRepresentative = ref(null)
+const emailModalText = ref('')
+const copySuccess = ref(false)
 
 // Computed properties
 const isValidRepZip = computed(() => {
@@ -982,6 +1061,73 @@ const downloadImage = () => {
   }
 }
 
+// Email modal functions
+const openEmailModal = (rep) => {
+  currentRepresentative.value = rep
+  
+  // Generate personalized email content
+  const title = rep.reason === 'U.S. Senator' ? 'Senator' : 'Representative'
+  const emailContent = `Dear ${title} ${rep.name},
+
+I am writing as your constituent to urge your support for Section 109 of the CLARITY Act (H.R. 3633). This critical provision protects the fundamental tools that make Bitcoin sovereign and censorship-resistant while ensuring appropriate regulatory oversight.
+
+Section 109 provides essential clarity by establishing that individuals and entities who do not control consumer funds, only provide software or computing services, and do not act as financial intermediaries should not be subject to money transmitter licensing requirements they cannot comply with anyway.
+
+Without this protection, we risk:
+• Pushing wallet development offshore to poorly-regulated jurisdictions
+• Hindering American competitiveness in open source financial technology
+• Creating confusion for builders who publish code and run infrastructure
+• Chilling innovation that improves consumer safety and transparency
+
+Please support Section 109 of the CLARITY Act to keep American leadership in responsible Bitcoin development and protect the rights of users and developers.
+
+Thank you for your time and service.
+
+Sincerely,
+[Your Name]
+[Your Address]
+[City, State, ZIP Code]`
+
+  emailModalText.value = emailContent
+  isEmailModalOpen.value = true
+  copySuccess.value = false
+}
+
+const closeEmailModal = () => {
+  isEmailModalOpen.value = false
+  currentRepresentative.value = null
+}
+
+const copyEmailToClipboard = async () => {
+  try {
+    await navigator.clipboard.writeText(emailModalText.value)
+    copySuccess.value = true
+    setTimeout(() => copySuccess.value = false, 2000)
+  } catch (err) {
+    // Fallback for older browsers
+    const textArea = document.createElement('textarea')
+    textArea.value = emailModalText.value
+    document.body.appendChild(textArea)
+    textArea.focus()
+    textArea.select()
+    try {
+      document.execCommand('copy')
+      copySuccess.value = true
+      setTimeout(() => copySuccess.value = false, 2000)
+    } catch (err) {
+      console.error('Failed to copy text: ', err)
+    }
+    document.body.removeChild(textArea)
+  }
+}
+
+// Keyboard event handler for email modal
+const handleEmailModalKeyDown = (event) => {
+  if (event.key === 'Escape' && isEmailModalOpen.value) {
+    closeEmailModal()
+  }
+}
+
 // Animation functions for representatives
 const beforeEnterRep = (el) => {
   el.style.opacity = 0
@@ -1003,6 +1149,9 @@ onMounted(() => {
   
   // Initial check
   handleScroll()
+
+  // Add keyboard event listener for email modal
+  window.addEventListener('keydown', handleEmailModalKeyDown)
 
   // Load reCAPTCHA script
   const script = document.createElement('script')
@@ -1044,6 +1193,7 @@ onMounted(() => {
 // Clean up event listeners when component is unmounted
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('keydown', handleEmailModalKeyDown)
   const script = document.querySelector('script[src="https://www.google.com/recaptcha/api.js"]')
   if (script) {
     script.remove()
