@@ -86,7 +86,7 @@
       >
         <div 
           v-if="isMenuOpen" 
-          class="md:hidden fixed top-[5rem] left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-gray-200 rounded-b-2xl"
+          class="md:hidden fixed top-20 left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-gray-200"
         >
           <div 
             class="flex flex-col space-y-6 p-8"
