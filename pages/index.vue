@@ -357,7 +357,7 @@
     <QuoteCarousel />
 
     <!-- Contact Your Representative Section -->
-    <section id="contact-representatives" class="py-8 bg-white px-4 scroll-reveal">
+    <section id="contact-representatives" class="py-16 bg-gray-100 px-4 scroll-reveal">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-4">
           <div class="flex items-center justify-center gap-4 mb-1">
@@ -477,7 +477,7 @@
     </section>
 
     <!-- Stay Updated Section -->
-    <section id="stay-updated" class="py-8 bg-white px-4 scroll-reveal">
+    <section id="stay-updated" class="py-16 bg-white px-4 scroll-reveal">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-4">
           <div class="flex items-center justify-center gap-4 mb-1">
