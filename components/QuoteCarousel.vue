@@ -20,7 +20,7 @@
         >
           &#8592;
         </button>
-        <div class="flex-1 flex justify-center min-h-[300px]">
+        <div class="flex-1 flex justify-center min-h-[450px] md:min-h-[300px]">
           <transition :name="transitionName" mode="out-in" @after-enter="onTransitionEnd">
             <div
               class="flex flex-col md:flex-row items-center gap-8 w-full"
