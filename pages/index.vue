@@ -580,12 +580,14 @@
               class="w-full h-auto rounded-2xl"
             >
             <div class="mt-6 text-center">
-              <button @click="downloadImage" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 text-gray-900 rounded-xl hover:bg-gray-100 transition-colors font-medium border border-gray-200">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                </svg>
-                Download Image
-              </button>
+              <div class="flex flex-col gap-3 justify-center">
+                <button @click="downloadImage" class="px-6 py-3 bg-coral-500 text-white rounded-xl hover:bg-coral-600 transition-colors font-medium">
+                  Download Campaign Image
+                </button>
+                <button @click="downloadTemplate" class="px-6 py-3 bg-gray-100 text-gray-900 rounded-xl hover:bg-gray-200 transition-colors font-medium border border-gray-200">
+                  Download Template
+                </button>
+              </div>
             </div>
           </div>
           
@@ -1083,6 +1085,23 @@ const downloadImage = () => {
   } catch (error) {
     console.error('Error downloading image:', error)
     alert('Error downloading image. Please try again.')
+  }
+}
+
+// Download template function
+const downloadTemplate = () => {
+  try {
+    // Create a simple download link for the remix template
+    const link = document.createElement('a')
+    link.href = '/images/remix-template.png'
+    link.download = 'remix-template.png'
+    link.target = '_blank'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  } catch (error) {
+    console.error('Error downloading template:', error)
+    alert('Error downloading template. Please try again.')
   }
 }
 
