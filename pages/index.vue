@@ -357,23 +357,21 @@
     <QuoteCarousel />
 
     <!-- Contact Your Representative Section -->
-    <section id="contact-representatives" class="py-16 bg-gray-100 px-4 scroll-reveal">
+    <section id="contact-representatives" class="py-20 bg-gray-100 px-4 scroll-reveal">
       <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-4">
-          <div class="flex items-center justify-center gap-4 mb-1">
-            <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase text-gray-900">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <h2 class="font-space-grotesk font-bold text-4xl md:text-5xl text-gray-900">
               Contact Your Representatives
             </h2>
             <img 
               src="@/assets/images/tellphone.png" 
               alt="Telephone" 
-              class="w-12 h-12 md:w-16 md:h-16 transform -rotate-12"
+              class="w-16 h-16 md:w-20 md:h-20 transform -rotate-12"
             />
           </div>
-        </div>
-
-        <div class="text-center mb-4">
-          <p class="text-gray-600 text-base md:text-lg">
+          <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Tell them you support Section 109 of the CLARITY Act!
           </p>
         </div>
@@ -480,69 +478,69 @@
     </section>
 
     <!-- Stay Updated Section -->
-    <section id="stay-updated" class="py-16 bg-white px-4 scroll-reveal">
+    <section id="stay-updated" class="py-20 bg-white px-4 scroll-reveal">
       <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-4">
-          <div class="flex items-center justify-center gap-4 mb-1">
-            <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase text-gray-900">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <div class="flex items-center justify-center gap-4 mb-6">
+            <h2 class="font-space-grotesk font-bold text-4xl md:text-5xl text-gray-900">
               Stay Updated
             </h2>
             <img 
               src="@/assets/images/bullhorn.png" 
               alt="Bullhorn" 
-              class="w-12 h-12 md:w-16 md:h-16 transform rotate-12"
+              class="w-16 h-16 md:w-20 md:h-20 transform rotate-12"
             />
           </div>
-        </div>
-
-        <div class="text-center mb-4">
-          <p class="text-gray-600 text-base md:text-lg">
+          <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Get critical updates & important activations delivered to your inbox
           </p>
         </div>
 
-        <div class="bg-gray-100 p-8 rounded-2xl border border-gray-100">
-          <div class="flex items-center justify-center mb-6">
+        <div class="bg-gray-100 p-8 md:p-12 rounded-2xl border border-gray-200">
+          <div class="flex items-center justify-center mb-8">
             <svg class="w-8 h-8 text-gray-900 mr-3" fill="currentColor" viewBox="0 0 20 20">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
             </svg>
-            <h3 class="text-xl md:text-2xl font-bold text-gray-900">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900">
               Join the Campaign
             </h3>
           </div>
           
-          <p class="text-gray-600 text-base md:text-lg mb-8 text-center">
+          <p class="text-gray-600 text-lg md:text-xl mb-10 text-center max-w-xl mx-auto">
             Be the first to know about new developments and action opportunities
           </p>
           
           <!-- Email Form -->
-          <form @submit.prevent="submitEmailForm" v-if="!emailSignedUp" class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center justify-center w-full mb-6">
-            <input 
-              type="email" 
-              placeholder="Enter your email address" 
-              ref="emailInput"
-              class="md:col-span-2 w-full px-4 py-3 bg-gray-100 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-coral-500 focus:ring-2 focus:ring-coral-500/20 text-base md:text-lg rounded-xl"
-            >
-            <button 
-              type="submit" 
-              :disabled="emailSubmitting" 
-              class="w-full bg-gray-900/90 backdrop-blur-sm text-white px-6 py-3 font-bold hover:bg-gray-800/90 transition-colors text-base md:text-lg rounded-xl flex items-center justify-center"
-            >
-              <span v-if="emailSubmitting" class="loading-spinner mr-2"></span>
-              {{ emailSubmitting ? 'Signing up...' : 'Sign Up' }}
-            </button>
+          <form @submit.prevent="submitEmailForm" v-if="!emailSignedUp" class="max-w-md mx-auto mb-8">
+            <div class="flex flex-col sm:flex-row gap-3">
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                ref="emailInput"
+                class="flex-1 px-4 py-3 bg-white border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-coral-500 focus:ring-2 focus:ring-coral-500/20 text-base md:text-lg rounded-xl shadow-sm"
+              >
+              <button 
+                type="submit" 
+                :disabled="emailSubmitting" 
+                class="px-8 py-3 bg-coral-500 text-white font-semibold hover:bg-coral-600 transition-colors text-base md:text-lg rounded-xl flex items-center justify-center shadow-sm"
+              >
+                <span v-if="emailSubmitting" class="loading-spinner mr-2"></span>
+                {{ emailSubmitting ? 'Signing up...' : 'Sign Up' }}
+              </button>
+            </div>
           </form>
           
           <p v-if="emailResult != ''" class="text-gray-900 mt-4 text-center font-medium">
             {{ emailResult }}
           </p>
 
-          <div class="flex items-center justify-center text-gray-500 text-sm mt-6">
-            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <div class="flex items-center justify-center text-gray-500 text-sm mt-8">
+            <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
             </svg>
-            Your information will only be used to look up your congressional representatives or keep you updated.
+            <span class="text-center">Your information will only be used to look up your congressional representatives or keep you updated.</span>
           </div>
         </div>
       </div>
@@ -553,7 +551,7 @@
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-2">
           <div class="flex items-center justify-center gap-4 mb-1">
-            <h2 class="font-space-grotesk font-bold text-2xl md:text-3xl uppercase text-gray-900">
+            <h2 class="font-space-grotesk font-bold text-4xl md:text-5xl text-gray-900">
               Share the Campaign
             </h2>
             <img 
