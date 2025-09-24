@@ -1,16 +1,26 @@
 <template>
-  <section class="py-20 bg-navy-900 px-4 scroll-reveal">
+  <section class="py-20 bg-gray-100 px-4 scroll-reveal">
     <div class="max-w-6xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="font-space-grotesk font-bold text-4xl md:text-5xl text-gray-900 mb-4">
+          Congressional Leaders Speak
+        </h2>
+        <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
+          Why the CLARITY Act is critical for U.S. industry.
+        </p>
+      </div>
+      
       <div class="flex items-center justify-center">
         <!-- Left Arrow (desktop only) -->
         <button
           @click="goToPrev"
-          class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-navy-800/80 hover:bg-coral-500 text-white shadow transition mx-2"
+          class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm hover:bg-coral-500/90 text-gray-900 hover:text-white transition mx-2 border border-white/30"
           aria-label="Previous quote"
         >
           &#8592;
         </button>
-        <div class="flex-1 flex justify-center min-h-[300px]">
+        <div class="flex-1 flex justify-center min-h-[450px] md:min-h-[300px]">
           <transition :name="transitionName" mode="out-in" @after-enter="onTransitionEnd">
             <div
               class="flex flex-col md:flex-row items-center gap-8 w-full"
@@ -19,10 +29,10 @@
             >
               <div class="flex-1">
                 <blockquote class="relative pl-8 border-l-4 border-coral-500">
-                  <p class="text-lg md:text-2xl text-white leading-relaxed mb-8" v-html="quotes[currentQuote].text"></p>
+                  <p class="text-lg md:text-2xl text-gray-700 leading-relaxed mb-8" v-html="quotes[currentQuote].text"></p>
                   <div class="flex flex-col">
                     <cite class="text-lg md:text-xl text-coral-500 font-bold not-italic">{{ quotes[currentQuote].author }}</cite>
-                    <span class="text-white/70">{{ quotes[currentQuote].title }}</span>
+                    <span class="text-gray-600">{{ quotes[currentQuote].title }}</span>
                   </div>
                 </blockquote>
               </div>
@@ -30,7 +40,7 @@
                 <img 
                   :src="quotes[currentQuote].image"
                   :alt="quotes[currentQuote].author"
-                  class="w-full h-full object-cover rounded-lg shadow-lg"
+                  class="w-full h-full object-cover rounded-2xl"
                 />
               </div>
             </div>
@@ -39,7 +49,7 @@
         <!-- Right Arrow (desktop only) -->
         <button
           @click="goToNext"
-          class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-navy-800/80 hover:bg-coral-500 text-white shadow transition mx-2"
+          class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm hover:bg-coral-500/90 text-gray-900 hover:text-white transition mx-2 border border-white/30"
           aria-label="Next quote"
         >
           &#8594;

@@ -6,7 +6,7 @@
 
     <!-- Modal panel -->
     <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-      <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-4xl sm:p-6">
+      <div class="relative transform overflow-hidden rounded-2xl bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-4xl sm:p-6">
         <!-- Close button -->
         <div class="absolute right-0 top-0 pr-4 pt-4">
           <button
@@ -24,16 +24,16 @@
         <!-- Modal content -->
         <div class="sm:flex sm:items-start">
           <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
-            <h3 class="text-2xl font-bold leading-6 text-navy-900 mb-6" id="modal-title">
+            <h3 class="text-2xl font-bold leading-6 text-gray-900 mb-6" id="modal-title">
               Contact
             </h3>
             
             <!-- Representative Form -->
             <div class="rep-form">
-              <h2 class="font-space-grotesk text-xl md:text-3xl text-navy-900 font-bold mb-2 md:mb-4 text-center">
+              <h2 class="font-space-grotesk text-xl md:text-3xl text-gray-900 font-bold mb-2 md:mb-4 text-center">
                 Contact your representatives:
               </h2>
-              <p class="text-navy-900 text-base md:text-lg mb-4 md:mb-6 text-center">
+              <p class="text-gray-700 text-base md:text-lg mb-4 md:mb-6 text-center">
                 Tell them you support Section 109 of the CLARITY Act!
               </p>
               
@@ -43,12 +43,12 @@
                   v-model="zipCode"
                   type="text" 
                   placeholder="Zip Code" 
-                  class="w-full px-4 py-3 bg-white border border-navy-900/20 text-navy-900 placeholder-navy-900/50 focus:outline-none focus:border-coral-500 text-base md:text-lg rounded-lg"
+                  class="w-full px-4 py-3 bg-gray-100 border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-coral-500 focus:ring-2 focus:ring-coral-500/20 text-base md:text-lg rounded-xl"
                 >
                 <button
                   type="submit"
                   :disabled="!isValidZip || loading"
-                  class="w-full bg-coral-500 text-white px-6 py-3 font-bold hover:bg-coral-400 transition-colors text-base md:text-lg flex items-center justify-center rounded-lg">
+                  class="w-full bg-coral-500/90 backdrop-blur-sm text-white px-6 py-3 font-bold hover:bg-coral-400/90 transition-colors text-base md:text-lg flex items-center justify-center rounded-xl">
                   <span v-if="loading" class="loading-spinner mr-2"></span>
                   {{ loading ? 'Searching...' : 'Find Representatives' }}
                 </button>
@@ -63,18 +63,18 @@
 
                 <!-- Loading Placeholder -->
                 <div v-if="loading" class="space-y-6 w-full">
-                  <div v-for="i in 3" :key="`skeleton-${i}`" class="bg-navy-900/5 p-6 rounded-lg animate-pulse">
+                  <div v-for="i in 3" :key="`skeleton-${i}`" class="bg-gray-100 p-6 rounded-2xl animate-pulse border border-gray-100">
                     <div class="flex flex-col md:flex-row gap-6">
-                      <div class="w-32 h-32 bg-navy-900/10 rounded-lg"></div>
+                      <div class="w-32 h-32 bg-gray-200 rounded-2xl"></div>
                       <div class="flex-1">
-                        <div class="h-6 bg-navy-900/10 rounded w-1/3 mb-2"></div>
-                        <div class="h-4 bg-navy-900/10 rounded w-1/2 mb-2"></div>
-                        <div class="h-4 bg-navy-900/10 rounded w-3/4 mb-4"></div>
+                        <div class="h-6 bg-gray-200 rounded w-1/3 mb-2"></div>
+                        <div class="h-4 bg-gray-200 rounded w-1/2 mb-2"></div>
+                        <div class="h-4 bg-gray-200 rounded w-3/4 mb-4"></div>
                         <div class="space-y-2">
-                          <div class="h-4 bg-navy-900/10 rounded w-1/4 mb-2"></div>
-                          <div class="h-4 bg-navy-900/10 rounded w-1/3 mb-4"></div>
-                          <div class="h-4 bg-navy-900/10 rounded w-1/2 mt-4 mb-2"></div>
-                          <div class="h-4 bg-navy-900/10 rounded w-3/5"></div>
+                          <div class="h-4 bg-gray-200 rounded w-1/4 mb-2"></div>
+                          <div class="h-4 bg-gray-200 rounded w-1/3 mb-4"></div>
+                          <div class="h-4 bg-gray-200 rounded w-1/2 mt-4 mb-2"></div>
+                          <div class="h-4 bg-gray-200 rounded w-3/5"></div>
                         </div>
                       </div>
                     </div>
@@ -93,25 +93,25 @@
                     <div 
                       v-for="(rep, index) in representatives" 
                       :key="rep.id" 
-                      class="bg-navy-900/5 p-6 rounded-lg rep-item"
+                      class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl rep-item border border-gray-100 hover:bg-white transition-all duration-300"
                       :style="{ '--rep-index': index }"
                     >
                       <div class="flex flex-col md:flex-row gap-6">
                         <img
                           :src="rep.photoURL"
                           :alt="rep.name"
-                          class="w-32 h-32 object-cover rounded-lg mx-auto md:mx-0 mb-4 md:mb-0"
+                          class="w-32 h-32 object-cover rounded-2xl mx-auto md:mx-0 mb-4 md:mb-0"
                         >
                         <div class="flex-1">
-                          <h3 class="text-xl font-bold mb-2 text-navy-900">{{ rep.name }}</h3>
-                          <p class="text-navy-900/70 mb-2">{{ rep.party }} - {{ rep.area }}</p>
-                          <p class="text-navy-900/70 mb-4">{{ rep.reason }}</p>
+                          <h3 class="text-xl font-bold mb-2 text-gray-900">{{ rep.name }}</h3>
+                          <p class="text-gray-600 mb-2">{{ rep.party }} - {{ rep.area }}</p>
+                          <p class="text-gray-600 mb-4">{{ rep.reason }}</p>
                           <div class="space-y-2">
                             <p class="font-bold text-coral-500">Main Office:</p>
-                            <p class="text-navy-900">{{ rep.phone }}</p>
+                            <p class="text-gray-900">{{ rep.phone }}</p>
                             <div v-if="rep.field_offices && rep.field_offices.length > 0">
                               <p class="font-bold text-coral-500 mt-4 mb-2">Local Offices:</p>
-                              <div v-for="(office, officeIndex) in rep.field_offices" :key="officeIndex" class="text-navy-900">
+                              <div v-for="(office, officeIndex) in rep.field_offices" :key="officeIndex" class="text-gray-900">
                                 {{ office.city }}: {{ office.phone }}
                               </div>
                             </div>
@@ -125,7 +125,7 @@
                 <!-- Empty State Placeholder -->
                 <div 
                   v-if="!loading && representatives.length === 0 && !error && zipCodeEntered" 
-                  class="text-navy-900/70 text-center py-8 fade-in"
+                  class="text-gray-600 text-center py-8 fade-in"
                 >
                   No representatives found for this zip code.
                 </div>
