@@ -122,56 +122,58 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative bg-gray-100 pt-[25vh] md:pt-0 scroll-reveal">
-      <!-- Extended background for form overflow -->
-      <div class="absolute inset-x-0 top-0 h-[1200px] md:h-[1400px] bg-gray-100 -z-10"></div>
-      
+    <div class="relative bg-gray-100 scroll-reveal">
       <!-- Hero Background Image with Light Overlay -->
-      <div class="absolute inset-x-0 top-0 h-[850px] md:h-[1000px] bg-[url('@/assets/images/satoshi-needs-you.png')] bg-cover bg-center">
-        <div class="absolute inset-0 bg-gradient-to-b from-navy-900/20 via-navy-900/4=40 to-navy-900/90"></div>
+      <div class="relative h-[70vh] sm:h-[75vh] md:h-[85vh] lg:h-[90vh] bg-[url('@/assets/images/satoshi-needs-you.png')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-navy-900/20 via-navy-900/40 to-navy-900/90"></div>
+        
+        <!-- Hero Content -->
+        <div class="relative flex flex-col items-center justify-center h-full px-4">
+          <div class="max-w-6xl mx-auto w-full">
+            <div class="flex flex-col items-center space-y-6 sm:space-y-8 md:space-y-12 text-center">
+              <!-- Updated Hero Title -->
+              <div class="text-center">
+                <h1 class="font-space-grotesk font-bold text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl uppercase text-white mb-2 leading-tight">
+                  SATOSHI NEEDS YOU
+                </h1>
+                
+                <!-- Updated Hero Subtitle -->
+                <h2 class="font-space-grotesk font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl uppercase text-coral-500 leading-tight">
+                  TO SAVE OUR WALLETS
+                </h2>
+              </div>
+
+              <!-- Hero Description -->
+              <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-white font-bold max-w-4xl leading-relaxed px-4">
+                Protect your right to transact freely. Support Section 109 of the CLARITY Act to ensure wallet freedom and protect developer rights.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       
-      <div class="relative flex flex-col items-center justify-center py-10 px-4 min-h-[850px] md:min-h-[1000px]">
-        <div class="max-w-6xl mx-auto w-full">
-          <div class="flex flex-col items-center space-y-8 md:space-y-12 text-center">
-            <!-- Updated Hero Title -->
-            <div class="text-center">
-              <h1 class="font-space-grotesk font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl uppercase text-white mb-2">
-                SATOSHI NEEDS YOU
-              </h1>
-              
-              <!-- Updated Hero Subtitle -->
-              <h2 class="font-space-grotesk font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase text-coral-500">
-                TO SAVE OUR WALLETS
-              </h2>
-            </div>
-
-            <!-- Hero Description -->
-            <p class="text-lg md:text-2xl text-white font-bold max-w-4xl leading-relaxed">
-              Protect your right to transact freely. Support Section 109 of the CLARITY Act to ensure wallet freedom and protect developer rights.
-            </p>
-
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 mt-8 md:mt-12">
-              <button 
-                @click="scrollToSection('contact-representatives')"
-                class="bg-white/80 backdrop-blur-sm text-gray-900 px-6 py-3 md:px-8 md:py-4 font-bold text-lg uppercase tracking-wider hover:bg-white/90 transition-all duration-300 border border-white/30 hover:border-white/50 rounded-xl"
-              >
-                Find Your Representatives
-              </button>
-              <button 
-                @click="scrollToSection('stay-updated')"
-                class="bg-white/80 backdrop-blur-sm text-gray-900 px-6 py-3 md:px-8 md:py-4 font-bold text-lg uppercase tracking-wider hover:bg-white/90 transition-all duration-300 border border-white/30 hover:border-white/50 rounded-xl"
-              >
-                Stay Updated
-              </button>
-              <button 
-                @click="scrollToSection('share-campaign')"
-                class="bg-coral-500/90 backdrop-blur-sm text-white px-6 py-3 md:px-8 md:py-4 font-bold text-lg uppercase tracking-wider hover:bg-coral-400/90 transition-all duration-300 border border-coral-500/30 hover:border-coral-400/30 rounded-xl"
-              >
-                Share Campaign
-              </button>
-            </div>
+      <!-- CTA Buttons Section - Separate from background image -->
+      <div class="relative bg-gray-100 py-8 sm:py-12 md:py-16">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button 
+              @click="scrollToSection('contact-representatives')"
+              class="w-full sm:w-auto bg-white/90 backdrop-blur-sm text-gray-900 px-6 py-3 md:px-8 md:py-4 font-bold text-base sm:text-lg uppercase tracking-wider hover:bg-white transition-all duration-300 border border-gray-200 hover:border-gray-300 rounded-xl shadow-lg hover:shadow-xl"
+            >
+              Find Your Representatives
+            </button>
+            <button 
+              @click="scrollToSection('stay-updated')"
+              class="w-full sm:w-auto bg-white/90 backdrop-blur-sm text-gray-900 px-6 py-3 md:px-8 md:py-4 font-bold text-base sm:text-lg uppercase tracking-wider hover:bg-white transition-all duration-300 border border-gray-200 hover:border-gray-300 rounded-xl shadow-lg hover:shadow-xl"
+            >
+              Stay Updated
+            </button>
+            <button 
+              @click="scrollToSection('share-campaign')"
+              class="w-full sm:w-auto bg-coral-500 text-white px-6 py-3 md:px-8 md:py-4 font-bold text-base sm:text-lg uppercase tracking-wider hover:bg-coral-600 transition-all duration-300 border border-coral-500 hover:border-coral-600 rounded-xl shadow-lg hover:shadow-xl"
+            >
+              Share Campaign
+            </button>
           </div>
         </div>
       </div>
