@@ -57,7 +57,7 @@
 </template>
 
 <script setup>
-import ogImage from '@/assets/images/og_image.png'
+import ogImage from '@/assets/images/og_image2.png'
 const props = defineProps({
   isOpen: {
     type: Boolean,
