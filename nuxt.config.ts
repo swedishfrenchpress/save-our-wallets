@@ -39,7 +39,8 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Save Our Wallets – Protect Your Right to Transact Freely' },
         { name: 'twitter:description', content: 'Satoshi Needs You to help Save our Wallets! Demand that congress support the BRCA amendments to the CLARITY Act. Protect your right to transact freely and keep innovation in America.' },
-        { name: 'twitter:image', content: 'https://saveourwallets.org/images/new_og_image.jpg' }
+        { name: 'twitter:image', content: 'https://saveourwallets.org/images/new_og_image.jpg?v=2' },
+        { name: 'twitter:image:alt', content: 'Satoshi Needs You - Save Our Wallets campaign poster' }
       ]
     }
   }
